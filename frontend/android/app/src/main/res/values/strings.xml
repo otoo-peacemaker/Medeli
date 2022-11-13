@@ -3,4 +3,7 @@
     <string name="headline_text">Place your order select pharmacy receive it</string>
     <string name="search_hint">Type here to search</string>
     <string name="button_1_text">Claim or prescription</string>
+    <string name="add_button_text">Add</string>
+    <string name="insurance_text">Add your insurance to use it in upcoming orders</string>
+    <string name="categories_text">Categories</string>
 </resources>

@@ -88,33 +88,35 @@
         app:layout_constraintHorizontal_bias="0.82"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quick_buttons"
-        app:layout_constraintVertical_bias="0.45"
+        app:layout_constraintVertical_bias="0.87"
         tools:srcCompat="@tools:sample/avatars" />
 
-    <EditText
+    <TextView
         android:id="@+id/insurance_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:gravity="start|top"
+        android:inputType="none"
         android:singleLine="false"
-        android:text="Add your insurance to use it in upcoming orders"
+        android:text="@string/insurance_text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:guidelineUseRtl="false"
         app:layout_constraintBottom_toTopOf="@+id/category_cards"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quick_buttons"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.43" />
 
     <Button
         android:id="@+id/add_button"
         android:layout_width="68dp"
-        android:layout_height="44dp"
+        android:layout_height="48dp"
         android:layout_marginTop="7dp"
         android:layout_marginEnd="12dp"
         android:layout_marginBottom="9dp"
-        android:text="Add"
+        android:text="@string/add_button_text"
         app:layout_constraintBottom_toTopOf="@+id/category_cards"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/insurance_text"
@@ -127,7 +129,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="12dp"
-        android:text="Categories"
+        android:text="@string/categories_text"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textStyle="bold"
@@ -164,15 +166,16 @@
                 <ImageButton
                     android:id="@+id/imageButton6"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     tools:srcCompat="@tools:sample/avatars" />
 
                 <ImageButton
                     android:id="@+id/imageButton7"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
+                    tools:ignore="ImageContrastCheck"
                     tools:srcCompat="@tools:sample/avatars" />
             </LinearLayout>
 
@@ -185,14 +188,14 @@
                 <ImageButton
                     android:id="@+id/imageButton6"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     tools:srcCompat="@tools:sample/avatars" />
 
                 <ImageButton
                     android:id="@+id/imageButton7"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     tools:srcCompat="@tools:sample/avatars" />
             </LinearLayout>
@@ -206,14 +209,14 @@
                 <ImageButton
                     android:id="@+id/imageButton6"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     tools:srcCompat="@tools:sample/avatars" />
 
                 <ImageButton
                     android:id="@+id/imageButton7"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     tools:srcCompat="@tools:sample/avatars" />
             </LinearLayout>
@@ -227,14 +230,14 @@
                 <ImageButton
                     android:id="@+id/imageButton6"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     tools:srcCompat="@tools:sample/avatars" />
 
                 <ImageButton
                     android:id="@+id/imageButton7"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     tools:srcCompat="@tools:sample/avatars" />
             </LinearLayout>
@@ -248,14 +251,14 @@
                 <ImageButton
                     android:id="@+id/imageButton6"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     tools:srcCompat="@tools:sample/avatars" />
 
                 <ImageButton
                     android:id="@+id/imageButton7"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     tools:srcCompat="@tools:sample/avatars" />
             </LinearLayout>
