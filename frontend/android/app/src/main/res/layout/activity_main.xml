@@ -7,12 +7,77 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/headline_text"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="45dp"
+        android:text="@string/headline_text"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.012" />
+
+    <SearchView
+        android:id="@+id/search_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:iconifiedByDefault="false"
+        android:queryHint="@string/search_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headline_text">
+
+    </SearchView>
+
+    <LinearLayout
+        android:id="@+id/quick_buttons"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_bar">
+
+        <ImageButton
+            android:id="@+id/button_1"
+            android:layout_width="96dp"
+            android:layout_height="88dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:contentDescription="@string/button_1_text"
+            tools:ignore="ImageContrastCheck,DuplicateSpeakableTextCheck"
+            tools:srcCompat="@tools:sample/avatars[4]" />
+
+        <ImageButton
+            android:id="@+id/button_2"
+            android:layout_width="96dp"
+            android:layout_height="88dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:contentDescription="@string/button_1_text"
+            tools:srcCompat="@tools:sample/avatars[1]" />
+
+        <ImageButton
+            android:id="@+id/button_3"
+            android:layout_width="96dp"
+            android:layout_height="88dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:contentDescription="@string/button_1_text"
+            tools:srcCompat="@tools:sample/avatars[8]" />
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
