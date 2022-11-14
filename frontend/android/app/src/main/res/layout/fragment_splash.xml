@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     style="@style/layoutStyle"
-    android:background="?attr/fullscreenBackgroundColor"
     tools:context=".ui.SplashFragment">
 
     <!--header-->

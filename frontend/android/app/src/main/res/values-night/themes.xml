@@ -59,15 +59,17 @@
         <item name="android:layout_width">match_parent</item>
     </style>
 
+    <style name="lineViewStyle" parent="ShapeAppearance.Material3.Corner.Small">
+        <item name="android:background">@drawable/line</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_width">98dp</item>
+    </style>
+
+
     <style name="textInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
     </style>
 
-
-    <style name="ThemeOverlay.Medeli.FullscreenContainer" parent="">
-        <item name="fullscreenBackgroundColor">@color/light_blue_900</item>
-        <item name="fullscreenTextColor">@color/light_blue_A400</item>
-    </style>
 
 
 </resources>
