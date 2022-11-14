@@ -5,10 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    style="@style/layoutStyle"
     android:background="?attr/fullscreenBackgroundColor"
-    android:layout_marginEnd="40dp"
-    android:layout_marginStart="40dp"
-    android:layout_marginTop="?actionBarSize"
     tools:context=".ui.SplashFragment">
 
     <!--header-->
@@ -32,20 +30,20 @@
         app:layout_constraintTop_toBottomOf="@+id/welcome" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/loginBtn"
         android:layout_marginTop="72dp"
         style="@style/buttonStyle"
         android:text="@string/sign_in"
-        app:layout_constraintEnd_toEndOf="@+id/button"
-        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="@+id/signUpBtn"
+        app:layout_constraintStart_toStartOf="@+id/signUpBtn"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/signUpBtn"
         style="@style/buttonStyle"
         android:text="@string/sign_up"
         app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
 
     <TextView
         android:id="@+id/textView"
@@ -53,11 +51,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:text="@string/skip_for_now"
+        android:clickable="true"
+        android:focusable="true"
         android:textColor="@color/secondaryColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/signUpBtn" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
