@@ -1,4 +1,4 @@
-package com.peacecodetech.medeli.ui
+package com.peacecodetech.medeli.viewmodel
 
 import androidx.lifecycle.ViewModel
 

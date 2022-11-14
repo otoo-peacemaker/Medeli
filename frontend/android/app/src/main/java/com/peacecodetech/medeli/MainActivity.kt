@@ -8,6 +8,7 @@ import com.peacecodetech.medeli.data.repository.UserAuthenticationRepository
 import com.peacecodetech.medeli.data.source.FirebaseDatastore
 
 class MainActivity : AppCompatActivity() {
+
     private val firebaseAuth: FirebaseAuth? = null
     private var signInClient: SignInClient? = null
 

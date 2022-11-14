@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.peacecodetech.medeli.R
+import com.peacecodetech.medeli.viewmodel.SignInViewModel
 
 class SignInFragment : Fragment() {
 

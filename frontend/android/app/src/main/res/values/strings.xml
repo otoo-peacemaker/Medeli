@@ -8,4 +8,11 @@
     <string name="auth_failed">Authentication Failed.</string>
     <string name="no_id_token">No ID token!</string>
     <string name="goggle_sign_in_failed">Google Sign-in failed</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="welcome_to_medeli">Welcome to Medeli</string>
+    <string name="splash_image">splash image</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="skip_for_now">Skip for now</string>
 </resources>
