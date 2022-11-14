@@ -1,4 +1,4 @@
-package com.peacecodetech.medeli.data
+package com.peacecodetech.medeli.data.source
 
 import android.app.PendingIntent
 import android.content.ContentValues.TAG
@@ -18,6 +18,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
+import com.peacecodetech.medeli.R
 import com.peacecodetech.medeli.util.BaseFragment
 
 class FirebaseDatastore(
@@ -80,7 +81,7 @@ class FirebaseDatastore(
      * @param isEnable enable or disable your UI buttons
      * */
 
-    private fun sendEmailVerification(isEnable: Button? = null) {
+     fun sendEmailVerification(isEnable: Button? = null) {
         // Disable button
         isEnable?.isEnabled = false
         // Send verification email
@@ -123,10 +124,7 @@ class FirebaseDatastore(
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "signInWithEmail:failure", task.exception)
-                    Toast.makeText(
-                        requireContext(), "Authentication failed.",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    Toast.makeText(requireContext(), "Authentication failed.", Toast.LENGTH_SHORT).show()
                     updateUserUI(null)
                 }
             }
@@ -146,7 +144,7 @@ class FirebaseDatastore(
                 launchGoogleSignIn(pendingIntent)
             }
             .addOnFailureListener { e ->
-                Log.e(TAG, "Google Sign-in failed", e)
+                Log.e(TAG, getString(R.string.goggle_sign_in_failed), e)
             }
 
     }
@@ -175,6 +173,7 @@ class FirebaseDatastore(
                     launchGoogleSignIn(result.pendingIntent)
                 }
                 .addOnFailureListener { e ->
+                    Log.d("OnTap","$e")
                     // No saved credentials found. Launch the One Tap sign-up flow, or
                     // do nothing and continue presenting the signed-out UI.
                 }
@@ -195,7 +194,7 @@ class FirebaseDatastore(
                 firebaseAuthWithGoogle(idToken, updateUserUI)
             } else {
                 // Shouldn't happen.
-                Log.d(TAG, "No ID token!")
+                Log.d(TAG, getString(R.string.no_id_token))
             }
         } catch (e: ApiException) {
             // Google Sign In failed, update UI appropriately
@@ -211,12 +210,12 @@ class FirebaseDatastore(
             .addOnCompleteListener(requireActivity()) { task ->
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
-                    Log.d(TAG, "signInWithCredential:success")
+                    Log.d(TAG, getString(R.string.sign_with_credential))
                     updateUserUI(currentUser)
                 } else {
                     // If sign in fails, display a message to the user.
-                    Log.w(TAG, "signInWithCredential:failure", task.exception)
-                    Snackbar.make(requireView(), "Authentication Failed.", Snackbar.LENGTH_SHORT).show()
+                    Log.w(TAG, getString(R.string.sign_with_credential_failure), task.exception)
+                    Snackbar.make(requireView(), getString(R.string.auth_failed), Snackbar.LENGTH_SHORT).show()
                     updateUserUI(null)
                 }
 
@@ -254,9 +253,10 @@ class FirebaseDatastore(
 
 
     /**
-     * Check if user is signed in (non-null) and update UI accordingly
+     * Check if user is signed in (non-null) and update UI accordingly.
+     *
      * call this method in the [onStart()]
-     * A function to sign user out from the database
+     *
      * @param updateUserUI is any generic lambda function that user update ui. Create a function that accept [FirebaseUser] and implement your UI logic.
      * @sample updateUI
      * */
@@ -276,7 +276,7 @@ class FirebaseDatastore(
     }
 
 
-    /** update user example
+    /** update user example**/
     private fun updateUI(user: FirebaseUser?) {
         /* hideProgressBar()
          if (user != null) {
@@ -302,6 +302,6 @@ class FirebaseDatastore(
              binding.signedInButtons.visibility = View.GONE
          }*/
     }
-*/
+
 
 }
