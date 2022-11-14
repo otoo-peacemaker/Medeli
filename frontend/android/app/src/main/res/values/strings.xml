@@ -22,4 +22,8 @@
     <string name="password">Password</string>
     <string name="forget_password">Forget password?</string>
     <string name="don_t_have_an_account">Don’t have an account?</string>
+    <string name="sign_up_with_google">Sign up with Google</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="sign_up_with_email">Sign up with Email</string>
+    <string name="confirm_password">Confirm password</string>
 </resources>
