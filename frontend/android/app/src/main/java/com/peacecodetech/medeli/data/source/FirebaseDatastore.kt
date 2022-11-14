@@ -4,6 +4,7 @@ import android.app.PendingIntent
 import android.content.ContentValues.TAG
 import android.content.Intent
 import android.content.IntentSender
+import android.net.Uri
 import android.util.Log
 import android.widget.Button
 import android.widget.Toast
@@ -24,7 +25,7 @@ import com.peacecodetech.medeli.util.BaseFragment
 class FirebaseDatastore(
     private val auth: FirebaseAuth,
     private var signInClient: SignInClient
-    ):BaseFragment() {
+) : BaseFragment() {
 
     /**
      * A variable for current user
@@ -34,9 +35,10 @@ class FirebaseDatastore(
     /**
      * This variable is used to launch google sign in client
      * */
-    private val signInLauncher = registerForActivityResult(ActivityResultContracts.StartIntentSenderForResult()) { result ->
-        handleGoogleSignInResult(result.data){currentUser}
-    }
+    private val signInLauncher =
+        registerForActivityResult(ActivityResultContracts.StartIntentSenderForResult()) { result ->
+            handleGoogleSignInResult(result.data) { currentUser }
+        }
 
     init {
         // Configure Google Sign In
@@ -81,7 +83,7 @@ class FirebaseDatastore(
      * @param isEnable enable or disable your UI buttons
      * */
 
-     fun sendEmailVerification(isEnable: Button? = null) {
+    fun sendEmailVerification(isEnable: Button? = null) {
         // Disable button
         isEnable?.isEnabled = false
         // Send verification email
@@ -90,10 +92,18 @@ class FirebaseDatastore(
                 // Re-enable button
                 isEnable?.isEnabled = true
                 if (task.isSuccessful) {
-                    Toast.makeText(context, "Verification email sent to ${currentUser.email} ", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        context,
+                        "Verification email sent to ${currentUser.email} ",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 } else {
                     Log.e(TAG, "sendEmailVerification", task.exception)
-                    Toast.makeText(context,"Failed to send verification email.",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        context,
+                        "Failed to send verification email.",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
     }
@@ -124,7 +134,8 @@ class FirebaseDatastore(
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "signInWithEmail:failure", task.exception)
-                    Toast.makeText(requireContext(), "Authentication failed.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "Authentication failed.", Toast.LENGTH_SHORT)
+                        .show()
                     updateUserUI(null)
                 }
             }
@@ -135,7 +146,7 @@ class FirebaseDatastore(
      * Sign in with google using the [firebaseAuthWithGoogle]
      * @param webClientId your client id from google console
      * */
-    fun signInWithGoogle(webClientId:String) {
+    fun signInWithGoogle(webClientId: String) {
         val signInRequest = GetSignInIntentRequest.builder()
             .setServerClientId(webClientId)
             .build()
@@ -154,8 +165,8 @@ class FirebaseDatastore(
      * Display One-Tap Sign In with google if user isn't logged in
      * Call this inside [onViewCreated] method
      * */
-    fun oneTapSignInWithGoogle(webClientId:String){
-        if (currentUser==null) {
+    fun oneTapSignInWithGoogle(webClientId: String) {
+        if (currentUser == null) {
             // Configure One Tap UI
             val oneTapRequest = BeginSignInRequest.builder()
                 .setGoogleIdTokenRequestOptions(
@@ -173,7 +184,7 @@ class FirebaseDatastore(
                     launchGoogleSignIn(result.pendingIntent)
                 }
                 .addOnFailureListener { e ->
-                    Log.d("OnTap","$e")
+                    Log.d("OnTap", "$e")
                     // No saved credentials found. Launch the One Tap sign-up flow, or
                     // do nothing and continue presenting the signed-out UI.
                 }
@@ -184,7 +195,10 @@ class FirebaseDatastore(
      *  Result returned from launching the Sign In PendingIntent
      * */
 
-    private fun handleGoogleSignInResult(data: Intent?,  updateUserUI: (user: FirebaseUser?) -> Unit) {
+    private fun handleGoogleSignInResult(
+        data: Intent?,
+        updateUserUI: (user: FirebaseUser?) -> Unit
+    ) {
         try {
             // Google Sign In was successful, authenticate with Firebase
             val credential = signInClient.getSignInCredentialFromIntent(data)
@@ -203,7 +217,10 @@ class FirebaseDatastore(
         }
     }
 
-    private fun firebaseAuthWithGoogle(idToken: String,updateUserUI: (user: FirebaseUser?) -> Unit ) {
+    private fun firebaseAuthWithGoogle(
+        idToken: String,
+        updateUserUI: (user: FirebaseUser?) -> Unit
+    ) {
         showProgressBar()
         val credential = GoogleAuthProvider.getCredential(idToken, null)
         auth.signInWithCredential(credential)
@@ -215,7 +232,11 @@ class FirebaseDatastore(
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, getString(R.string.sign_with_credential_failure), task.exception)
-                    Snackbar.make(requireView(), getString(R.string.auth_failed), Snackbar.LENGTH_SHORT).show()
+                    Snackbar.make(
+                        requireView(),
+                        getString(R.string.auth_failed),
+                        Snackbar.LENGTH_SHORT
+                    ).show()
                     updateUserUI(null)
                 }
 
@@ -275,6 +296,14 @@ class FirebaseDatastore(
         }
     }
 
+    /**
+     * If a user has signed in successfully you can get their account data at any point with the getCurrentUser method.
+     * To get the profile information retrieved from the sign-in providers linked to a user, use the [getProviderData] method.
+     * @sample getUserPnPInfo
+     * */
+
+    fun accessUserProfileAndProvidedInfo(userInformation: (user: FirebaseUser?) -> Unit) = userInformation(currentUser)
+
 
     /** update user example**/
     private fun updateUI(user: FirebaseUser?) {
@@ -303,5 +332,21 @@ class FirebaseDatastore(
          }*/
     }
 
+    private fun getUserPnPInfo() {
+        currentUser?.let {
+            for (profile in it.providerData) {
+                // Id of the provider (ex: google.com)
+                val providerId = profile.providerId
+
+                // UID specific to the provider
+                val uid = profile.uid
+
+                // Name, email address, and profile photo Url
+                val name = profile.displayName
+                val email = profile.email
+                val photoUrl = profile.photoUrl
+            }
+        }
+    }
 
 }

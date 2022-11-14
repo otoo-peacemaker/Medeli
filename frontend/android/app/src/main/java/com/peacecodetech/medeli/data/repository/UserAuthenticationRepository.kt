@@ -41,7 +41,13 @@ class UserAuthenticationRepository(
         return firebaseDatastore.oneTapSignInWithGoogle(clientId)
     }
 
+    fun getUserProfile(userInformation: (user: FirebaseUser?) -> Unit){
+        return firebaseDatastore.accessUserProfileAndProvidedInfo{user -> userInformation(user) }
+    }
+
     fun signOut(updateUserUI: (user: FirebaseUser?) -> Unit){
         return firebaseDatastore.signOut(updateUserUI)
     }
+
+
 }
