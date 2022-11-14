@@ -5,18 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.peacecodetech.medeli.R
 import com.peacecodetech.medeli.databinding.FragmentSplashBinding
-
-/**
- * An example full-screen fragment that shows and hides the system UI (i.e.
- * status bar and navigation/system bar) with user interaction.
- */
 class SplashFragment : Fragment() {
 
     private var _binding: FragmentSplashBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -30,6 +24,18 @@ class SplashFragment : Fragment() {
 
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.loginBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_splashFragment2_to_signInFragment)
+        }
+
+        binding.signUpBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_splashFragment2_to_signUpFragment) }
+
+
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()

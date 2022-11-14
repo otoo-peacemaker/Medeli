@@ -9,54 +9,68 @@
     tools:context=".ui.SplashFragment">
 
     <!--header-->
-
-    <TextView
-        android:id="@+id/welcome"
-        style="@style/welcomeStyle"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/welcome_to_medeli"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/splash_image"
-        android:src="@drawable/splash_img"
-        app:layout_constraintTop_toBottomOf="@+id/welcome" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/loginBtn"
-        android:layout_marginTop="72dp"
-        style="@style/buttonStyle"
-        android:text="@string/sign_in"
-        app:layout_constraintEnd_toEndOf="@+id/signUpBtn"
-        app:layout_constraintStart_toStartOf="@+id/signUpBtn"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            <TextView
+                android:id="@+id/welcome"
+                style="@style/welcomeStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome_to_medeli"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/signUpBtn"
-        style="@style/buttonStyle"
-        android:text="@string/sign_up"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/splash_image"
+                android:src="@drawable/splash_img"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/welcome" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="@string/skip_for_now"
-        android:clickable="true"
-        android:focusable="true"
-        android:textColor="@color/secondaryColor"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signUpBtn" />
+            <Button
+                android:id="@+id/loginBtn"
+                style="@style/buttonStyle"
+                android:layout_marginTop="72dp"
+                android:text="@string/sign_in"
+                app:layout_constraintEnd_toEndOf="@+id/signUpBtn"
+                app:layout_constraintStart_toStartOf="@+id/signUpBtn"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            <Button
+                android:id="@+id/signUpBtn"
+                style="@style/buttonStyle"
+                android:text="@string/sign_up"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginTop="60dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/skip_for_now"
+                android:textColor="@color/secondaryColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/signUpBtn" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
