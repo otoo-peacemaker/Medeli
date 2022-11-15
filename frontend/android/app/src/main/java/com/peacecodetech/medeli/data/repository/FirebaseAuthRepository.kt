@@ -1,15 +1,16 @@
-package com.peacecodetech.medeli.data.source
+package com.peacecodetech.medeli.data.repository
 
 import android.app.PendingIntent
 import android.content.ContentValues.TAG
 import android.content.Intent
 import android.content.IntentSender
-import android.net.Uri
 import android.util.Log
 import android.widget.Button
 import android.widget.Toast
 import androidx.activity.result.IntentSenderRequest
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import com.google.android.gms.auth.api.identity.BeginSignInRequest
 import com.google.android.gms.auth.api.identity.GetSignInIntentRequest
 import com.google.android.gms.auth.api.identity.Identity
@@ -22,7 +23,7 @@ import com.google.firebase.auth.GoogleAuthProvider
 import com.peacecodetech.medeli.R
 import com.peacecodetech.medeli.util.BaseFragment
 
-class FirebaseDatastore(
+class FirebaseAuthRepository(
     private val auth: FirebaseAuth,
     private var signInClient: SignInClient
 ) : BaseFragment() {
@@ -32,12 +33,19 @@ class FirebaseDatastore(
      * */
     private val currentUser = auth.currentUser
 
+    /***
+     * Observe user live data after login
+     * */
+    private val _updateUserUI = MutableLiveData<FirebaseUser?>()
+    val updateUserUI: LiveData<FirebaseUser?>
+        get() = _updateUserUI
+
     /**
      * This variable is used to launch google sign in client
      * */
     private val signInLauncher =
         registerForActivityResult(ActivityResultContracts.StartIntentSenderForResult()) { result ->
-            handleGoogleSignInResult(result.data) { currentUser }
+            handleGoogleSignInResult(result.data)
         }
 
     init {
@@ -51,21 +59,19 @@ class FirebaseDatastore(
      * @param isEnable enable or disable your UI buttons
      * @param email user email
      * @param password user password
-     * @param updateUserUI is any generic lambda function that user update ui. Create a function that accept [FirebaseUser] and implement your UI logic.
      * @sample updateUI
      * */
     fun signUpWithEmail(
         isEnable: Button? = null,
         email: String,
-        password: String,
-        updateUserUI: (user: FirebaseUser?) -> Unit
+        password: String
     ) {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "createUserWithEmail:success")
-                    updateUserUI(currentUser)
+                    _updateUserUI.postValue(currentUser)
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "createUserWithEmail:failure", task.exception)
@@ -73,7 +79,7 @@ class FirebaseDatastore(
                         context, "Authentication failed.",
                         Toast.LENGTH_SHORT
                     ).show()
-                    updateUserUI(null)
+                    _updateUserUI.postValue(null)
                 }
             }
     }
@@ -114,29 +120,27 @@ class FirebaseDatastore(
      * @param email user email
      * @param password user password
      * @param isEnable enable or disable your UI buttons
-     * @param updateUserUI is any generic lambda function that user update ui. Create a function that accept [FirebaseUser] and implement your UI logic.
      * @sample updateUI
      * */
 
     fun signInExistingUserWithEmail(
         isEnable: Boolean? = null,
         email: String,
-        password: String,
-        updateUserUI: (user: FirebaseUser?) -> Unit
+        password: String
     ) {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "signInWithEmail:success")
-                    updateUserUI(currentUser)
+                    _updateUserUI.postValue(currentUser)
 
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "signInWithEmail:failure", task.exception)
                     Toast.makeText(requireContext(), "Authentication failed.", Toast.LENGTH_SHORT)
                         .show()
-                    updateUserUI(null)
+                    _updateUserUI.postValue(null)
                 }
             }
     }
@@ -196,8 +200,7 @@ class FirebaseDatastore(
      * */
 
     private fun handleGoogleSignInResult(
-        data: Intent?,
-        updateUserUI: (user: FirebaseUser?) -> Unit
+        data: Intent?
     ) {
         try {
             // Google Sign In was successful, authenticate with Firebase
@@ -205,7 +208,7 @@ class FirebaseDatastore(
             val idToken = credential.googleIdToken
             if (idToken != null) {
                 Log.d(TAG, "firebaseAuthWithGoogle: ${credential.id}")
-                firebaseAuthWithGoogle(idToken, updateUserUI)
+                firebaseAuthWithGoogle(idToken)
             } else {
                 // Shouldn't happen.
                 Log.d(TAG, getString(R.string.no_id_token))
@@ -213,13 +216,12 @@ class FirebaseDatastore(
         } catch (e: ApiException) {
             // Google Sign In failed, update UI appropriately
             Log.w(TAG, "Google sign in failed", e)
-            updateUserUI(null)
+            _updateUserUI.postValue(null)
         }
     }
 
     private fun firebaseAuthWithGoogle(
-        idToken: String,
-        updateUserUI: (user: FirebaseUser?) -> Unit
+        idToken: String
     ) {
         showProgressBar()
         val credential = GoogleAuthProvider.getCredential(idToken, null)
@@ -228,7 +230,7 @@ class FirebaseDatastore(
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, getString(R.string.sign_with_credential))
-                    updateUserUI(currentUser)
+                    this._updateUserUI.postValue(currentUser)
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, getString(R.string.sign_with_credential_failure), task.exception)
@@ -237,7 +239,7 @@ class FirebaseDatastore(
                         getString(R.string.auth_failed),
                         Snackbar.LENGTH_SHORT
                     ).show()
-                    updateUserUI(null)
+                    this._updateUserUI.postValue(null)
                 }
 
                 hideProgressBar()
@@ -258,17 +260,17 @@ class FirebaseDatastore(
 
     /**
      * A function to sign user out from the database
-     * @param updateUserUI is any generic lambda function that user update ui. Create a function that accept [FirebaseUser] and implement your UI logic.
+     * In this sign out function we pass the [currentUser]
      * @sample updateUI
      * */
 
-    fun signOut(updateUserUI: (user: FirebaseUser?) -> Unit) {
+    fun signOut() {
         auth.signOut()
-        updateUserUI(null)
+        _updateUserUI.postValue(null)
 
         // Google sign out
         signInClient.signOut().addOnCompleteListener(requireActivity()) {
-            updateUserUI(null)
+            _updateUserUI.postValue(null)
         }
     }
 
@@ -277,16 +279,14 @@ class FirebaseDatastore(
      * Check if user is signed in (non-null) and update UI accordingly.
      *
      * call this method in the [onStart()]
-     *
-     * @param updateUserUI is any generic lambda function that user update ui. Create a function that accept [FirebaseUser] and implement your UI logic.
      * @sample updateUI
      * */
 
-    fun reloadUser(updateUserUI: (user: FirebaseUser?) -> Unit) {
+    fun reloadUser() {
         if (currentUser != null) {
             auth.currentUser!!.reload().addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    updateUserUI(auth.currentUser)
+                    _updateUserUI.postValue(auth.currentUser)
                     Toast.makeText(context, "Reload successful!", Toast.LENGTH_SHORT).show()
                 } else {
                     Log.e(TAG, "reload", task.exception)
@@ -296,13 +296,18 @@ class FirebaseDatastore(
         }
     }
 
+    fun getUserLiveData(): MutableLiveData<FirebaseUser?> {
+        return _updateUserUI
+    }
+
     /**
      * If a user has signed in successfully you can get their account data at any point with the getCurrentUser method.
      * To get the profile information retrieved from the sign-in providers linked to a user, use the [getProviderData] method.
      * @sample getUserPnPInfo
      * */
 
-    fun accessUserProfileAndProvidedInfo(userInformation: (user: FirebaseUser?) -> Unit) = userInformation(currentUser)
+    fun accessUserProfileAndProvidedInfo(userInformation: (user: FirebaseUser?) -> Unit) =
+        userInformation(currentUser)
 
 
     /** update user example**/
@@ -349,4 +354,6 @@ class FirebaseDatastore(
         }
     }
 
+
+    // private val updateUserUI: (user: MutableLiveData<FirebaseUser?>) -> Unit
 }

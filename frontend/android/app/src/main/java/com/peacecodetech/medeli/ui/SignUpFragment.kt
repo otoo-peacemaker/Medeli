@@ -22,7 +22,6 @@ class SignUpFragment : Fragment() {
 
         _binding = FragmentSignUpBinding.inflate(inflater, container, false)
         return binding.root
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -31,7 +30,6 @@ class SignUpFragment : Fragment() {
         binding.signInText.setOnClickListener {
             findNavController().navigate(R.id.action_signUpFragment_to_signInFragment)
         }
-
 
     }
 

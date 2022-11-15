@@ -33,8 +33,6 @@ class SplashFragment : Fragment() {
 
         binding.signUpBtn.setOnClickListener {
             findNavController().navigate(R.id.action_splashFragment2_to_signUpFragment) }
-
-
     }
 
     override fun onDestroyView() {

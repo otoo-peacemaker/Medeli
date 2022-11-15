@@ -114,7 +114,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/passLayout" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/loginBtn"
                 style="@style/buttonStyle"
                 android:layout_marginTop="80dp"
                 android:text="@string/sign_in"
@@ -132,7 +132,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/signUpText"
                 app:layout_constraintHorizontal_bias="0.844"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button" />
+                app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
 
             <TextView
                 android:id="@+id/signUpText"
