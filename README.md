@@ -10,3 +10,20 @@ Rules
 Project resources.
 ----------------------
 * [UI/UX Designs](https://www.figma.com/file/AyHDaS14pMbJRusNVHyEHj/Taha-Pharmacy-preview-(Community)?node-id=1%3A9718&t=TI6PpYfKv4xYCAdD-0)
+
+
+Architectural design
+----------------------
+MVVM
+
+While using any architecture pattern can be a benefit in our project, with MVVM it’s very simple to separate the business logic of our app from the GUI.
+
+We’ll be using 
+* Firebase authentication with Google 
+* and Cloud Firestore as a back-end. 
+
+The following diagram depict how we are going about the architecture.
+
+![1_5b-8CCT6MvQrWrep4aQUIw](https://user-images.githubusercontent.com/43262139/202090128-d644079b-b295-4ab5-9731-905abb60457b.png)
+
+This diagram comes straight out from the Android Architecture Components, except the fact that we’ll not be using Room for local persistence since Firestore already has its own caching mechanism, nor or web service as a remote data source, we’ll be simply using Firebase. As you can see, we have a ViewModel and a LiveData and we need to make them work together using the Repository pattern. This solution is very efficient and it’s actually recommended by the Android team.
