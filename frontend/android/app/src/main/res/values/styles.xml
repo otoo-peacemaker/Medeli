@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="welcomeStyle" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="android:fontWeight">800</item>
+        <item name="lineHeight">24.67dp</item>
+        <item name="font">@font/nexa_bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#1C3146</item>
+    </style>
+
+    <style name="buttonStyle" parent="ShapeAppearance.Material3.Corner.ExtraLarge">
+        <item name="android:fontWeight">800</item>
+        <item name="lineHeight">24.67dp</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="font">@font/nexa_regular</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="googleAuthButtonStyle" parent="ShapeAppearance.Material3.Corner.ExtraLarge">
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/nexa_regular</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@drawable/google_auth_button</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="lineViewStyle" parent="ShapeAppearance.Material3.Corner.Small">
+        <item name="android:background">@drawable/line</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_width">98dp</item>
+    </style>
+
+
+    <style name="layoutStyle">
+        <item name="android:layout_marginEnd">30dp</item>
+        <item name="android:layout_marginStart">30dp</item>
+        <item name="android:layout_marginTop">?actionBarSize</item>
+    </style>
+
+    <style name="textInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+    </style>
+</resources>

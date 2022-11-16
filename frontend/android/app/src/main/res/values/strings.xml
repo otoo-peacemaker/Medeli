@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">Medeli</string>
+    <string name="emailpassword_status_fmt">emailpassword_status_fmt</string>
+    <string name="firebase_status_fmt">firebase_status_fmt</string>
+    <string name="sign_with_credential">signInWithCredential:success</string>
+    <string name="sign_with_credential_failure">signInWithCredential:failure</string>
+    <string name="auth_failed">Authentication Failed.</string>
+    <string name="no_id_token">No ID token!</string>
+    <string name="goggle_sign_in_failed">Google Sign-in failed</string>
+    <string name="welcome_to_medeli">Welcome to Medeli</string>
+    <string name="splash_image">splash image</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="skip_for_now">Skip for now</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="google_logo">google logo</string>
+    <string name="sign_in_with_email">Sign in with Email</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forget_password">Forget password?</string>
+    <string name="don_t_have_an_account">Don’t have an account?</string>
+    <string name="sign_up_with_google">Sign up with Google</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="sign_up_with_email">Sign up with Email</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="username">Username</string>
 </resources>
