@@ -2,7 +2,6 @@ package com.peacecodetech.medeli.di
 
 import android.content.Context
 import com.google.android.gms.auth.api.identity.Identity
-import com.google.android.gms.auth.api.identity.SignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
@@ -41,7 +40,8 @@ class FireBaseModule {
 
     @Provides
     @Singleton
-    fun provideSignInClient(@ApplicationContext context: Context) =  Identity.getSignInClient(context)
+    fun provideSignInClient(@ApplicationContext context: Context) =
+        Identity.getSignInClient(context)
 
     @Provides
     @Singleton
@@ -51,9 +51,8 @@ class FireBaseModule {
     @Provides
     fun provideFirebaseAuthRepository(
         auth: FirebaseAuth,
-        signInClient: SignInClient,
         fireStore: FirebaseFirestore
     ): FirebaseAuthRepository {
-        return FirebaseAuthRepository(auth, signInClient, fireStore)
+        return FirebaseAuthRepository(auth, fireStore)
     }
 }

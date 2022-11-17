@@ -29,7 +29,6 @@ import javax.inject.Inject
 
 class FirebaseAuthRepository  @Inject constructor(
     private val auth: FirebaseAuth,
-    private var signInClient: SignInClient,
     private val fireStore: FirebaseFirestore
 ) : BaseFragment() {
 
@@ -37,6 +36,9 @@ class FirebaseAuthRepository  @Inject constructor(
      * A variable for current user
      * */
     private val currentUser = auth.currentUser
+
+    private var signInClient: SignInClient = Identity.getSignInClient(requireContext())
+
 
     /***
      * Observe user live data after login
@@ -53,7 +55,6 @@ class FirebaseAuthRepository  @Inject constructor(
 
     init {
         // Configure Google Sign In
-        signInClient = Identity.getSignInClient(requireContext())
     }
 
 
@@ -137,7 +138,7 @@ class FirebaseAuthRepository  @Inject constructor(
                 launchGoogleSignIn(pendingIntent)
             }
             .addOnFailureListener { e ->
-                Log.e(TAG, getString(R.string.goggle_sign_in_failed), e)
+                Timber.tag(TAG).e(e, getString(R.string.goggle_sign_in_failed))
             }
 
     }
@@ -166,7 +167,7 @@ class FirebaseAuthRepository  @Inject constructor(
                     launchGoogleSignIn(result.pendingIntent)
                 }
                 .addOnFailureListener { e ->
-                    Log.d("OnTap", "$e")
+                    Timber.tag("OnTap").d(e)
                     // No saved credentials found. Launch the One Tap sign-up flow, or
                     // do nothing and continue presenting the signed-out UI.
                 }
@@ -185,15 +186,15 @@ class FirebaseAuthRepository  @Inject constructor(
             val credential = signInClient.getSignInCredentialFromIntent(data)
             val idToken = credential.googleIdToken
             if (idToken != null) {
-                Log.d(TAG, "firebaseAuthWithGoogle: ${credential.id}")
+                Timber.tag(TAG).d("firebaseAuthWithGoogle: %s", credential.id)
                 firebaseAuthWithGoogle(idToken)
             } else {
                 // Shouldn't happen.
-                Log.d(TAG, getString(R.string.no_id_token))
+                Timber.tag(TAG).d(getString(R.string.no_id_token))
             }
         } catch (e: ApiException) {
             // Google Sign In failed, update UI appropriately
-            Log.w(TAG, "Google sign in failed", e)
+            Timber.tag(TAG).w(e, "Google sign in failed")
             userLiveData.postValue(null)
         }
     }
@@ -206,7 +207,7 @@ class FirebaseAuthRepository  @Inject constructor(
             .addOnCompleteListener(requireActivity()) { task ->
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
-                    Log.d(TAG, getString(R.string.sign_with_credential))
+                    Timber.tag(TAG).d(getString(R.string.sign_with_credential))
                     //   this._updateUserUI.postValue(currentUser)
                     userLiveData.postValue(
                         Resource.success(
@@ -218,11 +219,12 @@ class FirebaseAuthRepository  @Inject constructor(
                             )
                         )
                     )
-                    Log.d(TAG, "${task.result.user}")
+                    //Timber.tag(TAG).d("",task.result.user)
 
                 } else {
                     // If sign in fails, display a message to the user.
-                    Log.w(TAG, getString(R.string.sign_with_credential_failure), task.exception)
+                    Timber.tag(TAG)
+                        .w(task.exception, getString(R.string.sign_with_credential_failure))
                     Snackbar.make(
                         requireView(),
                         getString(R.string.auth_failed),
@@ -242,7 +244,7 @@ class FirebaseAuthRepository  @Inject constructor(
                 .build()
             signInLauncher.launch(intentSenderRequest)
         } catch (e: IntentSender.SendIntentException) {
-            Log.e(TAG, "Couldn't start Sign In: ${e.localizedMessage}")
+            Timber.tag(TAG).e("Couldn't start Sign In: %s", e.localizedMessage)
         }
     }
 
@@ -297,7 +299,7 @@ class FirebaseAuthRepository  @Inject constructor(
                     )
                     Toast.makeText(context, "Reload successful!", Toast.LENGTH_SHORT).show()
                 } else {
-                    Log.e(TAG, "reload", task.exception)
+                    Timber.tag(TAG).e(task.exception, "reload")
                     Toast.makeText(context, "Failed to reload user.", Toast.LENGTH_SHORT).show()
                 }
             }

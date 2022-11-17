@@ -4,19 +4,21 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.peacecodetech.medeli.R
 import com.peacecodetech.medeli.databinding.FragmentSignInBinding
 import com.peacecodetech.medeli.util.BaseFragment
 import com.peacecodetech.medeli.viewmodel.SignInViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SignInFragment : BaseFragment() {
 
     private var _binding: FragmentSignInBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var viewModel: SignInViewModel
+    private  val viewModel: SignInViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
