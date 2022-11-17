@@ -36,8 +36,9 @@ class SignInFragment : BaseFragment() {
             loginUser()
         }
 
-        viewModel.firebaseUserLiveDataObserver.observe(requireActivity()) {
-            if (it==null){
+        viewModel.userLiveDataObserver.observe(requireActivity()) {user->
+
+            if (user==null){
                 showDialog("Login Error","No credentials found")
             }else{
                 //TODO: navigate the user to home page

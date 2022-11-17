@@ -100,6 +100,25 @@
                     android:hint="@string/email" />
             </com.google.android.material.textfield.TextInputLayout>
 
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/phoneLayout"
+                style="@style/textInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/emailLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/phoneId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/email" />
+            </com.google.android.material.textfield.TextInputLayout>
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/passLayout"
                 style="@style/textInputLayoutStyle"
@@ -108,7 +127,7 @@
                 android:layout_marginTop="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/emailLayout"
+                app:layout_constraintTop_toBottomOf="@+id/phoneLayout"
                 app:passwordToggleEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -138,7 +157,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/signUpBtn"
                 style="@style/buttonStyle"
                 android:layout_marginTop="44dp"
                 android:text="@string/sign_up"
@@ -156,7 +175,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/signInText"
                 app:layout_constraintHorizontal_bias="0.844"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button" />
+                app:layout_constraintTop_toBottomOf="@+id/signUpBtn" />
 
             <TextView
                 android:id="@+id/signInText"

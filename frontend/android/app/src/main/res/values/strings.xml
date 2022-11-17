@@ -24,4 +24,5 @@
     <string name="sign_up_with_email">Sign up with Email</string>
     <string name="confirm_password">Confirm password</string>
     <string name="username">Username</string>
+    <string name="web_client_id">provide_web_client</string>
 </resources>
