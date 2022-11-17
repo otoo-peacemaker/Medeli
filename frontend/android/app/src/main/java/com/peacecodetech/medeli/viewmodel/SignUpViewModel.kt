@@ -1,9 +1,7 @@
 package com.peacecodetech.medeli.viewmodel
 
 import android.content.ContentValues.TAG
-import android.util.Log
 import android.widget.Button
-import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -31,7 +29,7 @@ class SignUpViewModel @Inject constructor(
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     Timber.tag(TAG).d("createUserWithEmail:success")
-                    repository.sendEmailVerification()
+                    sendEmailVerification()
                     userLiveData.postValue(
                         Resource.success(
                             User(
@@ -57,7 +55,7 @@ class SignUpViewModel @Inject constructor(
     }
 
 
-    fun sendEmailVerification(isEnable: Button? = null){
+    fun sendEmailVerification(isEnable: Button? = null) {
         // Disable button
         isEnable?.isEnabled = false
         // Send verification email
@@ -75,7 +73,7 @@ class SignUpViewModel @Inject constructor(
     }
 
     fun saveUser(fullName: String, email: String, password: String) {
-        repository.saveUser(fullName,email, password).addOnCompleteListener {task->
+        repository.saveUser(fullName, email, password).addOnCompleteListener { task ->
             if (task.isSuccessful) {
                 userLiveData.postValue(Resource.success(User()))
             } else {
@@ -84,11 +82,8 @@ class SignUpViewModel @Inject constructor(
         }
     }
 
-    fun signUpWithGoogle(string: String):LiveData<Resource<User>>{
+    fun signUpWithGoogle(string: String): LiveData<Resource<User>> {
         repository.signInWithGoogle(string)
         return userLiveData
     }
-
-
-
 }

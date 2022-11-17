@@ -16,8 +16,10 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class SignInViewModel @Inject constructor(
-    private val repository: FirebaseAuthRepository) : ViewModel() {
+class SignInViewModel
+@Inject constructor(
+    private val repository: FirebaseAuthRepository)
+    : ViewModel() {
 
     /***
      * Observe user live data after login
