@@ -25,4 +25,5 @@
     <string name="confirm_password">Confirm password</string>
     <string name="username">Username</string>
     <string name="web_client_id">provide_web_client</string>
+    <string name="phone_number">Phone number</string>
 </resources>

@@ -38,7 +38,7 @@ class SignInViewModel
     fun loginUser(email: String, password: String) {
         viewModelScope.launch {
             if (validatePassword(password) and isValidString(email)) {
-                repository.signUpWithEmail(email = email, password = password)
+                repository.signInExistingUserWithEmail(email = email, password = password)
                 _userLiveDataObserver.value = repository.getUserLiveData().value
             }else{
                 _userLiveDataObserver.postValue(Resource.error(data = null,"Login error"))

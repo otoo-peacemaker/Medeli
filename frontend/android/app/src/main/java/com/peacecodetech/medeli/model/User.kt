@@ -4,7 +4,7 @@ import androidx.room.ColumnInfo
 import androidx.room.PrimaryKey
 
 data class User(
-    @PrimaryKey(autoGenerate = true) val id: Int? = null,
+    @PrimaryKey(autoGenerate = true) val id: String? = null,
     @ColumnInfo(name = "uid") val uid: String? = null,
     @ColumnInfo(name = "fullName") val fullName: String? = null,
     @ColumnInfo(name = "firstName") val firstName: String? = null,
