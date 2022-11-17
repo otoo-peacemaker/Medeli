@@ -9,7 +9,6 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.activity.result.IntentSenderRequest
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.google.android.gms.auth.api.identity.BeginSignInRequest
 import com.google.android.gms.auth.api.identity.GetSignInIntentRequest
@@ -20,12 +19,18 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
+import com.google.firebase.firestore.FirebaseFirestore
 import com.peacecodetech.medeli.R
+import com.peacecodetech.medeli.model.User
 import com.peacecodetech.medeli.util.BaseFragment
+import com.peacecodetech.medeli.util.Resource
+import timber.log.Timber
+import javax.inject.Inject
 
-class FirebaseAuthRepository(
+class FirebaseAuthRepository  @Inject constructor(
     private val auth: FirebaseAuth,
-    private var signInClient: SignInClient
+    private var signInClient: SignInClient,
+    private val fireStore: FirebaseFirestore
 ) : BaseFragment() {
 
     /**
@@ -36,9 +41,7 @@ class FirebaseAuthRepository(
     /***
      * Observe user live data after login
      * */
-    private val _updateUserUI = MutableLiveData<FirebaseUser?>()
-    val updateUserUI: LiveData<FirebaseUser?>
-        get() = _updateUserUI
+    private val userLiveData = MutableLiveData<Resource<User>?>()
 
     /**
      * This variable is used to launch google sign in client
@@ -64,55 +67,15 @@ class FirebaseAuthRepository(
     fun signUpWithEmail(
         isEnable: Button? = null,
         email: String,
-        password: String
-    ) {
-        auth.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-                    // Sign in success, update UI with the signed-in user's information
-                    Log.d(TAG, "createUserWithEmail:success")
-                    _updateUserUI.postValue(currentUser)
-                } else {
-                    // If sign in fails, display a message to the user.
-                    Log.w(TAG, "createUserWithEmail:failure", task.exception)
-                    Toast.makeText(
-                        context, "Authentication failed.",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                    _updateUserUI.postValue(null)
-                }
-            }
-    }
+        password: String)= auth.createUserWithEmailAndPassword(email, password)
+
 
 
     /**
      * @param isEnable enable or disable your UI buttons
      * */
 
-    fun sendEmailVerification(isEnable: Button? = null) {
-        // Disable button
-        isEnable?.isEnabled = false
-        // Send verification email
-        currentUser?.sendEmailVerification()
-            ?.addOnCompleteListener { task ->
-                // Re-enable button
-                isEnable?.isEnabled = true
-                if (task.isSuccessful) {
-                    Toast.makeText(
-                        context,
-                        "Verification email sent to ${currentUser.email} ",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                } else {
-                    Log.e(TAG, "sendEmailVerification", task.exception)
-                    Toast.makeText(
-                        context,
-                        "Failed to send verification email.",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                }
-            }
-    }
+    fun sendEmailVerification(isEnable: Button? = null) = currentUser?.sendEmailVerification()
 
 
     /**
@@ -132,15 +95,30 @@ class FirebaseAuthRepository(
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
-                    Log.d(TAG, "signInWithEmail:success")
-                    _updateUserUI.postValue(currentUser)
+                    Timber.tag(TAG).d("signInWithEmail:success")
+                    //   _updateUserUI.postValue(currentUser)
+                    userLiveData.postValue(
+                        Resource.success(
+                            User(
+                                id = currentUser?.uid?.toInt(),
+                                email = currentUser?.email,
+                                fullName = currentUser?.displayName,
+                                password = currentUser?.phoneNumber
+                            )
+                        )
+                    )
 
                 } else {
                     // If sign in fails, display a message to the user.
-                    Log.w(TAG, "signInWithEmail:failure", task.exception)
+                    Timber.tag(TAG).w(task.exception, "signInWithEmail:failure")
                     Toast.makeText(requireContext(), "Authentication failed.", Toast.LENGTH_SHORT)
                         .show()
-                    _updateUserUI.postValue(null)
+                    userLiveData.postValue(
+                        Resource.error(
+                            null,
+                            message = task.exception?.message.toString()
+                        )
+                    )
                 }
             }
     }
@@ -216,13 +194,12 @@ class FirebaseAuthRepository(
         } catch (e: ApiException) {
             // Google Sign In failed, update UI appropriately
             Log.w(TAG, "Google sign in failed", e)
-            _updateUserUI.postValue(null)
+            userLiveData.postValue(null)
         }
     }
 
     private fun firebaseAuthWithGoogle(
-        idToken: String
-    ) {
+        idToken: String) {
         showProgressBar()
         val credential = GoogleAuthProvider.getCredential(idToken, null)
         auth.signInWithCredential(credential)
@@ -230,7 +207,19 @@ class FirebaseAuthRepository(
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, getString(R.string.sign_with_credential))
-                    this._updateUserUI.postValue(currentUser)
+                    //   this._updateUserUI.postValue(currentUser)
+                    userLiveData.postValue(
+                        Resource.success(
+                            User(
+                                id = currentUser?.uid?.toInt(),
+                                email = currentUser?.email,
+                                fullName = currentUser?.displayName,
+                                password = currentUser?.phoneNumber
+                            )
+                        )
+                    )
+                    Log.d(TAG, "${task.result.user}")
+
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, getString(R.string.sign_with_credential_failure), task.exception)
@@ -239,7 +228,7 @@ class FirebaseAuthRepository(
                         getString(R.string.auth_failed),
                         Snackbar.LENGTH_SHORT
                     ).show()
-                    this._updateUserUI.postValue(null)
+                    this.userLiveData.postValue(null)
                 }
 
                 hideProgressBar()
@@ -266,13 +255,23 @@ class FirebaseAuthRepository(
 
     fun signOut() {
         auth.signOut()
-        _updateUserUI.postValue(null)
+        userLiveData.postValue(null)
 
         // Google sign out
         signInClient.signOut().addOnCompleteListener(requireActivity()) {
-            _updateUserUI.postValue(null)
+            userLiveData.postValue(null)
         }
     }
+
+    fun saveUser(fullName:String, email: String, password: String) =
+        fireStore.collection("users").document(email).set(
+            User(
+                uid = currentUser?.uid,
+                fullName = fullName,
+                email = email,
+                password = password
+            )
+        )
 
 
     /**
@@ -286,7 +285,16 @@ class FirebaseAuthRepository(
         if (currentUser != null) {
             auth.currentUser!!.reload().addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    _updateUserUI.postValue(auth.currentUser)
+                    userLiveData.postValue(
+                        Resource.success(
+                            User(
+                                id = currentUser.uid.toInt(),
+                                email = currentUser.email,
+                                fullName = currentUser.displayName,
+                                password = currentUser.phoneNumber
+                            )
+                        )
+                    )
                     Toast.makeText(context, "Reload successful!", Toast.LENGTH_SHORT).show()
                 } else {
                     Log.e(TAG, "reload", task.exception)
@@ -296,9 +304,7 @@ class FirebaseAuthRepository(
         }
     }
 
-    fun getUserLiveData(): MutableLiveData<FirebaseUser?> {
-        return _updateUserUI
-    }
+    fun getUserLiveData() = userLiveData
 
     /**
      * If a user has signed in successfully you can get their account data at any point with the getCurrentUser method.

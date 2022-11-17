@@ -5,15 +5,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.peacecodetech.medeli.R
 import com.peacecodetech.medeli.databinding.FragmentSignUpBinding
+import com.peacecodetech.medeli.util.Status
+import com.peacecodetech.medeli.util.showSnackBar
 import com.peacecodetech.medeli.viewmodel.SignUpViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SignUpFragment : Fragment() {
     private var _binding: FragmentSignUpBinding? = null
     private val binding get() = _binding!!
-    private lateinit var viewModel: SignUpViewModel
+
+    private val viewModel: SignUpViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,6 +37,44 @@ class SignUpFragment : Fragment() {
             findNavController().navigate(R.id.action_signUpFragment_to_signInFragment)
         }
 
+        binding.signUpBtn.setOnClickListener {
+            registerUserEmailAndPassword()
+        }
+
+    }
+
+
+    private fun registerUserEmailAndPassword() {
+        val username = binding.nameId.text.toString()
+        val emailText = binding.emailId.text?.trim().toString()
+        val password = binding.passwordId.text.toString()
+        val confirmPassword = binding.passwordId.text.toString()
+
+
+
+        viewModel.registerUser(email = emailText, password = password).observe(viewLifecycleOwner) {
+            when (it.status) {
+                Status.LOADING -> {
+                    //TODO
+                }
+                Status.SUCCESS -> {
+                    viewModel.saveUser(username, emailText, password)
+                    //TODO
+                }
+                Status.ERROR -> {
+                    view?.showSnackBar(it.message!!)
+                }
+            }
+        }
+
+    }
+
+
+    private fun signUpWithGoogle() {
+        val webClientID = ""
+        viewModel.signUpWithGoogle(webClientID).observe(viewLifecycleOwner) {
+            //TODO
+        }
     }
 
     override fun onDestroyView() {

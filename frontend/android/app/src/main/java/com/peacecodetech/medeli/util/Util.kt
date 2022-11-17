@@ -1,10 +1,14 @@
 package com.peacecodetech.medeli.util
 
 
+import android.content.Context
+import android.view.View
 import android.view.inputmethod.InputMethodManager
+import android.widget.ImageView
 import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 import java.util.regex.Pattern
 
@@ -25,3 +29,6 @@ fun validatePassword(str: String):Boolean {
     return str.length>10 && (str.isNotEmpty())
 }
 
+fun View.showSnackBar(message: String) {
+    Snackbar.make(this, message, Snackbar.LENGTH_LONG).show()
+}

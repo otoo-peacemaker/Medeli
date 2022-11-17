@@ -37,7 +37,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:text="@string/sign_up_with_google" />
+                    android:text="@string/sign_in_with_google" />
             </LinearLayout>
 
 
