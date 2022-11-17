@@ -1,6 +1,7 @@
 package com.peacecodetech.medeli.ui
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,13 +10,15 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.peacecodetech.medeli.R
 import com.peacecodetech.medeli.databinding.FragmentSignUpBinding
+import com.peacecodetech.medeli.util.BaseFragment
 import com.peacecodetech.medeli.util.Status
 import com.peacecodetech.medeli.util.showSnackBar
 import com.peacecodetech.medeli.viewmodel.SignUpViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import timber.log.Timber
 
 @AndroidEntryPoint
-class SignUpFragment : Fragment() {
+class SignUpFragment : BaseFragment() {
     private var _binding: FragmentSignUpBinding? = null
     private val binding get() = _binding!!
 
@@ -56,9 +59,17 @@ class SignUpFragment : Fragment() {
             when (it.status) {
                 Status.LOADING -> {
                     //TODO
+                    showProgressBar()
                 }
                 Status.SUCCESS -> {
                     viewModel.saveUser(username, emailText, password)
+                    Timber.tag("Login user").d("::::::::::${it.data}")
+                    showDialog(
+                        "Sign up successfully",
+                        "Please, verify your account from $emailText"
+                    ) {
+                        findNavController().navigate(R.id.action_signUpFragment_to_signInFragment)
+                    }
                     //TODO
                 }
                 Status.ERROR -> {
@@ -72,9 +83,10 @@ class SignUpFragment : Fragment() {
 
     private fun signUpWithGoogle() {
         val webClientID = ""
-        viewModel.signUpWithGoogle(webClientID).observe(viewLifecycleOwner) {
-            //TODO
-        }
+        //TODO
+      /*  viewModel.signUpWithGoogle(webClientID).observe(viewLifecycleOwner) {
+
+        }*/
     }
 
     override fun onDestroyView() {

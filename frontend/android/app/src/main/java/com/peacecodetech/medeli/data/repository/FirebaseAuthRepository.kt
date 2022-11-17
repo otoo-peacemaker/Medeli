@@ -1,10 +1,11 @@
 package com.peacecodetech.medeli.data.repository
 
+import android.app.Activity
 import android.app.PendingIntent
 import android.content.ContentValues.TAG
+import android.content.Context
 import android.content.Intent
 import android.content.IntentSender
-import android.util.Log
 import android.widget.Button
 import android.widget.Toast
 import androidx.activity.result.IntentSenderRequest
@@ -24,11 +25,13 @@ import com.peacecodetech.medeli.R
 import com.peacecodetech.medeli.model.User
 import com.peacecodetech.medeli.util.BaseFragment
 import com.peacecodetech.medeli.util.Resource
+import dagger.hilt.android.qualifiers.ActivityContext
 import timber.log.Timber
 import javax.inject.Inject
 
 class FirebaseAuthRepository  @Inject constructor(
     private val auth: FirebaseAuth,
+    //private var signInClient: SignInClient,
     private val fireStore: FirebaseFirestore
 ) : BaseFragment() {
 
@@ -37,7 +40,7 @@ class FirebaseAuthRepository  @Inject constructor(
      * */
     private val currentUser = auth.currentUser
 
-    private var signInClient: SignInClient = Identity.getSignInClient(requireContext())
+
 
 
     /***
@@ -50,11 +53,12 @@ class FirebaseAuthRepository  @Inject constructor(
      * */
     private val signInLauncher =
         registerForActivityResult(ActivityResultContracts.StartIntentSenderForResult()) { result ->
-            handleGoogleSignInResult(result.data)
+          //  handleGoogleSignInResult(result.data)
         }
 
     init {
         // Configure Google Sign In
+        // signInClient = Identity.getSignInClient(context)
     }
 
 
@@ -77,6 +81,8 @@ class FirebaseAuthRepository  @Inject constructor(
      * */
 
     fun sendEmailVerification(isEnable: Button? = null) = currentUser?.sendEmailVerification()
+
+    fun forgotPassword()=currentUser
 
 
     /**
@@ -101,7 +107,7 @@ class FirebaseAuthRepository  @Inject constructor(
                     userLiveData.postValue(
                         Resource.success(
                             User(
-                                id = currentUser?.uid?.toInt(),
+                                id = currentUser?.uid,
                                 email = currentUser?.email,
                                 fullName = currentUser?.displayName,
                                 password = currentUser?.phoneNumber
@@ -124,11 +130,11 @@ class FirebaseAuthRepository  @Inject constructor(
             }
     }
 
-
-    /**
+/*
+    *//**
      * Sign in with google using the [firebaseAuthWithGoogle]
      * @param webClientId your client id from google console
-     * */
+     * *//*
     fun signInWithGoogle(webClientId: String) {
         val signInRequest = GetSignInIntentRequest.builder()
             .setServerClientId(webClientId)
@@ -141,13 +147,14 @@ class FirebaseAuthRepository  @Inject constructor(
                 Timber.tag(TAG).e(e, getString(R.string.goggle_sign_in_failed))
             }
 
-    }
+    }*/
 
 
     /**
      * Display One-Tap Sign In with google if user isn't logged in
      * Call this inside [onViewCreated] method
      * */
+    /*
     fun oneTapSignInWithGoogle(webClientId: String) {
         if (currentUser == null) {
             // Configure One Tap UI
@@ -172,13 +179,13 @@ class FirebaseAuthRepository  @Inject constructor(
                     // do nothing and continue presenting the signed-out UI.
                 }
         }
-    }
+    }*/
 
     /**
      *  Result returned from launching the Sign In PendingIntent
      * */
 
-    private fun handleGoogleSignInResult(
+    /*private fun handleGoogleSignInResult(
         data: Intent?
     ) {
         try {
@@ -197,7 +204,7 @@ class FirebaseAuthRepository  @Inject constructor(
             Timber.tag(TAG).w(e, "Google sign in failed")
             userLiveData.postValue(null)
         }
-    }
+    }*/
 
     private fun firebaseAuthWithGoogle(
         idToken: String) {
@@ -212,7 +219,7 @@ class FirebaseAuthRepository  @Inject constructor(
                     userLiveData.postValue(
                         Resource.success(
                             User(
-                                id = currentUser?.uid?.toInt(),
+                                id = currentUser?.uid,
                                 email = currentUser?.email,
                                 fullName = currentUser?.displayName,
                                 password = currentUser?.phoneNumber
@@ -260,9 +267,9 @@ class FirebaseAuthRepository  @Inject constructor(
         userLiveData.postValue(null)
 
         // Google sign out
-        signInClient.signOut().addOnCompleteListener(requireActivity()) {
+       /* signInClient.signOut().addOnCompleteListener(requireActivity()) {
             userLiveData.postValue(null)
-        }
+        }*/
     }
 
     fun saveUser(fullName:String, email: String, password: String) =
@@ -290,7 +297,7 @@ class FirebaseAuthRepository  @Inject constructor(
                     userLiveData.postValue(
                         Resource.success(
                             User(
-                                id = currentUser.uid.toInt(),
+                                id = currentUser.uid,
                                 email = currentUser.email,
                                 fullName = currentUser.displayName,
                                 password = currentUser.phoneNumber

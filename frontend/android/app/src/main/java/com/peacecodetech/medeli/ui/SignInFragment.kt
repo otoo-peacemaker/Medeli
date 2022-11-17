@@ -1,6 +1,7 @@
 package com.peacecodetech.medeli.ui
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,6 +12,7 @@ import com.peacecodetech.medeli.databinding.FragmentSignInBinding
 import com.peacecodetech.medeli.util.BaseFragment
 import com.peacecodetech.medeli.viewmodel.SignInViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import timber.log.Timber
 
 @AndroidEntryPoint
 class SignInFragment : BaseFragment() {
@@ -41,9 +43,15 @@ class SignInFragment : BaseFragment() {
         viewModel.userLiveDataObserver.observe(requireActivity()) {user->
 
             if (user==null){
-                showDialog("Login Error","No credentials found")
+                showDialog("Login Error","No credentials found"){
+                    findNavController().navigate(R.id.action_signInFragment_to_signUpFragment)
+                }
             }else{
                 //TODO: navigate the user to home page
+                showDialog("🤗🤗🤗","Login successfully") {
+                    //TODO
+                    Timber.tag("Login user").d("::::::::::${user.data}")
+                }
             }
         }
 

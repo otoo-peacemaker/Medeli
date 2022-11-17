@@ -33,7 +33,7 @@ class SignUpViewModel @Inject constructor(
                     userLiveData.postValue(
                         Resource.success(
                             User(
-                                id = task.result.user!!.uid.toInt(),
+                                id = task.result.user!!.uid,
                                 email = task.result.user?.email,
                                 fullName = task.result.user?.displayName,
                                 password = task.result.user?.phoneNumber
@@ -55,7 +55,7 @@ class SignUpViewModel @Inject constructor(
     }
 
 
-    fun sendEmailVerification(isEnable: Button? = null) {
+    private fun sendEmailVerification(isEnable: Button? = null) {
         // Disable button
         isEnable?.isEnabled = false
         // Send verification email
@@ -81,9 +81,9 @@ class SignUpViewModel @Inject constructor(
             }
         }
     }
-
+/*
     fun signUpWithGoogle(string: String): LiveData<Resource<User>> {
         repository.signInWithGoogle(string)
         return userLiveData
-    }
+    }*/
 }
