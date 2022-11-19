@@ -1,15 +1,16 @@
 package com.peacecodetech.medeli.ui
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import com.google.android.gms.common.api.ApiException
 import com.peacecodetech.medeli.R
 import com.peacecodetech.medeli.databinding.FragmentSignInBinding
 import com.peacecodetech.medeli.util.BaseFragment
+import com.peacecodetech.medeli.util.Status
 import com.peacecodetech.medeli.viewmodel.SignInViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
@@ -20,7 +21,7 @@ class SignInFragment : BaseFragment() {
     private var _binding: FragmentSignInBinding? = null
     private val binding get() = _binding!!
 
-    private  val viewModel: SignInViewModel by viewModels()
+    private val viewModel: SignInViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,21 +41,6 @@ class SignInFragment : BaseFragment() {
             loginUser()
         }
 
-        viewModel.userLiveDataObserver.observe(requireActivity()) {user->
-
-            if (user==null){
-                showDialog("Login Error","No credentials found"){
-                    findNavController().navigate(R.id.action_signInFragment_to_signUpFragment)
-                }
-            }else{
-                //TODO: navigate the user to home page
-                showDialog("🤗🤗🤗","Login successfully") {
-                    //TODO
-                    Timber.tag("Login user").d("::::::::::${user.data}")
-                }
-            }
-        }
-
 
         binding.signUpText.setOnClickListener {
             findNavController().navigate(R.id.action_signInFragment_to_signUpFragment)
@@ -64,11 +50,41 @@ class SignInFragment : BaseFragment() {
     }
 
 
-    private fun loginUser(){
-        with(binding){
+    private fun loginUser() {
+        with(binding) {
             val email = emailId.text.toString()
-            val password  = passwordId.text.toString()
-            viewModel.loginUser(email,password)
+            val password = passwordId.text.toString()
+
+            try {
+                viewModel.loginUser(email, password).observe(viewLifecycleOwner) {
+                    when (it?.status) {
+                        Status.SUCCESS -> {
+                            Timber.tag("Login user").d("::::::::::${it.data}")
+                            showDialog(" Login successful", "${it.message}") {
+                                //TODO
+                            }
+                        }
+                        Status.ERROR -> {
+                            showDialog("Login Error", "${it.message}") {
+                             //   findNavController().navigate(R.id.action_signInFragment_to_signUpFragment)
+                            }
+                        }
+                        Status.LOADING -> {
+                            //TODO()
+                        }
+                        null -> {
+                            showDialog("Login Error", "No credentials found") {
+                                findNavController().navigate(R.id.action_signInFragment_to_signUpFragment)
+                            }
+                        }
+                    }
+                }
+            } catch (e: ApiException) {
+                showDialog("Login Error", "${e.message}") {
+                    //  findNavController().navigate(R.id.action_signInFragment_to_signUpFragment)
+                }
+            }
+
         }
     }
 

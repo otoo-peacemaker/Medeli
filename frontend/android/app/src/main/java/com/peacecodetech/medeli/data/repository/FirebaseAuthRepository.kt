@@ -1,21 +1,15 @@
 package com.peacecodetech.medeli.data.repository
 
-import android.app.Activity
+
 import android.app.PendingIntent
 import android.content.ContentValues.TAG
-import android.content.Context
-import android.content.Intent
 import android.content.IntentSender
 import android.widget.Button
 import android.widget.Toast
 import androidx.activity.result.IntentSenderRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.lifecycle.MutableLiveData
-import com.google.android.gms.auth.api.identity.BeginSignInRequest
-import com.google.android.gms.auth.api.identity.GetSignInIntentRequest
-import com.google.android.gms.auth.api.identity.Identity
-import com.google.android.gms.auth.api.identity.SignInClient
-import com.google.android.gms.common.api.ApiException
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -25,11 +19,10 @@ import com.peacecodetech.medeli.R
 import com.peacecodetech.medeli.model.User
 import com.peacecodetech.medeli.util.BaseFragment
 import com.peacecodetech.medeli.util.Resource
-import dagger.hilt.android.qualifiers.ActivityContext
 import timber.log.Timber
 import javax.inject.Inject
 
-class FirebaseAuthRepository  @Inject constructor(
+class FirebaseAuthRepository @Inject constructor(
     private val auth: FirebaseAuth,
     //private var signInClient: SignInClient,
     private val fireStore: FirebaseFirestore
@@ -39,8 +32,6 @@ class FirebaseAuthRepository  @Inject constructor(
      * A variable for current user
      * */
     private val currentUser = auth.currentUser
-
-
 
 
     /***
@@ -53,7 +44,7 @@ class FirebaseAuthRepository  @Inject constructor(
      * */
     private val signInLauncher =
         registerForActivityResult(ActivityResultContracts.StartIntentSenderForResult()) { result ->
-          //  handleGoogleSignInResult(result.data)
+            //  handleGoogleSignInResult(result.data)
         }
 
     init {
@@ -69,20 +60,19 @@ class FirebaseAuthRepository  @Inject constructor(
      * @param password user password
      * @sample updateUI
      * */
-    fun signUpWithEmail(
-        isEnable: Button? = null,
-        email: String,
-        password: String)= auth.createUserWithEmailAndPassword(email, password)
-
+    fun signUpWithEmail(isEnable: Button? = null, email: String, password: String) =
+        auth.createUserWithEmailAndPassword(email, password)
 
 
     /**
      * @param isEnable enable or disable your UI buttons
      * */
-
     fun sendEmailVerification(isEnable: Button? = null) = currentUser?.sendEmailVerification()
 
-    fun forgotPassword()=currentUser
+    /**
+     * @param email enter email to send a password reset
+     * */
+    fun sendPasswordResetEmail(email: String) = auth.sendPasswordResetEmail(email)
 
 
     /**
@@ -93,45 +83,18 @@ class FirebaseAuthRepository  @Inject constructor(
      * @sample updateUI
      * */
 
-    fun signInExistingUserWithEmail(
-        isEnable: Boolean? = null,
-        email: String,
-        password: String
-    ) {
+    fun signInExistingUserWithEmail(isEnable: Boolean? = null, email: String, password: String) =
         auth.signInWithEmailAndPassword(email, password)
-            .addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-                    // Sign in success, update UI with the signed-in user's information
-                    Timber.tag(TAG).d("signInWithEmail:success")
-                    //   _updateUserUI.postValue(currentUser)
-                    userLiveData.postValue(
-                        Resource.success(
-                            User(
-                                id = currentUser?.uid,
-                                email = currentUser?.email,
-                                fullName = currentUser?.displayName,
-                                password = currentUser?.phoneNumber
-                            )
-                        )
-                    )
 
-                } else {
-                    // If sign in fails, display a message to the user.
-                    Timber.tag(TAG).w(task.exception, "signInWithEmail:failure")
-                    Toast.makeText(requireContext(), "Authentication failed.", Toast.LENGTH_SHORT)
-                        .show()
-                    userLiveData.postValue(
-                        Resource.error(
-                            null,
-                            message = task.exception?.message.toString()
-                        )
-                    )
-                }
-            }
-    }
+
+    fun signInWithGoogle(acct: GoogleSignInAccount) = auth.signInWithCredential(
+        GoogleAuthProvider.getCredential(acct.idToken, null)
+    )
+
 
 /*
-    *//**
+    */
+    /**
      * Sign in with google using the [firebaseAuthWithGoogle]
      * @param webClientId your client id from google console
      * *//*
@@ -150,36 +113,35 @@ class FirebaseAuthRepository  @Inject constructor(
     }*/
 
 
-    /**
-     * Display One-Tap Sign In with google if user isn't logged in
-     * Call this inside [onViewCreated] method
-     * */
-    /*
-    fun oneTapSignInWithGoogle(webClientId: String) {
-        if (currentUser == null) {
-            // Configure One Tap UI
-            val oneTapRequest = BeginSignInRequest.builder()
-                .setGoogleIdTokenRequestOptions(
-                    BeginSignInRequest.GoogleIdTokenRequestOptions.builder()
-                        .setSupported(true)
-                        .setServerClientId(webClientId)
-                        .setFilterByAuthorizedAccounts(true)
-                        .build()
-                )
-                .build()
+    /* *
+      * Display One-Tap Sign In with google if user isn't logged in
+      * Call this inside [onViewCreated] method
+      *
+     fun oneTapSignInWithGoogle(webClientId: String) {
+         if (currentUser == null) {
+             // Configure One Tap UI
+             val oneTapRequest = BeginSignInRequest.builder()
+                 .setGoogleIdTokenRequestOptions(
+                     BeginSignInRequest.GoogleIdTokenRequestOptions.builder()
+                         .setSupported(true)
+                         .setServerClientId(webClientId)
+                         .setFilterByAuthorizedAccounts(true)
+                         .build()
+                 )
+                 .build()
 
-            // Display the One Tap UI
-            signInClient.beginSignIn(oneTapRequest)
-                .addOnSuccessListener { result ->
-                    launchGoogleSignIn(result.pendingIntent)
-                }
-                .addOnFailureListener { e ->
-                    Timber.tag("OnTap").d(e)
-                    // No saved credentials found. Launch the One Tap sign-up flow, or
-                    // do nothing and continue presenting the signed-out UI.
-                }
-        }
-    }*/
+             // Display the One Tap UI
+             signInClient.beginSignIn(oneTapRequest)
+                 .addOnSuccessListener { result ->
+                     launchGoogleSignIn(result.pendingIntent)
+                 }
+                 .addOnFailureListener { e ->
+                     Timber.tag("OnTap").d(e)
+                     // No saved credentials found. Launch the One Tap sign-up flow, or
+                     // do nothing and continue presenting the signed-out UI.
+                 }
+         }
+     }*/
 
     /**
      *  Result returned from launching the Sign In PendingIntent
@@ -207,7 +169,8 @@ class FirebaseAuthRepository  @Inject constructor(
     }*/
 
     private fun firebaseAuthWithGoogle(
-        idToken: String) {
+        idToken: String
+    ) {
         showProgressBar()
         val credential = GoogleAuthProvider.getCredential(idToken, null)
         auth.signInWithCredential(credential)
@@ -267,12 +230,12 @@ class FirebaseAuthRepository  @Inject constructor(
         userLiveData.postValue(null)
 
         // Google sign out
-       /* signInClient.signOut().addOnCompleteListener(requireActivity()) {
-            userLiveData.postValue(null)
-        }*/
+        /* signInClient.signOut().addOnCompleteListener(requireActivity()) {
+             userLiveData.postValue(null)
+         }*/
     }
 
-    fun saveUser(fullName:String, email: String, password: String) =
+    fun saveUser(fullName: String, email: String, password: String) =
         fireStore.collection("users").document(email).set(
             User(
                 uid = currentUser?.uid,

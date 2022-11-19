@@ -62,7 +62,7 @@ class SignUpFragment : BaseFragment() {
                     showProgressBar()
                 }
                 Status.SUCCESS -> {
-                    viewModel.saveUser(username, emailText, password)
+                    viewModel.saveUser(username, emailText, password)//Save data to the room
                     Timber.tag("Login user").d("::::::::::${it.data}")
                     showDialog(
                         "Sign up successfully",
