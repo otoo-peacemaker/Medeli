@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.tasks.RuntimeExecutionException
+import com.google.firebase.auth.FirebaseAuth
 import com.peacecodetech.medeli.data.repository.FirebaseAuthRepository
 import com.peacecodetech.medeli.model.User
 import com.peacecodetech.medeli.util.NetworkManager
@@ -23,7 +24,8 @@ import javax.inject.Inject
 class SignInViewModel
 @Inject constructor(
     private val networkControl: NetworkManager,
-    private val repository: FirebaseAuthRepository
+    private val repository: FirebaseAuthRepository,
+    private  var auth: FirebaseAuth
 ) : ViewModel() {
 
     /***
@@ -36,7 +38,7 @@ class SignInViewModel
     fun loginUser(email: String, password: String): LiveData<Resource<User>?> {
         viewModelScope.launch {
             try {
-                if (validatePassword(password) and isValidString(email)) {
+                if (email.isNotEmpty() and password.isNotEmpty()) {
                     repository.signInExistingUserWithEmail(email = email, password = password)
                         .addOnCompleteListener { task ->
                             if (task.isSuccessful) {
@@ -74,7 +76,7 @@ class SignInViewModel
                     _userLiveDataObserver.postValue(
                         Resource.error(
                             data = null,
-                            "Please, email and password mismatch"
+                            "Please, fill all fields"
                         )
                     )
                 }

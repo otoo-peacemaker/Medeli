@@ -60,7 +60,7 @@ class SignInFragment : BaseFragment() {
                     when (it?.status) {
                         Status.SUCCESS -> {
                             Timber.tag("Login user").d("::::::::::${it.data}")
-                            showDialog(" Login successful", "${it.message}") {
+                            showDialog(" Login", "Login successful") {
                                 //TODO
                             }
                         }
@@ -73,14 +73,12 @@ class SignInFragment : BaseFragment() {
                             //TODO()
                         }
                         null -> {
-                            showDialog("Login Error", "No credentials found") {
-                                findNavController().navigate(R.id.action_signInFragment_to_signUpFragment)
-                            }
+                           //TODO
                         }
                     }
                 }
             } catch (e: ApiException) {
-                showDialog("Login Error", "${e.message}") {
+                showDialog("Login ApiException", "${e.message}") {
                     //  findNavController().navigate(R.id.action_signInFragment_to_signUpFragment)
                 }
             }
