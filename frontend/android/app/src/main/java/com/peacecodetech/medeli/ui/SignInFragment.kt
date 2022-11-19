@@ -36,16 +36,13 @@ class SignInFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
         binding.loginBtn.setOnClickListener {
             loginUser()
         }
 
-
         binding.signUpText.setOnClickListener {
             findNavController().navigate(R.id.action_signInFragment_to_signUpFragment)
         }
-
 
     }
 

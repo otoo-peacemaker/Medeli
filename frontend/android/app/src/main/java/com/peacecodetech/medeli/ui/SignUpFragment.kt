@@ -51,32 +51,36 @@ class SignUpFragment : BaseFragment() {
         val username = binding.nameId.text.toString()
         val emailText = binding.emailId.text?.trim().toString()
         val password = binding.passwordId.text.toString()
+        val phoneNumber = binding.phoneId.text.toString()
         val confirmPassword = binding.passwordId.text.toString()
 
-
-
-        viewModel.registerUser(email = emailText, password = password).observe(viewLifecycleOwner) {
-            when (it.status) {
-                Status.LOADING -> {
-                    //TODO
-                    showProgressBar()
-                }
-                Status.SUCCESS -> {
-                    viewModel.saveUser(username, emailText, password)//Save data to the room
-                    Timber.tag("Login user").d("::::::::::${it.data}")
-                    showDialog(
-                        "Sign up successfully",
-                        "Please, verify your account from $emailText"
-                    ) {
-                        findNavController().navigate(R.id.action_signUpFragment_to_signInFragment)
+        if (password == confirmPassword){
+            viewModel.registerUser(email = emailText, password = password, phoneNumber = phoneNumber).observe(viewLifecycleOwner) {
+                when (it.status) {
+                    Status.LOADING -> {
+                        //TODO
+                        showProgressBar()
                     }
-                    //TODO
-                }
-                Status.ERROR -> {
-                    view?.showSnackBar(it.message!!)
+                    Status.SUCCESS -> {
+                        viewModel.saveUser(username, emailText, password)//Save data to the room
+                        Timber.tag("Login user").d("::::::::::${it.data}")
+                        showDialog(
+                            "Sign up successfully",
+                            "Please, verify your account from $emailText"
+                        ) {
+                            findNavController().navigate(R.id.action_signUpFragment_to_signInFragment)
+                        }
+                        //TODO
+                    }
+                    Status.ERROR -> {
+                        showDialog("Registration error", it.message!!) {}
+                    }
                 }
             }
+        }else {
+            showDialog("Registration error","Password and confirm password  mismatch") {}
         }
+
 
     }
 
