@@ -12,6 +12,24 @@ Project resources.
 * [UI/UX Designs](https://www.figma.com/file/AyHDaS14pMbJRusNVHyEHj/Taha-Pharmacy-preview-(Community)?node-id=1%3A9718&t=TI6PpYfKv4xYCAdD-0)
 * [Run the app here](https://appetize.io/app/ngcnjmrfdbpmeujz4ttnadx2su?device=pixel4&osVersion=11.0&scale=75)
 
+Project features
+-----------------
+* Support dark and light theme
+* Login and registration with firebase
+* To be continue.....
+
+
+Libraries and tools
+-------------------
+* Android studio
+* Kotlin
+* coroutines
+* navigation component
+* LiveData
+* DI with dagger/hilt
+* room
+* firebase auth and cloud store
+
 
 Architectural design
 ----------------------
