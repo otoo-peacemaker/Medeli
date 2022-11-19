@@ -60,20 +60,20 @@ class SignInFragment : BaseFragment() {
                     when (it?.status) {
                         Status.SUCCESS -> {
                             Timber.tag("Login user").d("::::::::::${it.data}")
-                            showDialog(" Login", "Login successful") {
-                                //TODO
+                            showDialog(" Login", "Login successful ${it.data}") {
+                                //TODO AFTER OK BUTTON IS PRESSED
                             }
                         }
                         Status.ERROR -> {
                             showDialog("Login Error", "${it.message}") {
-                             //   findNavController().navigate(R.id.action_signInFragment_to_signUpFragment)
+                                //TODO AFTER OK BUTTON IS PRESSED
                             }
                         }
                         Status.LOADING -> {
-                            //TODO()
+                            //TODO() SET LOADING SCREEN
                         }
                         null -> {
-                           //TODO
+                                // TODO : This is always null
                         }
                     }
                 }

@@ -39,21 +39,20 @@ class SignInViewModel
         viewModelScope.launch {
             try {
                 if (email.isNotEmpty() and password.isNotEmpty()) {
+                    Resource.loading(null)
                     repository.signInExistingUserWithEmail(email = email, password = password)
                         .addOnCompleteListener { task ->
                             if (task.isSuccessful) {
                                 // Sign in success, update UI with the signed-in user's information
                                 //TODO:  CHECK IF EMAIL IS VERIFIED
-                                Timber.tag(ContentValues.TAG)
-                                    .d("signInWithEmail:success ${task.result}")
+                                Timber.tag(ContentValues.TAG).d("signInWithEmail:success ${task.result}")
                                 //   _updateUserUI.postValue(currentUser)
+                                val user = auth.currentUser
                                 _userLiveDataObserver.postValue(
                                     Resource.success(
                                         User(
-                                            id = task.result.user?.uid,
-                                            email = task.result.user?.email,
-                                            fullName = task.result.user?.displayName,
-                                            password = task.result.user?.phoneNumber
+                                            uid = user?.uid,
+                                            email = user?.email,
                                         )
                                     )
                                 )
