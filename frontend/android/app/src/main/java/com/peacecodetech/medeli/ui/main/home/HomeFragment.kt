@@ -1,4 +1,4 @@
-package com.peacecodetech.medeli.ui.ui.home
+package com.peacecodetech.medeli.ui.main.home
 
 import android.os.Bundle
 import android.view.LayoutInflater

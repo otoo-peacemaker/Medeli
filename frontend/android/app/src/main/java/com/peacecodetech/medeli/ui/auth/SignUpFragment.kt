@@ -1,19 +1,15 @@
-package com.peacecodetech.medeli.ui
+package com.peacecodetech.medeli.ui.auth
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.peacecodetech.medeli.R
 import com.peacecodetech.medeli.databinding.FragmentSignUpBinding
 import com.peacecodetech.medeli.util.BaseFragment
 import com.peacecodetech.medeli.util.Status
-import com.peacecodetech.medeli.util.showSnackBar
-import com.peacecodetech.medeli.viewmodel.SignUpViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
 

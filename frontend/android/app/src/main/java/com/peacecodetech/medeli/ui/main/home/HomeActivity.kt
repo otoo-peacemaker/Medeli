@@ -1,4 +1,4 @@
-package com.peacecodetech.medeli.ui
+package com.peacecodetech.medeli.ui.main.home
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

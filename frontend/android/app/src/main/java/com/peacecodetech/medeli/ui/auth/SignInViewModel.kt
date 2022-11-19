@@ -1,4 +1,4 @@
-package com.peacecodetech.medeli.viewmodel
+package com.peacecodetech.medeli.ui.auth
 
 import android.content.ContentValues
 import android.text.TextUtils
@@ -13,8 +13,6 @@ import com.peacecodetech.medeli.data.repository.FirebaseAuthRepository
 import com.peacecodetech.medeli.model.User
 import com.peacecodetech.medeli.util.NetworkManager
 import com.peacecodetech.medeli.util.Resource
-import com.peacecodetech.medeli.util.isValidString
-import com.peacecodetech.medeli.util.validatePassword
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import timber.log.Timber

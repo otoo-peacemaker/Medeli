@@ -1,4 +1,4 @@
-package com.peacecodetech.medeli.ui.ui.notifications
+package com.peacecodetech.medeli.ui.main.notifications
 
 import android.os.Bundle
 import android.view.LayoutInflater

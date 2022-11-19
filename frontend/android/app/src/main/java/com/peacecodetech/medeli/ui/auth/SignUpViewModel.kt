@@ -1,4 +1,4 @@
-package com.peacecodetech.medeli.viewmodel
+package com.peacecodetech.medeli.ui.auth
 
 import android.content.ContentValues.TAG
 import android.widget.Button

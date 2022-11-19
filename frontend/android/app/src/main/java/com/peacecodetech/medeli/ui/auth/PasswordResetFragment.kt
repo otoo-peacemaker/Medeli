@@ -1,4 +1,4 @@
-package com.peacecodetech.medeli.ui
+package com.peacecodetech.medeli.ui.auth
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +10,6 @@ import com.peacecodetech.medeli.R
 import com.peacecodetech.medeli.databinding.FragmentPasswordResetBinding
 import com.peacecodetech.medeli.util.BaseFragment
 import com.peacecodetech.medeli.util.Status
-import com.peacecodetech.medeli.viewmodel.SignInViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

@@ -1,4 +1,4 @@
-package com.peacecodetech.medeli.ui.ui.home
+package com.peacecodetech.medeli.ui.main.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

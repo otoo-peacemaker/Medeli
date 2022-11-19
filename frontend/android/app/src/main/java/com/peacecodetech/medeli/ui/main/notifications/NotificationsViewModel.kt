@@ -1,4 +1,4 @@
-package com.peacecodetech.medeli.ui.ui.notifications
+package com.peacecodetech.medeli.ui.main.notifications
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

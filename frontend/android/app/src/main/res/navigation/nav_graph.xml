@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/signInFragment"
-        android:name="com.peacecodetech.medeli.ui.SignInFragment"
+        android:name="com.peacecodetech.medeli.ui.auth.SignInFragment"
         android:label="fragment_sign_in"
         tools:layout="@layout/fragment_sign_in">
         <action
@@ -31,7 +31,7 @@
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.peacecodetech.medeli.ui.SignUpFragment"
+        android:name="com.peacecodetech.medeli.ui.auth.SignUpFragment"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up">
         <action
@@ -40,7 +40,7 @@
     </fragment>
     <fragment
         android:id="@+id/passwordResetFragment"
-        android:name="com.peacecodetech.medeli.ui.PasswordResetFragment"
+        android:name="com.peacecodetech.medeli.ui.auth.PasswordResetFragment"
         android:label="fragment_password_reset"
         tools:layout="@layout/fragment_password_reset" >
         <action
