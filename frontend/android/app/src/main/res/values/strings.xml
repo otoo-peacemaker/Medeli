@@ -26,4 +26,8 @@
     <string name="username">Username</string>
     <string name="web_client_id">provide_web_client</string>
     <string name="phone_number">Phone number</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="set_text_in_oncreate_method">Set text in oncreate method</string>
+    <string name="send_email">Send email</string>
 </resources>

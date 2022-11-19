@@ -35,15 +35,18 @@ class SignInFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setListeners()
+    }
 
-        binding.loginBtn.setOnClickListener {
-            loginUser()
+
+    private fun setListeners() {
+        with(binding) {
+            loginBtn.setOnClickListener {
+                loginUser()
+            }
+            signUpText.setOnClickListener { findNavController().navigate(R.id.action_signInFragment_to_signUpFragment) }
+            forgotPss.setOnClickListener { findNavController().navigate(R.id.action_signInFragment_to_passwordResetFragment) }
         }
-
-        binding.signUpText.setOnClickListener {
-            findNavController().navigate(R.id.action_signInFragment_to_signUpFragment)
-        }
-
     }
 
 

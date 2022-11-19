@@ -90,6 +90,7 @@ class SignInViewModel
     }
 
     fun signInWithGoogle(acct: GoogleSignInAccount): LiveData<Resource<User>?> {
+        Resource.loading(null)
         repository.signInWithGoogle(acct).addOnCompleteListener { task ->
             if (task.isSuccessful) {
                 _userLiveDataObserver.postValue(
@@ -109,6 +110,7 @@ class SignInViewModel
 
 
     fun sendPasswordResetEmail(email: String): LiveData<Resource<User>?> {
+        Resource.loading(null)
         if (TextUtils.isEmpty(email)) {
             _userLiveDataObserver.postValue(Resource.error(null, "Enter registered email"))
         } else if (networkControl.isConnected()) {

@@ -81,7 +81,6 @@ class SignUpFragment : BaseFragment() {
             showDialog("Registration error","Password and confirm password  mismatch") {}
         }
 
-
     }
 
 

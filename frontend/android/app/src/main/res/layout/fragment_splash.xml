@@ -5,7 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/layoutStyle"
     tools:context=".ui.SplashFragment">
 
     <!--header-->
@@ -17,6 +16,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
+            style="@style/layoutStyle"
             android:layout_height="wrap_content">
 
             <TextView
@@ -59,7 +59,7 @@
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="@dimen/_30sdp"
                 android:clickable="true"
                 android:focusable="true"
                 android:text="@string/skip_for_now"
