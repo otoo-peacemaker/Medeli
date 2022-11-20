@@ -1,18 +1,27 @@
 package com.peacecodetech.medeli.ui.auth
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.common.api.ApiException
 import com.peacecodetech.medeli.R
 import com.peacecodetech.medeli.databinding.FragmentSignInBinding
+import com.peacecodetech.medeli.ui.main.home.HomeActivity
 import com.peacecodetech.medeli.util.BaseFragment
+import com.peacecodetech.medeli.util.Constants.RC_SIGN_IN
 import com.peacecodetech.medeli.util.Status
+import com.peacecodetech.medeli.util.showSnackBar
+import com.peacecodetech.medeli.util.startHomeActivity
 import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class SignInFragment : BaseFragment() {
@@ -21,6 +30,9 @@ class SignInFragment : BaseFragment() {
     private val binding get() = _binding!!
 
     private val viewModel: SignInViewModel by viewModels()
+
+    @Inject
+    lateinit var googleSignInClient: GoogleSignInClient
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -45,9 +57,9 @@ class SignInFragment : BaseFragment() {
             }
             signUpText.setOnClickListener { findNavController().navigate(R.id.action_signInFragment_to_signUpFragment) }
             forgotPss.setOnClickListener { findNavController().navigate(R.id.action_signInFragment_to_passwordResetFragment) }
+            signInWithGoogle.setOnClickListener { signInWithGoogle() }
         }
     }
-
 
     private fun loginUser() {
         with(binding) {
@@ -60,7 +72,7 @@ class SignInFragment : BaseFragment() {
                         Status.SUCCESS -> {
                             Timber.tag("Login user").d("::::::::::${it.data}")
                             showDialog(" Login", "Login successful ${it.data}") {
-                                //TODO AFTER OK BUTTON IS PRESSED
+                                context?.startHomeActivity()
                             }
                         }
                         Status.ERROR -> {
@@ -83,6 +95,53 @@ class SignInFragment : BaseFragment() {
             }
 
         }
+    }
+
+    fun signInWithGoogle(){
+        val signInIntent: Intent = googleSignInClient.signInIntent
+        startActivityForResult(signInIntent, RC_SIGN_IN)
+    }
+
+    @Deprecated("Deprecated in Java")
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == RC_SIGN_IN) {
+
+            val task = GoogleSignIn.getSignedInAccountFromIntent(data)
+            try {
+                val account = task.getResult(ApiException::class.java)
+
+                viewModel.signInWithGoogle(account!!).observe(viewLifecycleOwner) {
+                    when (it?.status) {
+                        Status.SUCCESS -> {
+                            if (findNavController().currentDestination?.id == R.id.signInFragment) {
+                                startActivity(Intent(activity, HomeActivity::class.java))
+                               // Timber.d("$TAG ::::: ${auth.currentUser?.displayName} ")
+                            }
+                        }
+                        Status.ERROR -> {
+                          //  binding.normalLoader.visibility = View.INVISIBLE
+                            requireView().showSnackBar(it.message!!)
+                        }
+
+                        Status.LOADING -> {
+                            //binding.normalLoader.visibility = View.VISIBLE
+                        }
+                        else -> {
+                            //TODO
+                        }
+                    }
+                }
+            } catch (e: ApiException) {
+                Toast.makeText(requireContext(), e.message, Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+
+    companion object {
+        val TAG: String = SignInFragment::class.java.simpleName
+        fun signInFragmentInstance() = SignInFragment()
     }
 
     override fun onDestroyView() {

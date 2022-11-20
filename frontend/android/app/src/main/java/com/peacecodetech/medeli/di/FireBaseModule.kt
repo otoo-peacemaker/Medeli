@@ -38,11 +38,7 @@ class FireBaseModule {
             .requestIdToken(context.getString(R.string.web_client_id))
             .requestEmail()
             .build()
-/*
-    @Provides
-    @ActivityContext
-    fun provideSignInClient(@ActivityContext context: Context) =
-        Identity.getSignInClient(context)*/
+
 
     @Provides
     @Singleton

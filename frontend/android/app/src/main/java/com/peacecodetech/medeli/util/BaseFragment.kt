@@ -1,11 +1,13 @@
 package com.peacecodetech.medeli.util
 
 import android.content.Context
+import android.content.Intent
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.peacecodetech.medeli.ui.main.home.HomeActivity
 
 open class BaseFragment : Fragment() {
 
