@@ -13,10 +13,12 @@ Project resources.
 * [Run the app here](https://appetize.io/app/ngcnjmrfdbpmeujz4ttnadx2su?device=pixel4&osVersion=11.0&scale=75)
 * [APK file](https://drive.google.com/file/d/1TgS2YMke2-Q3o63sWUPyPy5sJN7JUEf-/view)
 
-Project features
+Current Project features
 -----------------
 * Support dark and light theme
 * Login and registration with firebase
+* Reset password
+* continue with google
 * To be continue.....
 
 
