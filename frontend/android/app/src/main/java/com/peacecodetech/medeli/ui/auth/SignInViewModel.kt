@@ -23,7 +23,7 @@ class SignInViewModel
 @Inject constructor(
     private val networkControl: NetworkManager,
     private val repository: FirebaseAuthRepository,
-    private  var auth: FirebaseAuth
+    auth: FirebaseAuth
 ) : ViewModel() {
 
     /***
@@ -32,6 +32,8 @@ class SignInViewModel
 
     private val _userLiveDataObserver: MutableLiveData<Resource<User>?> =
         MutableLiveData<Resource<User>?>()
+
+    private val user = auth.currentUser
 
     fun loginUser(email: String, password: String): LiveData<Resource<User>?> {
         viewModelScope.launch {
@@ -45,7 +47,6 @@ class SignInViewModel
                                 //TODO:  CHECK IF EMAIL IS VERIFIED
                                 Timber.tag(ContentValues.TAG).d("signInWithEmail:success ${task.result}")
                                 //   _updateUserUI.postValue(currentUser)
-                                val user = auth.currentUser
                                 _userLiveDataObserver.postValue(
                                     Resource.success(
                                         User(
@@ -94,8 +95,8 @@ class SignInViewModel
                 _userLiveDataObserver.postValue(
                     Resource.success(
                         User(
-                            email = task.result.user?.email,
-                            fullName = task.result.user?.displayName
+                            email = user?.email,
+                            fullName = user?.displayName
                         )
                     )
                 )

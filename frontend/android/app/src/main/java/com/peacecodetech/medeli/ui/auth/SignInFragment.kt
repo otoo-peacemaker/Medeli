@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.result.ActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -13,12 +15,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.common.api.ApiException
 import com.peacecodetech.medeli.R
 import com.peacecodetech.medeli.databinding.FragmentSignInBinding
-import com.peacecodetech.medeli.ui.main.home.HomeActivity
-import com.peacecodetech.medeli.util.BaseFragment
-import com.peacecodetech.medeli.util.Constants.RC_SIGN_IN
-import com.peacecodetech.medeli.util.Status
-import com.peacecodetech.medeli.util.showSnackBar
-import com.peacecodetech.medeli.util.startHomeActivity
+import com.peacecodetech.medeli.util.*
 import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
 import javax.inject.Inject
@@ -33,6 +30,9 @@ class SignInFragment : BaseFragment() {
 
     @Inject
     lateinit var googleSignInClient: GoogleSignInClient
+
+    @Inject
+    lateinit var isNetworkAvailable: NetworkManager
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -84,7 +84,7 @@ class SignInFragment : BaseFragment() {
                             //TODO() SET LOADING SCREEN
                         }
                         null -> {
-                                // TODO : This is always null
+                            // TODO : This is always null
                         }
                     }
                 }
@@ -97,46 +97,50 @@ class SignInFragment : BaseFragment() {
         }
     }
 
-    fun signInWithGoogle(){
-        val signInIntent: Intent = googleSignInClient.signInIntent
-        startActivityForResult(signInIntent, RC_SIGN_IN)
-    }
+    private fun signInWithGoogle() {
 
-    @Deprecated("Deprecated in Java")
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == RC_SIGN_IN) {
-
-            val task = GoogleSignIn.getSignedInAccountFromIntent(data)
-            try {
-                val account = task.getResult(ApiException::class.java)
-
-                viewModel.signInWithGoogle(account!!).observe(viewLifecycleOwner) {
-                    when (it?.status) {
-                        Status.SUCCESS -> {
-                            if (findNavController().currentDestination?.id == R.id.signInFragment) {
-                                startActivity(Intent(activity, HomeActivity::class.java))
-                               // Timber.d("$TAG ::::: ${auth.currentUser?.displayName} ")
-                            }
-                        }
-                        Status.ERROR -> {
-                          //  binding.normalLoader.visibility = View.INVISIBLE
-                            requireView().showSnackBar(it.message!!)
-                        }
-
-                        Status.LOADING -> {
-                            //binding.normalLoader.visibility = View.VISIBLE
-                        }
-                        else -> {
-                            //TODO
-                        }
-                    }
-                }
-            } catch (e: ApiException) {
-                Toast.makeText(requireContext(), e.message, Toast.LENGTH_SHORT).show()
-            }
+        if (isNetworkAvailable.isConnected()) {
+            val signInIntent: Intent = googleSignInClient.signInIntent
+            startForResult.launch(signInIntent)
+        } else {
+            view?.showSnackBar("Please, check your internet connection")
         }
     }
+
+    private val startForResult =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
+            if (result.resultCode == Constants.RC_SIGN_IN) {
+                val intent = result.data
+                val task = GoogleSignIn.getSignedInAccountFromIntent(intent)
+                try {
+                    val account = task.getResult(ApiException::class.java)
+                    viewModel.signInWithGoogle(account!!).observe(viewLifecycleOwner) {
+                        when (it?.status) {
+                            Status.SUCCESS -> {
+                                // binding.signUpBtn.isEnabled = true
+                                // binding.normalLoader.visibility = View.INVISIBLE
+                                if (findNavController().currentDestination?.id == R.id.signUpFragment) {
+                                    context?.startHomeActivity()
+                                    Timber.d("display ${it.data?.fullName} ")
+                                }
+                            }
+                            Status.ERROR -> {
+                                requireView().showSnackBar(it.message!!)
+                            }
+                            Status.LOADING -> {
+                                // binding.signUpBtn.isEnabled = false
+                                //  binding.normalLoader.visibility = View.VISIBLE
+                            }
+                            else -> {
+                                //TODO
+                            }
+                        }
+                    }
+                } catch (e: ApiException) {
+                    Toast.makeText(requireContext(), e.message, Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
 
 
     companion object {

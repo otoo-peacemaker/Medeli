@@ -6,8 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.result.ActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -104,51 +105,53 @@ class SignUpFragment : BaseFragment() {
     private fun signInWithGoogle() {
         if (isNetworkAvailable.isConnected()) {
             val signInIntent: Intent = googleSignInClient.signInIntent
-            startActivityForResult(signInIntent, Constants.RC_SIGN_IN)
+            startForResult.launch(signInIntent)
         } else {
             view?.showSnackBar("Please, check your internet connection")
         }
 
     }
 
-    @Deprecated("Deprecated in Java")//GOOGLE SIGN IN
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == Constants.RC_SIGN_IN) {
-            val task = GoogleSignIn.getSignedInAccountFromIntent(data)
-            try {
-                val account = task.getResult(ApiException::class.java)
-                lViewModel.signInWithGoogle(account!!).observe(viewLifecycleOwner, Observer {
-                    when (it?.status) {
-                        Status.SUCCESS -> {
-                            binding.signUpBtn.isEnabled = true
-                            // binding.normalLoader.visibility = View.INVISIBLE
-                            if (findNavController().currentDestination?.id == R.id.signUpFragment) {
-                                context?.startHomeActivity()
-                                // Timber.d("display ${auth.currentUser?.displayName} ")
+    private val startForResult =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
+            if (result.resultCode == Constants.RC_SIGN_IN) {
+                val intent = result.data
+                val task = GoogleSignIn.getSignedInAccountFromIntent(intent)
+                try {
+                    val account = task.getResult(ApiException::class.java)
+                    lViewModel.signInWithGoogle(account!!).observe(viewLifecycleOwner) {
+                        when (it?.status) {
+                            Status.SUCCESS -> {
+                                binding.signUpBtn.isEnabled = true
+                                // binding.normalLoader.visibility = View.INVISIBLE
+                                if (findNavController().currentDestination?.id == R.id.signUpFragment) {
+                                    context?.startHomeActivity()
+                                    Timber.d("display ${it.data?.fullName} ")
+                                }
+                                viewModel.saveUser(
+                                    fullName = it.data?.fullName!!,
+                                    email = it.data.email!!,
+                                    password = "null"
+                                )
                             }
-                            /* viewModel.saveUser(
-                                 auth.currentUser?.displayName!!,
-                                 auth.currentUser?.email!!, ""
-                             )*/
-                        }
-                        Status.ERROR -> {
-                            requireView().showSnackBar(it.message!!)
-                        }
-                        Status.LOADING -> {
-                            binding.signUpBtn.isEnabled = false
-                            //  binding.normalLoader.visibility = View.VISIBLE
-                        }
-                        else -> {
-                            //TODO
+                            Status.ERROR -> {
+                                requireView().showSnackBar(it.message!!)
+                            }
+                            Status.LOADING -> {
+                                binding.signUpBtn.isEnabled = false
+                                //  binding.normalLoader.visibility = View.VISIBLE
+                            }
+                            else -> {
+                                //TODO
+                            }
                         }
                     }
-                })
-            } catch (e: ApiException) {
-                Toast.makeText(requireContext(), e.message, Toast.LENGTH_SHORT).show()
+                } catch (e: ApiException) {
+                    Toast.makeText(requireContext(), e.message, Toast.LENGTH_SHORT).show()
+                }
             }
         }
-    }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

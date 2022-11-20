@@ -1,21 +1,17 @@
 package com.peacecodetech.medeli.data.repository
 
 
-import android.app.PendingIntent
 import android.content.ContentValues.TAG
-import android.content.IntentSender
+import android.net.Uri
+import android.telecom.Call.Details
 import android.widget.Button
 import android.widget.Toast
-import androidx.activity.result.IntentSenderRequest
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.lifecycle.MutableLiveData
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
-import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.firestore.FirebaseFirestore
-import com.peacecodetech.medeli.R
 import com.peacecodetech.medeli.model.User
 import com.peacecodetech.medeli.util.BaseFragment
 import com.peacecodetech.medeli.util.Resource
@@ -38,19 +34,6 @@ class FirebaseAuthRepository @Inject constructor(
      * Observe user live data after login
      * */
     private val userLiveData = MutableLiveData<Resource<User>?>()
-
-    /**
-     * This variable is used to launch google sign in client
-     * */
-    private val signInLauncher =
-        registerForActivityResult(ActivityResultContracts.StartIntentSenderForResult()) { result ->
-            //  handleGoogleSignInResult(result.data)
-        }
-
-    init {
-        // Configure Google Sign In
-        // signInClient = Identity.getSignInClient(context)
-    }
 
 
     /**
@@ -90,133 +73,6 @@ class FirebaseAuthRepository @Inject constructor(
     fun signInWithGoogle(acct: GoogleSignInAccount) = auth.signInWithCredential(
         GoogleAuthProvider.getCredential(acct.idToken, null)
     )
-
-
-/*
-    */
-    /**
-     * Sign in with google using the [firebaseAuthWithGoogle]
-     * @param webClientId your client id from google console
-     * *//*
-    fun signInWithGoogle(webClientId: String) {
-        val signInRequest = GetSignInIntentRequest.builder()
-            .setServerClientId(webClientId)
-            .build()
-        signInClient.getSignInIntent(signInRequest)
-            .addOnSuccessListener { pendingIntent ->
-                launchGoogleSignIn(pendingIntent)
-            }
-            .addOnFailureListener { e ->
-                Timber.tag(TAG).e(e, getString(R.string.goggle_sign_in_failed))
-            }
-
-    }*/
-
-
-    /* *
-      * Display One-Tap Sign In with google if user isn't logged in
-      * Call this inside [onViewCreated] method
-      *
-     fun oneTapSignInWithGoogle(webClientId: String) {
-         if (currentUser == null) {
-             // Configure One Tap UI
-             val oneTapRequest = BeginSignInRequest.builder()
-                 .setGoogleIdTokenRequestOptions(
-                     BeginSignInRequest.GoogleIdTokenRequestOptions.builder()
-                         .setSupported(true)
-                         .setServerClientId(webClientId)
-                         .setFilterByAuthorizedAccounts(true)
-                         .build()
-                 )
-                 .build()
-
-             // Display the One Tap UI
-             signInClient.beginSignIn(oneTapRequest)
-                 .addOnSuccessListener { result ->
-                     launchGoogleSignIn(result.pendingIntent)
-                 }
-                 .addOnFailureListener { e ->
-                     Timber.tag("OnTap").d(e)
-                     // No saved credentials found. Launch the One Tap sign-up flow, or
-                     // do nothing and continue presenting the signed-out UI.
-                 }
-         }
-     }*/
-
-    /**
-     *  Result returned from launching the Sign In PendingIntent
-     * */
-
-    /*private fun handleGoogleSignInResult(
-        data: Intent?
-    ) {
-        try {
-            // Google Sign In was successful, authenticate with Firebase
-            val credential = signInClient.getSignInCredentialFromIntent(data)
-            val idToken = credential.googleIdToken
-            if (idToken != null) {
-                Timber.tag(TAG).d("firebaseAuthWithGoogle: %s", credential.id)
-                firebaseAuthWithGoogle(idToken)
-            } else {
-                // Shouldn't happen.
-                Timber.tag(TAG).d(getString(R.string.no_id_token))
-            }
-        } catch (e: ApiException) {
-            // Google Sign In failed, update UI appropriately
-            Timber.tag(TAG).w(e, "Google sign in failed")
-            userLiveData.postValue(null)
-        }
-    }*/
-
-    private fun firebaseAuthWithGoogle(
-        idToken: String
-    ) {
-        showProgressBar()
-        val credential = GoogleAuthProvider.getCredential(idToken, null)
-        auth.signInWithCredential(credential)
-            .addOnCompleteListener(requireActivity()) { task ->
-                if (task.isSuccessful) {
-                    // Sign in success, update UI with the signed-in user's information
-                    Timber.tag(TAG).d(getString(R.string.sign_with_credential))
-                    //   this._updateUserUI.postValue(currentUser)
-                    userLiveData.postValue(
-                        Resource.success(
-                            User(
-                                id = currentUser?.uid,
-                                email = currentUser?.email,
-                                fullName = currentUser?.displayName,
-                                password = currentUser?.phoneNumber
-                            )
-                        )
-                    )
-                    //Timber.tag(TAG).d("",task.result.user)
-
-                } else {
-                    // If sign in fails, display a message to the user.
-                    Timber.tag(TAG)
-                        .w(task.exception, getString(R.string.sign_with_credential_failure))
-                    Snackbar.make(
-                        requireView(),
-                        getString(R.string.auth_failed),
-                        Snackbar.LENGTH_SHORT
-                    ).show()
-                    this.userLiveData.postValue(null)
-                }
-
-                hideProgressBar()
-            }
-    }
-
-
-    private fun launchGoogleSignIn(pendingIntent: PendingIntent) {
-        try {
-            val intentSenderRequest = IntentSenderRequest.Builder(pendingIntent)
-                .build()
-            signInLauncher.launch(intentSenderRequest)
-        } catch (e: IntentSender.SendIntentException) {
-            Timber.tag(TAG).e("Couldn't start Sign In: %s", e.localizedMessage)
-        }
-    }
 
 
     /**
@@ -280,7 +136,7 @@ class FirebaseAuthRepository @Inject constructor(
 
     /**
      * If a user has signed in successfully you can get their account data at any point with the getCurrentUser method.
-     * To get the profile information retrieved from the sign-in providers linked to a user, use the [getProviderData] method.
+     * To get the profile information retrieved from the sign-in providers linked to a user, use the [getUserPnPInfo] method.
      * @sample getUserPnPInfo
      * */
 
@@ -315,19 +171,17 @@ class FirebaseAuthRepository @Inject constructor(
          }*/
     }
 
-    private fun getUserPnPInfo() {
+    /**
+     *  Id of the provider (ex: google.com)
+     *  UID specific to the provider
+     *  Name, email address, and profile photo Url
+     *
+     * */
+
+     fun getUserPnPInfo(details:(providerId:String, displayName:String?, email:String?,photoUrl:Uri?)->Unit) {
         currentUser?.let {
             for (profile in it.providerData) {
-                // Id of the provider (ex: google.com)
-                val providerId = profile.providerId
-
-                // UID specific to the provider
-                val uid = profile.uid
-
-                // Name, email address, and profile photo Url
-                val name = profile.displayName
-                val email = profile.email
-                val photoUrl = profile.photoUrl
+                details(profile.providerId,profile.displayName,profile.email,profile.photoUrl)
             }
         }
     }
