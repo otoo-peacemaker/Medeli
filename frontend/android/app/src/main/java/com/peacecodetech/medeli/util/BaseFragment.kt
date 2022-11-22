@@ -7,6 +7,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.snackbar.Snackbar
 import com.peacecodetech.medeli.ui.main.home.HomeActivity
 
 open class BaseFragment : Fragment() {
@@ -39,6 +40,10 @@ open class BaseFragment : Fragment() {
                 action()
             }
             .show()
+    }
+
+    fun showSnackBar(message: String) {
+        Snackbar.make(requireView(), message, Snackbar.LENGTH_LONG).show()
     }
 
 

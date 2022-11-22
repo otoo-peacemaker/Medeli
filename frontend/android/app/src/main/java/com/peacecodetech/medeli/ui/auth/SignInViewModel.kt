@@ -55,7 +55,6 @@ class SignInViewModel
                                         )
                                     )
                                 )
-
                             } else {
                                 // If sign in fails, display a message to the user.
                                 Timber.tag(ContentValues.TAG)
@@ -67,7 +66,6 @@ class SignInViewModel
                                     )
                                 )
                             }
-
                         }
                     _userLiveDataObserver.value = repository.getUserLiveData().value
                 } else {
@@ -78,13 +76,10 @@ class SignInViewModel
                         )
                     )
                 }
-
             } catch (e: RuntimeExecutionException) {
                 _userLiveDataObserver.postValue(Resource.error(null, e.message.toString()))
             }
-
         }
-
         return _userLiveDataObserver
     }
 

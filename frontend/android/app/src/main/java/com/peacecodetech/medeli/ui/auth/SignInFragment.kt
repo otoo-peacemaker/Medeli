@@ -70,6 +70,8 @@ class SignInFragment : BaseFragment() {
                 viewModel.loginUser(email, password).observe(viewLifecycleOwner) {
                     when (it?.status) {
                         Status.SUCCESS -> {
+                            loginBtn.isEnabled = true
+                            loginBtn.text = getString(R.string.sign_in)
                             Timber.tag("Login user").d("::::::::::${it.data}")
                             showDialog(" Login", "Login successful ${it.data}") {
                                 context?.startHomeActivity()
@@ -78,10 +80,13 @@ class SignInFragment : BaseFragment() {
                         Status.ERROR -> {
                             showDialog("Login Error", "${it.message}") {
                                 //TODO AFTER OK BUTTON IS PRESSED
+                                loginBtn.isEnabled = true
+                                loginBtn.text = getString(R.string.sign_in)
                             }
                         }
                         Status.LOADING -> {
-                            //TODO() SET LOADING SCREEN
+                            loginBtn.isEnabled = false
+                            loginBtn.text = getString(R.string.loading)
                         }
                         null -> {
                             // TODO : This is always null

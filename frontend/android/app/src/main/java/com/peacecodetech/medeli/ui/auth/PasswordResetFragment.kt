@@ -10,6 +10,7 @@ import com.peacecodetech.medeli.R
 import com.peacecodetech.medeli.databinding.FragmentPasswordResetBinding
 import com.peacecodetech.medeli.util.BaseFragment
 import com.peacecodetech.medeli.util.Status
+import com.peacecodetech.medeli.util.showSnackBar
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -39,16 +40,20 @@ class PasswordResetFragment : BaseFragment() {
                         .observe(viewLifecycleOwner) {
                             when (it?.status) {
                                 Status.SUCCESS -> {
-                                    showDialog("Password reset sent", "Please check your ${emailId.nameId.text.toString()} to reset your password") {
-                                        findNavController().navigate(R.id.action_passwordResetFragment_to_signInFragment)
-                                    }
+                                    sendEmailId.loginBtn.isEnabled = true
+                                    sendEmailId.loginBtn.text = getString(R.string.send_email)
+                                    showSnackBar("Password reset sent to ${emailId.nameId.text.toString()}")
+                                    findNavController().navigate(R.id.action_passwordResetFragment_to_signInFragment)
                                 }
                                 Status.ERROR -> {
-                                    showDialog("Password reset error", "${it.message}") {
-                                      //  findNavController().navigate(R.id.action_passwordResetFragment_to_signInFragment)
-                                    }
+                                    showDialog("Password reset error", "${it.message}") {}
+                                    sendEmailId.loginBtn.isEnabled = true
+                                    sendEmailId.loginBtn.text = getString(R.string.send_email)
                                 }
-                                Status.LOADING -> TODO()
+                                Status.LOADING -> {
+                                    sendEmailId.loginBtn.isEnabled = false
+                                    sendEmailId.loginBtn.text = getString(R.string.loading)
+                                }
                                 null -> TODO()
                             }
                         }

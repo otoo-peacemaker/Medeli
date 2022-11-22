@@ -31,7 +31,7 @@
 
 
     <include
-        layout="@layout/button"
+        layout="@layout/app_buttons"
         android:id="@+id/sendEmailId"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_45sdp"

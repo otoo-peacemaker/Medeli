@@ -98,7 +98,6 @@ class SignUpFragment : BaseFragment() {
         } else {
             showDialog("Registration error", "Password and confirm password  mismatch") {}
         }
-
     }
 
 
@@ -109,7 +108,6 @@ class SignUpFragment : BaseFragment() {
         } else {
             view?.showSnackBar("Please, check your internet connection")
         }
-
     }
 
     private val startForResult =
@@ -123,6 +121,7 @@ class SignUpFragment : BaseFragment() {
                         when (it?.status) {
                             Status.SUCCESS -> {
                                 binding.signUpBtn.isEnabled = true
+                                binding.signUpBtn.text = getString(R.string.sign_up)
                                 // binding.normalLoader.visibility = View.INVISIBLE
                                 if (findNavController().currentDestination?.id == R.id.signUpFragment) {
                                     context?.startHomeActivity()
@@ -136,10 +135,12 @@ class SignUpFragment : BaseFragment() {
                             }
                             Status.ERROR -> {
                                 requireView().showSnackBar(it.message!!)
+                                binding.signUpBtn.isEnabled = true
+                                binding.signUpBtn.text = getString(R.string.sign_up)
                             }
                             Status.LOADING -> {
                                 binding.signUpBtn.isEnabled = false
-                                //  binding.normalLoader.visibility = View.VISIBLE
+                                binding.signUpBtn.text = getString(R.string.loading)
                             }
                             else -> {
                                 //TODO

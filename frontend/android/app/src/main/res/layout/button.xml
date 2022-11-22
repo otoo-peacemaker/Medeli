@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Button
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/loginBtn"
-    style="@style/buttonStyle"
-    android:layout_marginTop="@dimen/_10sdp"
-    android:text="@string/set_text_in_oncreate_method" />
