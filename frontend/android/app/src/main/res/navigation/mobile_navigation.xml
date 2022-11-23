@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_pharmacy">
 
     <fragment
         android:id="@+id/navigation_home"
@@ -12,14 +12,14 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_pharmacy"
         android:name="com.peacecodetech.medeli.ui.main.pharmacy.PharmacyFragment"
-        android:label="@string/title_dashboard"
+        android:label="@string/pharmacy"
         tools:layout="@layout/fragment_pharmacy" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_search"
         android:name="com.peacecodetech.medeli.ui.main.search.SearchFragment"
-        android:label="@string/title_notifications"
+        android:label="@string/search"
         tools:layout="@layout/fragment_search" />
 </navigation>

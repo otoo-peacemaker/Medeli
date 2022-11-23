@@ -42,4 +42,6 @@
     <string name="button">Button</string>
     <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</string>
     <string name="saved_pharmacies">Saved pharmacies</string>
+    <string name="search">Search</string>
+    <string name="pharmacy">Pharmacy</string>
 </resources>
