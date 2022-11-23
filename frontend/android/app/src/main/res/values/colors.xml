@@ -14,5 +14,7 @@
     <color name="cardBgColor">#FFFFFF</color>
 
     <color name="textColor">#1C3146</color>
+    <color name="distanceDesc">#465C67</color>
+    <color name="storeColor">#000000</color>
 
 </resources>

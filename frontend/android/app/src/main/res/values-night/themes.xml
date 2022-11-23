@@ -12,6 +12,9 @@
         <item name="colorSecondaryVariant">@color/white</item>
         <item name="colorOnSecondary">@color/white</item>
 
+        <item name="colorSurface">@color/windowBackground</item>
+        <item name="colorOnSurface">@color/white</item>
+
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <item name="android:windowLightStatusBar">false</item>

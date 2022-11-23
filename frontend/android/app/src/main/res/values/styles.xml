@@ -44,6 +44,12 @@
 
     </style>
 
+    <style name="ratingTextViewStyle" parent="TextAppearance.Material3.DisplayMedium">
+        <item name="fontFamily">@font/nexa_regular</item>
+        <item name="textFillColor">#A7B0B5</item>
+        <item name="android:fontWeight">10</item>
+    </style>
+
     <!--Material Circle Image style-->
     <style name="circleImageView" parent="ShapeAppearance.MaterialComponents.MediumComponent">
         <item name="cornerFamily">rounded</item>
