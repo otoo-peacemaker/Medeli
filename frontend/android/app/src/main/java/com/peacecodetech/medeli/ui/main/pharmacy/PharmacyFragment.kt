@@ -17,7 +17,7 @@ class PharmacyFragment : Fragment() {
     private var _binding: FragmentPharmacyBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var viewPager: ViewPager2
+    private lateinit var viewPager: ViewPager
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -29,8 +29,8 @@ class PharmacyFragment : Fragment() {
         _binding = FragmentPharmacyBinding.inflate(inflater, container, false)
 
         viewPager = binding.viewPager
-        val adapter = PagerAdapter(requireActivity())
-        viewPager.adapter = adapter
+        /*//val adapter = PagerAdapter(requireActivity())
+        //viewPager.adapter = adapter
 
        // binding.tabL.setupWithViewPager(viewPager)
 
@@ -48,8 +48,39 @@ class PharmacyFragment : Fragment() {
                 // Handle tab unselect
             }
         })
+*/
+
+        setupViewPager()
+        setupTabLayout()
 
         return  binding.root
+    }
+
+    private fun setupViewPager() {
+        binding.viewPager.apply {
+            adapter = ViewPagerAdapter(childFragmentManager, binding.tabL.tabCount)
+            addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(binding.tabL))
+        }
+    }
+
+    private fun setupTabLayout() {
+        binding.tabL.apply {
+            addTab(this.newTab().setText("Saved"))
+            addTab(this.newTab().setText("Nearest"))
+
+            // tabGravity = TabLayout.GRAVITY_FILL
+            addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+                override fun onTabSelected(tab: TabLayout.Tab?) {
+                    tab?.position?.let {
+                        binding.viewPager.currentItem = it
+                    }
+                }
+                override fun onTabUnselected(tab: TabLayout.Tab?) {
+                }
+                override fun onTabReselected(tab: TabLayout.Tab?) {
+                }
+            })
+        }
     }
 
     override fun onDestroyView() {
