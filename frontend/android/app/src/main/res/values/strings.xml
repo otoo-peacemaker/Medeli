@@ -44,4 +44,6 @@
     <string name="saved_pharmacies">Saved pharmacies</string>
     <string name="search">Search</string>
     <string name="pharmacy">Pharmacy</string>
+    <string name="saved">Saved</string>
+    <string name="nearest">Nearest</string>
 </resources>

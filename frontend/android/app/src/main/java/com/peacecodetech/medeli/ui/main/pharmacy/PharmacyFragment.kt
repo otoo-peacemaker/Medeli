@@ -65,8 +65,6 @@ class PharmacyFragment : Fragment() {
 
     private fun setupTabLayout() {
         binding.tabL.apply {
-            addTab(this.newTab().setText("Saved"))
-            addTab(this.newTab().setText("Nearest"))
 
             // tabGravity = TabLayout.GRAVITY_FILL
             addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {

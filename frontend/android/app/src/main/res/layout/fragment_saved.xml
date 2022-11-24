@@ -71,14 +71,16 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/nexa_bold"
         android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/nexa_bold"
         android:text="@string/saved_pharmacies"
-        app:layout_constraintTop_toBottomOf="@id/cardView"
         android:textFontWeight="18"
         android:textSize="@dimen/_15ssp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardView"
+        app:layout_constraintVertical_bias="0.606" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
@@ -88,7 +90,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title"
         tools:itemCount="4"
         tools:listitem="@layout/saved_list" />
 
