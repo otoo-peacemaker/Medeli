@@ -7,29 +7,32 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.viewpager.widget.ViewPager
+import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.peacecodetech.medeli.databinding.FragmentPharmacyBinding
 
 class PharmacyFragment : Fragment() {
 
     private var _binding: FragmentPharmacyBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
+
+    private lateinit var viewPager: ViewPager2
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val dashboardViewModel =
-            ViewModelProvider(this)[PharmacyViewModel::class.java]
+        val dashboardViewModel = ViewModelProvider(this)[PharmacyViewModel::class.java]
 
         _binding = FragmentPharmacyBinding.inflate(inflater, container, false)
-        val root: View = binding.root
 
-        binding.tabL.setupWithViewPager(viewPager)
+        viewPager = binding.viewPager
+        val adapter = PagerAdapter(requireActivity())
+        viewPager.adapter = adapter
+
+       // binding.tabL.setupWithViewPager(viewPager)
 
         binding.tabL.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
 
@@ -46,7 +49,7 @@ class PharmacyFragment : Fragment() {
             }
         })
 
-        return root
+        return  binding.root
     }
 
     override fun onDestroyView() {
