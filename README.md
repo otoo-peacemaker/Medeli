@@ -19,6 +19,7 @@ Current Project features
 * Login and registration with firebase
 * Reset password
 * continue with google
+* saved pharmacy list
 * To be continue.....
 
 
