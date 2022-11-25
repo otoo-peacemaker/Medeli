@@ -30,7 +30,7 @@ class PagerAdapter(fm: FragmentActivity) : FragmentStateAdapter(fm) {
     }
 }
 
-class ViewPagerAdapter(fm: FragmentManager,  var tabCount: Int) : FragmentPagerAdapter(fm) {
+class ViewPagerAdapter(fm: FragmentManager, private var tabCount: Int) : FragmentPagerAdapter(fm) {
 
     override fun getItem(position: Int): Fragment {
         return when (position) {

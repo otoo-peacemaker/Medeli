@@ -46,4 +46,13 @@
     <string name="pharmacy">Pharmacy</string>
     <string name="saved">Saved</string>
     <string name="nearest">Nearest</string>
+    <string name="open_map">Open map</string>
+    <string name="find_new_pharmacies">Find new pharmacies</string>
+    <string name="easily_browse_on_map">Easily browse on map</string>
+    <string name="store">storeforent</string>
+    <string name="call">Call</string>
+    <string name="view">View</string>
+    <string name="chat">Chat</string>
+    <string name="fav">Favorite</string>
+    <string name="share">Share</string>
 </resources>

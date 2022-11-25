@@ -30,14 +30,15 @@
                 android:src="@drawable/ic_storefront"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/materialButton"
-                app:tint="@color/storeColor" />
+                app:tint="@color/storeColor"
+                android:contentDescription="@string/store" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/materialButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_10sdp"
-                android:text="Open map"
+                android:text="@string/open_map"
                 android:textAllCaps="false"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -47,7 +48,7 @@
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Find new pharmacies"
+                android:text="@string/find_new_pharmacies"
                 app:layout_constraintEnd_toStartOf="@+id/materialButton"
                 app:layout_constraintHorizontal_bias="0.214"
                 app:layout_constraintStart_toEndOf="@+id/imageView2"
@@ -58,7 +59,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="Easily browse on map"
+                android:text="@string/easily_browse_on_map"
                 android:textColor="@color/distanceDesc"
                 app:layout_constraintEnd_toEndOf="@+id/textView2"
                 app:layout_constraintHorizontal_bias="0.0"
