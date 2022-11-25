@@ -9,7 +9,7 @@ import androidx.lifecycle.viewModelScope
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.tasks.RuntimeExecutionException
 import com.google.firebase.auth.FirebaseAuth
-import com.peacecodetech.medeli.data.repository.FirebaseAuthRepository
+import com.peacecodetech.medeli.data.repository.firebase.FirebaseAuthRepository
 import com.peacecodetech.medeli.model.User
 import com.peacecodetech.medeli.util.NetworkManager
 import com.peacecodetech.medeli.util.Resource
@@ -30,11 +30,8 @@ class SignInViewModel
      * Observe user live data after login
      * */
 
-    private val _userLiveDataObserver: MutableLiveData<Resource<User>?> =
-        MutableLiveData<Resource<User>?>()
-
+    private val _userLiveDataObserver: MutableLiveData<Resource<User>?> = MutableLiveData<Resource<User>?>()
     private val user = auth.currentUser
-
     fun loginUser(email: String, password: String): LiveData<Resource<User>?> {
         viewModelScope.launch {
             try {
@@ -101,9 +98,6 @@ class SignInViewModel
         }
         return _userLiveDataObserver
     }
-
-
-
 
     fun sendPasswordResetEmail(email: String): LiveData<Resource<User>?> {
         Resource.loading(null)

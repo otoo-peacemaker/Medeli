@@ -85,8 +85,8 @@ class PharmacyFragment : Fragment(), RecyclerAdapter.OnViewDetail,
         }
 
         //TODO: submit student data from viewmodel
-        val stdList = Student
-        pharmacyAdapter.submitList(stdList.getStudentList())
+       // val stdList = Student
+        //pharmacyAdapter.submitList(stdList.getStudentList())
     }
 
     override fun onDestroyView() {
