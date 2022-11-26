@@ -1,12 +1,17 @@
 package com.peacecodetech.medeli.ui.main.pharmacy
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.flowWithLifecycle
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
@@ -14,8 +19,12 @@ import com.peacecodetech.medeli.R
 import com.peacecodetech.medeli.databinding.FragmentPharmacyBinding
 import com.peacecodetech.medeli.databinding.SavedListBinding
 import com.peacecodetech.medeli.model.Pharmacy
+import com.peacecodetech.medeli.util.Status
+import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 import timber.log.Timber
 
+@AndroidEntryPoint
 class PharmacyFragment : Fragment(), RecyclerAdapter.OnViewDetail,
     RecyclerAdapter.OnSelectedItemListener {
 
@@ -23,13 +32,20 @@ class PharmacyFragment : Fragment(), RecyclerAdapter.OnViewDetail,
     private val binding get() = _binding!!
 
     private lateinit var viewPager: ViewPager
+    private val viewModel:PharmacyViewModel by viewModels()
+    private val pharmacyAdapter: RecyclerAdapter by lazy {
+        RecyclerAdapter(this, this) { _, data ->
+            //get item  on selected row
+            Timber.d("YOU CLICK  FRAGMENT \n $data")
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val dashboardViewModel = ViewModelProvider(this)[PharmacyViewModel::class.java]
+       // viewModel = ViewModelProvider(this)[PharmacyViewModel::class.java]
         _binding = FragmentPharmacyBinding.inflate(inflater, container, false)
         viewPager = binding.viewPager
         /*//val adapter = PagerAdapter(requireActivity())
@@ -39,6 +55,7 @@ class PharmacyFragment : Fragment(), RecyclerAdapter.OnViewDetail,
         setupViewPager()
         setupTabLayout()
         initRecView()
+        viewModelObservers()
 
         return binding.root
     }
@@ -71,27 +88,38 @@ class PharmacyFragment : Fragment(), RecyclerAdapter.OnViewDetail,
     }
 
     private fun initRecView() {
-        val pharmacyAdapter: RecyclerAdapter by lazy {
-            RecyclerAdapter(this, this) { _, data ->
-                //get item  on selected row
-                Timber.d("YOU CLICK  FRAGMENT \n $data")
-            }
-        }
         val recyclerView = binding.savedFragment.recyclerView
         recyclerView.apply {
             layoutManager = LinearLayoutManager(requireContext())
             setHasFixedSize(true)
             adapter = pharmacyAdapter
         }
-
-        //TODO: submit student data from viewmodel
-       // val stdList = Student
-        //pharmacyAdapter.submitList(stdList.getStudentList())
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+
+
+    fun viewModelObservers(){
+        lifecycleScope.launch {
+            viewModel.pharmacyData
+                .flowWithLifecycle(lifecycle, Lifecycle.State.STARTED)
+                .collect { data ->
+                    if (data != null) {
+                        when(data.status){
+                            Status.SUCCESS -> {
+                                Log.d("String","$data")
+                                pharmacyAdapter.submitList(data.data)
+                            }
+                            Status.ERROR -> {
+                                TODO()
+                            }
+                            Status.LOADING -> {
+                                TODO()
+                            }
+                        }
+
+                    }
+                }
+        }
     }
 
     override fun onOnViewDetail(pharmacy: Pharmacy) {
@@ -122,5 +150,11 @@ class PharmacyFragment : Fragment(), RecyclerAdapter.OnViewDetail,
             }
         }
 
+    }
+
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

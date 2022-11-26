@@ -4,10 +4,10 @@ import android.content.Context
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
-import com.google.firebase.ktx.Firebase
 import com.peacecodetech.medeli.R
 import com.peacecodetech.medeli.data.repository.FirebaseRealtimeDBImpl
 import com.peacecodetech.medeli.data.repository.firebase.FirebaseAuthRepository
@@ -34,7 +34,24 @@ class FireBaseModule {
 
     @Provides
     @Singleton
-    fun provideFireStoreRef(query: Query) : CollectionReference {
+    fun provideFirebaseDatabase() = FirebaseDatabase.getInstance()
+
+    @Provides
+    @Singleton
+    fun provideCollectionReference(ref: FirebaseFirestore, query: String): CollectionReference {
+        return ref.collection(query)
+    }
+
+    @Provides
+    @Singleton
+    fun provideQuery(firestore: FirebaseFirestore, query: String): Query {
+        return firestore.collection(query)
+    }
+
+    @Provides
+    @Singleton
+    fun provideString(): String {
+        return "string"
     }
 
     @Provides

@@ -1,5 +1,6 @@
 package com.peacecodetech.medeli.data.repository
 
+import androidx.lifecycle.asLiveData
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.Query
 import com.peacecodetech.medeli.data.repository.firebase.FirebaseRealtimeDB

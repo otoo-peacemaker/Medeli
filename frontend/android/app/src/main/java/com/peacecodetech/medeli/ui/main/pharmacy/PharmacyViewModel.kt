@@ -8,6 +8,8 @@ import com.peacecodetech.medeli.data.repository.FirebaseRealtimeDBImpl
 import com.peacecodetech.medeli.model.Pharmacy
 import com.peacecodetech.medeli.util.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -16,8 +18,8 @@ class PharmacyViewModel @Inject constructor(
     private val repository: FirebaseRealtimeDBImpl
 ) : ViewModel() {
 
-    private val _dataState = MutableLiveData<Resource<List<Pharmacy>>>(Resource.loading(null))
-    val dataState: LiveData<Resource<List<Pharmacy>>> = _dataState
+    /*private val _dataState = MutableLiveData<Resource<List<Pharmacy>>>(Resource.loading(null))
+    val dataState: LiveData<Resource<List<Pharmacy>>> = _dataState*/
 
     private val _isDataAdded = MutableLiveData<Resource<Void?>>(Resource.success(null))
     val isDataAdded: LiveData<Resource<Void?>> = _isDataAdded
@@ -26,22 +28,29 @@ class PharmacyViewModel @Inject constructor(
     private val _isDataDeleted = MutableLiveData<Resource<Void?>>(Resource.success(null))
     val isDataDeleted: LiveData<Resource<Void?>> = _isDataDeleted
 
+    private val _pharmacyData: MutableStateFlow<Resource<List<Pharmacy>>?> =
+        MutableStateFlow(null)
+    val pharmacyData = _pharmacyData.asStateFlow()
+
     init {
         getData()
     }
 
     private fun getData() {
         viewModelScope.launch {
-            repository.getPharmacyData().collect { response ->
-                _dataState.value = response
+            repository.getPharmacyData()
+                .collect { response ->
+                    _pharmacyData.value = response
             }
         }
     }
 
     fun addData(pharmacy: Pharmacy) {
         viewModelScope.launch {
-            repository.addPharmacyData(pharmacy).collect { response ->
+            repository.addPharmacyData(pharmacy)
+                .collect { response ->
                 _isDataAdded.value = response
+
             }
         }
     }
