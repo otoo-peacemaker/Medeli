@@ -24,4 +24,7 @@
     <string name="sign_up_with_email">Sign up with Email</string>
     <string name="confirm_password">Confirm password</string>
     <string name="username">Username</string>
+    <string name="login_error_text">Login Error</string>
+    <string name="no_credentials_found">No credentials found</string>
+
 </resources>
