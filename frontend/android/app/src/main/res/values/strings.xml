@@ -26,5 +26,10 @@
     <string name="username">Username</string>
     <string name="login_error_text">Login Error</string>
     <string name="no_credentials_found">No credentials found</string>
+    <string name="sent_verification_email">\"Verification email sent to \"</string>
+    <string name="failed_verification_email">Failed to send verification email.</string>
+    <string name="authentication_failed">Authentication failed.</string>
+    <string name="reload_successful">Reload successful!</string>
+    <string name="failed_to_reload">Failed to reload user.</string>
 
 </resources>

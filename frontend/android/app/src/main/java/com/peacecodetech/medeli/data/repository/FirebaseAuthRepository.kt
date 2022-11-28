@@ -76,7 +76,7 @@ class FirebaseAuthRepository(
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "createUserWithEmail:failure", task.exception)
                     Toast.makeText(
-                        context, "Authentication failed.",
+                        context, getString(R.string.authentication_failed),
                         Toast.LENGTH_SHORT
                     ).show()
                     _updateUserUI.postValue(null)
@@ -100,14 +100,14 @@ class FirebaseAuthRepository(
                 if (task.isSuccessful) {
                     Toast.makeText(
                         context,
-                        "Verification email sent to ${currentUser.email} ",
+                        getString(R.string.sent_verification_email) + currentUser.email + " ",
                         Toast.LENGTH_SHORT
                     ).show()
                 } else {
                     Log.e(TAG, "sendEmailVerification", task.exception)
                     Toast.makeText(
                         context,
-                        "Failed to send verification email.",
+                        getString(R.string.failed_verification_email),
                         Toast.LENGTH_SHORT
                     ).show()
                 }
@@ -138,7 +138,7 @@ class FirebaseAuthRepository(
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "signInWithEmail:failure", task.exception)
-                    Toast.makeText(requireContext(), "Authentication failed.", Toast.LENGTH_SHORT)
+                    Toast.makeText(requireContext(), getString(R.string.authentication_failed), Toast.LENGTH_SHORT)
                         .show()
                     _updateUserUI.postValue(null)
                 }
@@ -287,10 +287,10 @@ class FirebaseAuthRepository(
             auth.currentUser!!.reload().addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     _updateUserUI.postValue(auth.currentUser)
-                    Toast.makeText(context, "Reload successful!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, getString(R.string.reload_successful), Toast.LENGTH_SHORT).show()
                 } else {
                     Log.e(TAG, "reload", task.exception)
-                    Toast.makeText(context, "Failed to reload user.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, getString(R.string.failed_to_reload), Toast.LENGTH_SHORT).show()
                 }
             }
         }
