@@ -1,4 +1,4 @@
-package com.peacecodetech.medeli.data.repository.firebase
+package com.peacecodetech.medeli.data.source
 
 import com.peacecodetech.medeli.model.Pharmacy
 import com.peacecodetech.medeli.util.Resource

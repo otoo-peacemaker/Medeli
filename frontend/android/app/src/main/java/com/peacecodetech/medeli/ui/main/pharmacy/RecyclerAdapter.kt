@@ -3,19 +3,27 @@ package com.peacecodetech.medeli.ui.main.pharmacy
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Filter
+import android.widget.Filterable
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.peacecodetech.medeli.databinding.SavedListBinding
 import com.peacecodetech.medeli.model.Pharmacy
+import com.peacecodetech.medeli.ui.main.home.Categories
 
 class RecyclerAdapter(
     private var onSelectedItemListener: OnSelectedItemListener,
     private var onViewDetail: OnViewDetail,
     private var itemCheckListener: (isChecked: Boolean, data: MutableList<Pharmacy>) -> Unit,
 ) :
-    ListAdapter<Pharmacy, RecyclerAdapter.SavedListViewHolder>(ListComparator()) {
+    ListAdapter<Pharmacy, RecyclerAdapter.SavedListViewHolder>(ListComparator()), Filterable {
     private val data = mutableListOf<Pharmacy>()
+
+    var categoriesList: ArrayList<Categories> = ArrayList()
+    var categoriesListFiltered: ArrayList<Categories> = ArrayList()
+
+    //Glide.with(itemView.imageView.context).load(result.downloadUrl).into(itemView.imageView)
 
     //bind the recycler list items
     inner class SavedListViewHolder(val binding: SavedListBinding) :
@@ -72,6 +80,38 @@ class RecyclerAdapter(
 
     interface OnViewDetail {
         fun onOnViewDetail(pharmacy: Pharmacy)
+    }
+
+    override fun getFilter(): Filter {
+        return object : Filter(){
+            override fun performFiltering(constraint: CharSequence?): FilterResults {
+                val charString = constraint?.toString() ?: ""
+                categoriesListFiltered = if (charString.isEmpty()) categoriesList else{
+                    val filteredList = ArrayList<Categories>()
+                    categoriesList
+                        .filter {
+                            it.name.contains(constraint!!)//or something  (it.author.contains(constraint))
+                        }.forEach { value ->
+                            filteredList.add(value)
+                        }
+                    filteredList
+                }
+
+                return FilterResults().apply {
+                    values = categoriesListFiltered
+                }
+            }
+
+            override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
+               categoriesListFiltered = if (results?.values ==null)
+                   ArrayList()
+               else {
+                   results.values as ArrayList<Categories>
+               }
+                   notifyDataSetChanged()
+            }
+
+        }
     }
 
 

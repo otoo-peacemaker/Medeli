@@ -40,6 +40,7 @@ class SignInFragment : BaseFragment() {
     ): View {
 
         _binding = FragmentSignInBinding.inflate(inflater, container, false)
+        setProgressBar((requireActivity().findViewById(R.id.progressId)))
         return binding.root
 
     }
@@ -70,10 +71,11 @@ class SignInFragment : BaseFragment() {
                 viewModel.loginUser(email, password).observe(viewLifecycleOwner) {
                     when (it?.status) {
                         Status.SUCCESS -> {
+                            hideProgressBar()
                             loginBtn.isEnabled = true
                             loginBtn.text = getString(R.string.sign_in)
                             Timber.tag("Login user").d("::::::::::${it.data}")
-                            showDialog(" Login", "Login successful ${it.data}") {
+                            showDialog(" Login", "Login successful") {
                                 context?.startHomeActivity()
                             }
                         }
@@ -83,10 +85,11 @@ class SignInFragment : BaseFragment() {
                                 loginBtn.isEnabled = true
                                 loginBtn.text = getString(R.string.sign_in)
                             }
+                            hideProgressBar()
                         }
                         Status.LOADING -> {
                             loginBtn.isEnabled = false
-                            loginBtn.text = getString(R.string.loading)
+                          showProgressBar()
                         }
                         null -> {
                             // TODO : This is always null

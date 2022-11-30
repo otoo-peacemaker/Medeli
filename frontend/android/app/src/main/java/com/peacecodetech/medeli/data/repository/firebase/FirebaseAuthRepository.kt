@@ -115,7 +115,7 @@ class FirebaseAuthRepository @Inject constructor(
                     userLiveData.postValue(
                         Resource.success(
                             User(
-                                id = currentUser.uid,
+                                id = currentUser.uid.toInt(),
                                 email = currentUser.email,
                                 fullName = currentUser.displayName,
                                 password = currentUser.phoneNumber

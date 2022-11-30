@@ -46,7 +46,7 @@ class SignUpViewModel @Inject constructor(
                                 userLiveData.postValue(
                                     Resource.success(
                                         User(
-                                            id = user!!.uid,
+                                            id = user!!.uid.toIntOrNull(),
                                             email = user.email,
                                             fullName = user.displayName,
                                             password = user.phoneNumber

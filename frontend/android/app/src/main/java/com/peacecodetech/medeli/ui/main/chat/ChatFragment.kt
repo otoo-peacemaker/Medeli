@@ -10,10 +10,6 @@ import com.peacecodetech.medeli.R
 
 class ChatFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = ChatFragment()
-    }
-
     private lateinit var viewModel: ChatViewModel
 
     override fun onCreateView(
@@ -23,9 +19,10 @@ class ChatFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_chat, container, false)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(ChatViewModel::class.java)
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewModel = ViewModelProvider(this)[ChatViewModel::class.java]
         // TODO: Use the ViewModel
     }
 

@@ -4,12 +4,13 @@ import android.content.Context
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
 import com.peacecodetech.medeli.R
-import com.peacecodetech.medeli.data.repository.FirebaseRealtimeDBImpl
+import com.peacecodetech.medeli.data.repository.firebase.FirebaseRealtimeDBImpl
 import com.peacecodetech.medeli.data.repository.firebase.FirebaseAuthRepository
 import dagger.Module
 import dagger.Provides
@@ -35,6 +36,13 @@ class FireBaseModule {
     @Provides
     @Singleton
     fun provideFirebaseDatabase() = FirebaseDatabase.getInstance()
+
+   /* @Provides
+    @Singleton
+    fun provideDatabaseReference():DatabaseReference{
+        return DatabaseReference()
+    }*/
+
 
     @Provides
     @Singleton

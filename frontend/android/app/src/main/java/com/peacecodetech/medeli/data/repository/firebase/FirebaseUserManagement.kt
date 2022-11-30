@@ -1,2 +1,2 @@
-package com.peacecodetech.medeli.data.repository
+package com.peacecodetech.medeli.data.repository.firebase
 

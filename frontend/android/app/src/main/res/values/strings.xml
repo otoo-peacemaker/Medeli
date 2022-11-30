@@ -17,7 +17,7 @@
     <string name="sign_in_with_email">Sign in with Email</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
-    <string name="forget_password">Forget password?</string>
+    <string name="forget_password">Forgot password?</string>
     <string name="don_t_have_an_account">Don’t have an account?</string>
     <string name="sign_up_with_google">Sign up with Google</string>
     <string name="already_have_an_account">Already have an account?</string>
@@ -55,4 +55,19 @@
     <string name="chat">Chat</string>
     <string name="fav">Favorite</string>
     <string name="share">Share</string>
+    <string name="heading_home">Place your order select \n pharmacy recive it</string>
+    <string name="claim_or_prescription">Claim or prescription</string>
+    <string name="orderic">orderIc</string>
+    <string name="pharmacist">Pharmacist assistant</string>
+    <string name="add">Add</string>
+    <string name="product">Product picture</string>
+    <string name="profile">Profie</string>
+    <string name="_52">$ 52</string>
+    <string name="_68_in_stock">68 in stock</string>
+    <string name="_4">4</string>
+    <string name="evy_body">Evy body</string>
+    <string name="minus">minus</string>
+    <string name="details">Details</string>
+    <string name="products">Products</string>
+    <string name="mom_and_baby">Mom and baby</string>
 </resources>

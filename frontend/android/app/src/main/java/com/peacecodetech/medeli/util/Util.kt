@@ -1,12 +1,15 @@
 package com.peacecodetech.medeli.util
 
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.view.View
+import android.widget.ProgressBar
 import com.google.android.material.snackbar.Snackbar
 import com.peacecodetech.medeli.MainActivity
 import com.peacecodetech.medeli.ui.main.home.HomeActivity
+import java.io.IOException
 import java.util.regex.Pattern
 
 val EMAIL_ADDRESS_PATTERN: Pattern = Pattern.compile(
@@ -42,3 +45,13 @@ fun Context.startAuthActivity() =
         it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(it)
     }
+fun getJsonDataFromAsset(context: Context, fileName: String): String? {
+    val jsonString: String
+    try {
+        jsonString = context.assets.open(fileName).bufferedReader().use { it.readText() }
+    } catch (ioException: IOException) {
+        ioException.message
+        return null
+    }
+    return jsonString
+}

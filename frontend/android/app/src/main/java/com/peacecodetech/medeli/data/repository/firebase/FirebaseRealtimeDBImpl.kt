@@ -1,9 +1,8 @@
-package com.peacecodetech.medeli.data.repository
+package com.peacecodetech.medeli.data.repository.firebase
 
-import androidx.lifecycle.asLiveData
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.Query
-import com.peacecodetech.medeli.data.repository.firebase.FirebaseRealtimeDB
+import com.peacecodetech.medeli.data.source.FirebaseRealtimeDB
 import com.peacecodetech.medeli.model.Pharmacy
 import com.peacecodetech.medeli.util.Resource
 import kotlinx.coroutines.channels.awaitClose
@@ -35,7 +34,12 @@ class FirebaseRealtimeDBImpl @Inject constructor(
         try {
             emit(Resource.loading(null))
             val pharmacyId = ref.document().id
-            val metaData = Pharmacy(pharmacy.logo,pharmacy.name, pharmacy.distance, pharmacy.description,pharmacy.rating)
+            val metaData = Pharmacy(
+                logo = pharmacy.logo,
+                name = pharmacy.name,
+                distance = pharmacy.distance,
+                description = pharmacy.description,
+                rating = pharmacy.rating)
             val addition = ref.document(pharmacyId).set(metaData).await()
             emit(Resource.success(addition))
         } catch (e: Exception) {

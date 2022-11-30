@@ -1,795 +1,794 @@
-{
-	"Pharmacy_Metadata": [{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ1JjJczBYu960TChdWT_rwhGtmshPVCItHg&usqp=CAU",
-			"Name": "TOBINCO PHARMACEUTICALS LTD",
-			"Distance": "1 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 3,
-			"Contact": "0244662440"
-		},
-		{
-			"Logo": "http://healthtech.salientadvisory.com/wp-content/uploads/sites/2/2021/05/Add-Pharma-Logo.jpg",
-			"Name": "ADDPHARMA",
-			"Distance": "2 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 3,
-			"Contact": "0200601376"
-		},
-		{
-			"Logo": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fprimepharmacyghana%2F&psig=AOvVaw3EgiQSdwEEw4aVl_Zjirfi&ust=1669242255326000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOC5oI_qwvsCFQAAAAAdAAAAABAE",
-			"Name": "PRIME PHARMACY",
-			"Distance": "3 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 3,
-			"Contact": "0201525646"
-		},
-		{
-			"Logo": "https://www.medbriefnamibia.com/wp-content/uploads/2019/05/lifeh.jpg",
-			"Name": "LIFE HEALTHCARE PHARMACY",
-			"Distance": "4 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 3,
-			"Contact": "0246160287"
-		},
-		{
-			"Logo": "https://www.ancdev.com/mall/wp-content/uploads/sites/2/2019/09/The-Mall-Pharmacy_001.jpg",
-			"Name": "THE MALL PHARMACY",
-			"Distance": "5 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 3,
-			"Contact": "0289400400"
-		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjs_Ybp1eZRJ5dORu8xkPcGnMEIRl-CSOPZQ&usqp=CAU",
-			"Name": "TOP UP PHARMACY",
-			"Distance": "6 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 3,
-			"Contact": "0242226555"
-		},
-		{
-			"Logo": "https://pbs.twimg.com/media/ELWa7sRXkAE-hW4.jpg",
-			"Name": "SONOTECH PHARMACY",
-			"Distance": "7 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 3,
-			"Contact": "0206161908/0555293766"
-		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIDev9BEeOxyh-pedseh5nEjSarDPY3VIy1A&usqp=CAU",
-			"Name": "CS ALLOT PHARMACY",
-			"Distance": "8 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 3,
-			"Contact": "0501584305"
-		},
-		{
-			"Logo": "https://media.istockphoto.com/id/1275720974/vector/blue-and-green-medical-cross-health.jpg?s=612x612&w=0&k=20&c=j322qhLcySdh7qhtlTnUf_EUzlQG2i9bnoJ3vHdJ81I=",
-			"Name": "FRONTLINE PHARMACY",
-			"Distance": "9 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 3,
-			"Contact": "030 233 6063"
-		},
-		{
-			"Logo": "https://t3.ftcdn.net/jpg/01/53/65/36/360_F_153653613_llJ3dVkulkn3jsWpoAMFJJDBPPZMXJi8.jpg",
-			"Name": "GRITZ PHARMACY",
-			"Distance": "10 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 3,
-			"Contact": "0302927969"
-		},
-		{
-			"Logo": "https://www.mapleleafpharmacy.co.uk/wp-content/uploads/2020/02/web-logo.svg",
-			"Name": "MAPLE LEAF CHEMIST",
-			"Distance": "11 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 3,
-			"Contact": "0289400400"
-		},
-		{
-			"Logo": "https://www.graphicsprings.com/filestorage/stencils/62eedfb5818a17fdb9581b1b9324a630.png?width=500&height=500",
-			"Name": "TUDU PHARMACY",
-			"Distance": "12 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 3,
-			"Contact": "0501447404"
-		},
-		{
-			"Logo": "https://media-exp1.licdn.com/dms/image/C560BAQEEvJa9s6arXQ/company-logo_200_200/0/1519870200648?e=2159024400&v=beta&t=WyPXADEGZ6Mf2lBir0m46cf7eVRyv4_I5kCxayo0bwc",
-			"Name": "E&E HOSPITAL",
-			"Distance": "13 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 3,
-			"Contact": "0501447404"
+[
+	{
+		"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ1JjJczBYu960TChdWT_rwhGtmshPVCItHg&usqp=CAU",
+			"name": "TOBINCO PHARMACEUTICALS LTD",
+			"distance": "1 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 3,
+			"contact": "0244662440"
+		},
+		{
+			"logo": "http://healthtech.salientadvisory.com/wp-content/uploads/sites/2/2021/05/Add-Pharma-Logo.jpg",
+			"name": "ADDPHARMA",
+			"distance": "2 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 3,
+			"contact": "0200601376"
+		},
+		{
+			"logo": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fprimepharmacyghana%2F&psig=AOvVaw3EgiQSdwEEw4aVl_Zjirfi&ust=1669242255326000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOC5oI_qwvsCFQAAAAAdAAAAABAE",
+			"name": "PRIME PHARMACY",
+			"distance": "3 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 3,
+			"contact": "0201525646"
+		},
+		{
+			"logo": "https://www.medbriefnamibia.com/wp-content/uploads/2019/05/lifeh.jpg",
+			"name": "LIFE HEALTHCARE PHARMACY",
+			"distance": "4 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 3,
+			"contact": "0246160287"
+		},
+		{
+			"logo": "https://www.ancdev.com/mall/wp-content/uploads/sites/2/2019/09/The-Mall-Pharmacy_001.jpg",
+			"name": "THE MALL PHARMACY",
+			"distance": "5 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 3,
+			"contact": "0289400400"
+		},
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjs_Ybp1eZRJ5dORu8xkPcGnMEIRl-CSOPZQ&usqp=CAU",
+			"name": "TOP UP PHARMACY",
+			"distance": "6 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 3,
+			"contact": "0242226555"
+		},
+		{
+			"logo": "https://pbs.twimg.com/media/ELWa7sRXkAE-hW4.jpg",
+			"name": "SONOTECH PHARMACY",
+			"distance": "7 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 3,
+			"contact": "0206161908/0555293766"
+		},
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIDev9BEeOxyh-pedseh5nEjSarDPY3VIy1A&usqp=CAU",
+			"name": "CS ALLOT PHARMACY",
+			"distance": "8 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 3,
+			"contact": "0501584305"
+		},
+		{
+			"logo": "https://media.istockphoto.com/id/1275720974/vector/blue-and-green-medical-cross-health.jpg?s=612x612&w=0&k=20&c=j322qhLcySdh7qhtlTnUf_EUzlQG2i9bnoJ3vHdJ81I=",
+			"name": "FRONTLINE PHARMACY",
+			"distance": "9 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 3,
+			"contact": "030 233 6063"
+		},
+		{
+			"logo": "https://t3.ftcdn.net/jpg/01/53/65/36/360_F_153653613_llJ3dVkulkn3jsWpoAMFJJDBPPZMXJi8.jpg",
+			"name": "GRITZ PHARMACY",
+			"distance": "10 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 3,
+			"contact": "0302927969"
+		},
+		{
+			"logo": "https://www.mapleleafpharmacy.co.uk/wp-content/uploads/2020/02/web-logo.svg",
+			"name": "MAPLE LEAF CHEMIST",
+			"distance": "11 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 3,
+			"contact": "0289400400"
+		},
+		{
+			"logo": "https://www.graphicsprings.com/filestorage/stencils/62eedfb5818a17fdb9581b1b9324a630.png?width=500&height=500",
+			"name": "TUDU PHARMACY",
+			"distance": "12 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 3,
+			"contact": "0501447404"
+		},
+		{
+			"logo": "https://media-exp1.licdn.com/dms/image/C560BAQEEvJa9s6arXQ/company-logo_200_200/0/1519870200648?e=2159024400&v=beta&t=WyPXADEGZ6Mf2lBir0m46cf7eVRyv4_I5kCxayo0bwc",
+			"name": "E&E HOSPITAL",
+			"distance": "13 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 3,
+			"contact": "0501447404"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs0ErsOxNWCsWtF6gvR2Gpyj0_tX9E8yXYug&usqp=CAU",
-			"Name": "RANDY PHARMACY",
-			"Distance": "14 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 3,
-			"Contact": "0244662440"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs0ErsOxNWCsWtF6gvR2Gpyj0_tX9E8yXYug&usqp=CAU",
+			"name": "RANDY PHARMACY",
+			"distance": "14 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 3,
+			"contact": "0244662440"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
-			"Name": "REHOBOTH PHARMACY",
-			"Distance": "15 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 3,
-			"Contact": "0244662441"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
+			"name": "REHOBOTH PHARMACY",
+			"distance": "15 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 3,
+			"contact": "0244662441"
 		},
-		{
-			"Logo": "https://www.graphicsprings.com/filestorage/stencils/62eedfb5818a17fdb9581b1b9324a630.png?width=500&height=500",
-			"Name": "ALL LIFE PHARMACY",
-			"Distance": "16 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 3,
-			"Contact": "0244662440"
+		{
+			"logo": "https://www.graphicsprings.com/filestorage/stencils/62eedfb5818a17fdb9581b1b9324a630.png?width=500&height=500",
+			"name": "ALL LIFE PHARMACY",
+			"distance": "16 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 3,
+			"contact": "0244662440"
 		},
-		{
-			"Logo": "https://media-exp1.licdn.com/dms/image/C560BAQEEvJa9s6arXQ/company-logo_200_200/0/1519870200648?e=2159024400&v=beta&t=WyPXADEGZ6Mf2lBir0m46cf7eVRyv4_I5kCxayo0bwc",
-			"Name": "BRIDGEVIEW PHARMACY",
-			"Distance": "17 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 4,
-			"Contact": "0302252722"
+		{
+			"logo": "https://media-exp1.licdn.com/dms/image/C560BAQEEvJa9s6arXQ/company-logo_200_200/0/1519870200648?e=2159024400&v=beta&t=WyPXADEGZ6Mf2lBir0m46cf7eVRyv4_I5kCxayo0bwc",
+			"name": "BRIDGEVIEW PHARMACY",
+			"distance": "17 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 4,
+			"contact": "0302252722"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs0ErsOxNWCsWtF6gvR2Gpyj0_tX9E8yXYug&usqp=CAU",
-			"Name": "BLACKSWAN PHARMACY",
-			"Distance": "18 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 4,
-			"Contact": "0200999491"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs0ErsOxNWCsWtF6gvR2Gpyj0_tX9E8yXYug&usqp=CAU",
+			"name": "BLACKSWAN PHARMACY",
+			"distance": "18 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 4,
+			"contact": "0200999491"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
-			"Name": "BEDREICH PHARMACY",
-			"Distance": "19 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 4,
-			"Contact": "0302668291"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
+			"name": "BEDREICH PHARMACY",
+			"distance": "19 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 4,
+			"contact": "0302668291"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
-			"Name": "BIOTIC PHARMACY",
-			"Distance": "20 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 4,
-			"Contact": "0208179666/0279620117"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
+			"name": "BIOTIC PHARMACY",
+			"distance": "20 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 4,
+			"contact": "0208179666/0279620117"
 		},
-		{
-			"Logo": "https://www.graphicsprings.com/filestorage/stencils/62eedfb5818a17fdb9581b1b9324a630.png?width=500&height=500",
-			"Name": "GLEM PHARMACY",
-			"Distance": "21 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 4,
-			"Contact": "0289400400"
+		{
+			"logo": "https://www.graphicsprings.com/filestorage/stencils/62eedfb5818a17fdb9581b1b9324a630.png?width=500&height=500",
+			"name": "GLEM PHARMACY",
+			"distance": "21 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 4,
+			"contact": "0289400400"
 		},
-		{
-			"Logo": "https://media-exp1.licdn.com/dms/image/C560BAQEEvJa9s6arXQ/company-logo_200_200/0/1519870200648?e=2159024400&v=beta&t=WyPXADEGZ6Mf2lBir0m46cf7eVRyv4_I5kCxayo0bwc",
-			"Name": "FABBY CHEMIST",
-			"Distance": "22 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 4,
-			"Contact": "0243019268"
+		{
+			"logo": "https://media-exp1.licdn.com/dms/image/C560BAQEEvJa9s6arXQ/company-logo_200_200/0/1519870200648?e=2159024400&v=beta&t=WyPXADEGZ6Mf2lBir0m46cf7eVRyv4_I5kCxayo0bwc",
+			"name": "FABBY CHEMIST",
+			"distance": "22 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 4,
+			"contact": "0243019268"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs0ErsOxNWCsWtF6gvR2Gpyj0_tX9E8yXYug&usqp=CAU",
-			"Name": "SAQS PHARMACY",
-			"Distance": "23 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 4,
-			"Contact": "0289601401"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs0ErsOxNWCsWtF6gvR2Gpyj0_tX9E8yXYug&usqp=CAU",
+			"name": "SAQS PHARMACY",
+			"distance": "23 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 4,
+			"contact": "0289601401"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
-			"Name": "SCAB PHARMACY",
-			"Distance": "24 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 4,
-			"Contact": "0248465831"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
+			"name": "SCAB PHARMACY",
+			"distance": "24 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 4,
+			"contact": "0248465831"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
-			"Name": "ASHBY'S PHARMACY",
-			"Distance": "25 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 4,
-			"Contact": "0277335132/0302305348"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
+			"name": "ASHBY'S PHARMACY",
+			"distance": "25 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 4,
+			"contact": "0277335132/0302305348"
 		},
-		{
-			"Logo": "https://www.graphicsprings.com/filestorage/stencils/62eedfb5818a17fdb9581b1b9324a630.png?width=500&height=500",
-			"Name": "TWO-F PHARMACY",
-			"Distance": "26 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 4,
-			"Contact": "0244662440"
+		{
+			"logo": "https://www.graphicsprings.com/filestorage/stencils/62eedfb5818a17fdb9581b1b9324a630.png?width=500&height=500",
+			"name": "TWO-F PHARMACY",
+			"distance": "26 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 4,
+			"contact": "0244662440"
 		},
-		{
-			"Logo": "https://media-exp1.licdn.com/dms/image/C560BAQEEvJa9s6arXQ/company-logo_200_200/0/1519870200648?e=2159024400&v=beta&t=WyPXADEGZ6Mf2lBir0m46cf7eVRyv4_I5kCxayo0bwc",
-			"Name": "XERION PHARMACY",
-			"Distance": "27 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 4,
-			"Contact": "0289400400"
+		{
+			"logo": "https://media-exp1.licdn.com/dms/image/C560BAQEEvJa9s6arXQ/company-logo_200_200/0/1519870200648?e=2159024400&v=beta&t=WyPXADEGZ6Mf2lBir0m46cf7eVRyv4_I5kCxayo0bwc",
+			"name": "XERION PHARMACY",
+			"distance": "27 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 4,
+			"contact": "0289400400"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs0ErsOxNWCsWtF6gvR2Gpyj0_tX9E8yXYug&usqp=CAU",
-			"Name": "BANDY CHEMIST",
-			"Distance": "28 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 4,
-			"Contact": "0244662440"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs0ErsOxNWCsWtF6gvR2Gpyj0_tX9E8yXYug&usqp=CAU",
+			"name": "BANDY CHEMIST",
+			"distance": "28 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 4,
+			"contact": "0244662440"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
-			"Name": "VITAL PHARMACY",
-			"Distance": "29 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 4,
-			"Contact": "0200601376"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
+			"name": "VITAL PHARMACY",
+			"distance": "29 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 4,
+			"contact": "0200601376"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
-			"Name": "FRANKO PHARMACY",
-			"Distance": "30 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 4,
-			"Contact": "0201525646"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
+			"name": "FRANKO PHARMACY",
+			"distance": "30 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 4,
+			"contact": "0201525646"
 		},
-		{
-			"Logo": "https://www.graphicsprings.com/filestorage/stencils/62eedfb5818a17fdb9581b1b9324a630.png?width=500&height=500",
-			"Name": "VERAMS PHARMACY",
-			"Distance": "31 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 4,
-			"Contact": "0246160287"
+		{
+			"logo": "https://www.graphicsprings.com/filestorage/stencils/62eedfb5818a17fdb9581b1b9324a630.png?width=500&height=500",
+			"name": "VERAMS PHARMACY",
+			"distance": "31 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 4,
+			"contact": "0246160287"
 		},
-		{
-			"Logo": "https://media-exp1.licdn.com/dms/image/C560BAQEEvJa9s6arXQ/company-logo_200_200/0/1519870200648?e=2159024400&v=beta&t=WyPXADEGZ6Mf2lBir0m46cf7eVRyv4_I5kCxayo0bwc",
-			"Name": "OSU PHARMA LTD",
-			"Distance": "32 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 4,
-			"Contact": "0289400400"
+		{
+			"logo": "https://media-exp1.licdn.com/dms/image/C560BAQEEvJa9s6arXQ/company-logo_200_200/0/1519870200648?e=2159024400&v=beta&t=WyPXADEGZ6Mf2lBir0m46cf7eVRyv4_I5kCxayo0bwc",
+			"name": "OSU PHARMA LTD",
+			"distance": "32 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 4,
+			"contact": "0289400400"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs0ErsOxNWCsWtF6gvR2Gpyj0_tX9E8yXYug&usqp=CAU",
-			"Name": "RAPHEKA PHARMACY",
-			"Distance": "33 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 5,
-			"Contact": "0242226555"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs0ErsOxNWCsWtF6gvR2Gpyj0_tX9E8yXYug&usqp=CAU",
+			"name": "RAPHEKA PHARMACY",
+			"distance": "33 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 5,
+			"contact": "0242226555"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
-			"Name": "FAHBABS FORTRESS PHARMACY",
-			"Distance": "34 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 5,
-			"Contact": "0550500125"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
+			"name": "FAHBABS FORTRESS PHARMACY",
+			"distance": "34 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 5,
+			"contact": "0550500125"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
-			"Name": "EFF-ESS PHARMACY",
-			"Distance": "35 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 5,
-			"Contact": "0246773225"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
+			"name": "EFF-ESS PHARMACY",
+			"distance": "35 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 5,
+			"contact": "0246773225"
 		},
-		{
-			"Logo": "https://www.graphicsprings.com/filestorage/stencils/62eedfb5818a17fdb9581b1b9324a630.png?width=500&height=500",
-			"Name": "ATLANTIC CHEMIST",
-			"Distance": "36 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 5,
-			"Contact": "0248344829"
+		{
+			"logo": "https://www.graphicsprings.com/filestorage/stencils/62eedfb5818a17fdb9581b1b9324a630.png?width=500&height=500",
+			"name": "ATLANTIC CHEMIST",
+			"distance": "36 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 5,
+			"contact": "0248344829"
 		},
-		{
-			"Logo": "https://media-exp1.licdn.com/dms/image/C560BAQEEvJa9s6arXQ/company-logo_200_200/0/1519870200648?e=2159024400&v=beta&t=WyPXADEGZ6Mf2lBir0m46cf7eVRyv4_I5kCxayo0bwc",
-			"Name": "JOFAS PHARMACY",
-			"Distance": "37 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 5,
-			"Contact": "0501288894"
+		{
+			"logo": "https://media-exp1.licdn.com/dms/image/C560BAQEEvJa9s6arXQ/company-logo_200_200/0/1519870200648?e=2159024400&v=beta&t=WyPXADEGZ6Mf2lBir0m46cf7eVRyv4_I5kCxayo0bwc",
+			"name": "JOFAS PHARMACY",
+			"distance": "37 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 5,
+			"contact": "0501288894"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs0ErsOxNWCsWtF6gvR2Gpyj0_tX9E8yXYug&usqp=CAU",
-			"Name": "KINACO PHARMACY",
-			"Distance": "38 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 5,
-			"Contact": "030 271 6220"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs0ErsOxNWCsWtF6gvR2Gpyj0_tX9E8yXYug&usqp=CAU",
+			"name": "KINACO PHARMACY",
+			"distance": "38 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 5,
+			"contact": "030 271 6220"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
-			"Name": "TONYA PHARMACY",
-			"Distance": "39 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 5,
-			"Contact": "0302715934/0244377461"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
+			"name": "TONYA PHARMACY",
+			"distance": "39 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 5,
+			"contact": "0302715934/0244377461"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
-			"Name": "BRAKATU PHARMACY LTD",
-			"Distance": "40 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 5,
-			"Contact": "0244218881"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
+			"name": "BRAKATU PHARMACY LTD",
+			"distance": "40 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 5,
+			"contact": "0244218881"
 		},
-		{
-			"Logo": "https://www.graphicsprings.com/filestorage/stencils/62eedfb5818a17fdb9581b1b9324a630.png?width=500&height=500",
-			"Name": "ASEDA PHARMACY",
-			"Distance": "41 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 5,
-			"Contact": "0200871974"
+		{
+			"logo": "https://www.graphicsprings.com/filestorage/stencils/62eedfb5818a17fdb9581b1b9324a630.png?width=500&height=500",
+			"name": "ASEDA PHARMACY",
+			"distance": "41 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 5,
+			"contact": "0200871974"
 		},
-		{
-			"Logo": "https://media-exp1.licdn.com/dms/image/C560BAQEEvJa9s6arXQ/company-logo_200_200/0/1519870200648?e=2159024400&v=beta&t=WyPXADEGZ6Mf2lBir0m46cf7eVRyv4_I5kCxayo0bwc",
-			"Name": "A&E PHARMACY",
-			"Distance": "42 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 5,
-			"Contact": "0244280642"
+		{
+			"logo": "https://media-exp1.licdn.com/dms/image/C560BAQEEvJa9s6arXQ/company-logo_200_200/0/1519870200648?e=2159024400&v=beta&t=WyPXADEGZ6Mf2lBir0m46cf7eVRyv4_I5kCxayo0bwc",
+			"name": "A&E PHARMACY",
+			"distance": "42 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 5,
+			"contact": "0244280642"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs0ErsOxNWCsWtF6gvR2Gpyj0_tX9E8yXYug&usqp=CAU",
-			"Name": "CHAMALT PHARMACY",
-			"Distance": "43 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 5,
-			"Contact": "0244662440"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs0ErsOxNWCsWtF6gvR2Gpyj0_tX9E8yXYug&usqp=CAU",
+			"name": "CHAMALT PHARMACY",
+			"distance": "43 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 5,
+			"contact": "0244662440"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
-			"Name": "SLAVA PHARMACY",
-			"Distance": "44 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 5,
-			"Contact": "0200601376"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
+			"name": "SLAVA PHARMACY",
+			"distance": "44 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 5,
+			"contact": "0200601376"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
-			"Name": "VALDI PHARMACY",
-			"Distance": "45 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 5,
-			"Contact": "0201525646"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
+			"name": "VALDI PHARMACY",
+			"distance": "45 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 5,
+			"contact": "0201525646"
 		},
-		{
-			"Logo": "https://www.graphicsprings.com/filestorage/stencils/62eedfb5818a17fdb9581b1b9324a630.png?width=500&height=500",
-			"Name": "BENCYN PHARMARCY",
-			"Distance": "46 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 5,
-			"Contact": "0246160287"
+		{
+			"logo": "https://www.graphicsprings.com/filestorage/stencils/62eedfb5818a17fdb9581b1b9324a630.png?width=500&height=500",
+			"name": "BENCYN PHARMARCY",
+			"distance": "46 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 5,
+			"contact": "0246160287"
 		},
-		{
-			"Logo": "https://media-exp1.licdn.com/dms/image/C560BAQEEvJa9s6arXQ/company-logo_200_200/0/1519870200648?e=2159024400&v=beta&t=WyPXADEGZ6Mf2lBir0m46cf7eVRyv4_I5kCxayo0bwc",
-			"Name": "DARTAH PHARMACY",
-			"Distance": "47 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 5,
-			"Contact": "0289400400"
+		{
+			"logo": "https://media-exp1.licdn.com/dms/image/C560BAQEEvJa9s6arXQ/company-logo_200_200/0/1519870200648?e=2159024400&v=beta&t=WyPXADEGZ6Mf2lBir0m46cf7eVRyv4_I5kCxayo0bwc",
+			"name": "DARTAH PHARMACY",
+			"distance": "47 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 5,
+			"contact": "0289400400"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs0ErsOxNWCsWtF6gvR2Gpyj0_tX9E8yXYug&usqp=CAU",
-			"Name": "KOMBAT PHARMACY",
-			"Distance": "48 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 5,
-			"Contact": "0242226555"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs0ErsOxNWCsWtF6gvR2Gpyj0_tX9E8yXYug&usqp=CAU",
+			"name": "KOMBAT PHARMACY",
+			"distance": "48 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 5,
+			"contact": "0242226555"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
-			"Name": "WESTEND PHARMACY",
-			"Distance": "49 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 5,
-			"Contact": "0208159541"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
+			"name": "WESTEND PHARMACY",
+			"distance": "49 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 5,
+			"contact": "0208159541"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
-			"Name": "YASSIN PHARMACY LIMITED",
-			"Distance": "50 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 5,
-			"Contact": "0322390677/0244226160"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
+			"name": "YASSIN PHARMACY LIMITED",
+			"distance": "50 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 5,
+			"contact": "0322390677/0244226160"
 		},
-		{
-			"Logo": "https://www.graphicsprings.com/filestorage/stencils/62eedfb5818a17fdb9581b1b9324a630.png?width=500&height=500",
-			"Name": "A. RAZMAK PHARMACY",
-			"Distance": "51 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 5,
-			"Contact": "0248669234/0202383850"
+		{
+			"logo": "https://www.graphicsprings.com/filestorage/stencils/62eedfb5818a17fdb9581b1b9324a630.png?width=500&height=500",
+			"name": "A. RAZMAK PHARMACY",
+			"distance": "51 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 5,
+			"contact": "0248669234/0202383850"
 		},
-		{
-			"Logo": "https://media-exp1.licdn.com/dms/image/C560BAQEEvJa9s6arXQ/company-logo_200_200/0/1519870200648?e=2159024400&v=beta&t=WyPXADEGZ6Mf2lBir0m46cf7eVRyv4_I5kCxayo0bwc",
-			"Name": "DOMINION PHARMACY",
-			"Distance": "52 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 5,
-			"Contact": "0209215924"
+		{
+			"logo": "https://media-exp1.licdn.com/dms/image/C560BAQEEvJa9s6arXQ/company-logo_200_200/0/1519870200648?e=2159024400&v=beta&t=WyPXADEGZ6Mf2lBir0m46cf7eVRyv4_I5kCxayo0bwc",
+			"name": "DOMINION PHARMACY",
+			"distance": "52 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 5,
+			"contact": "0209215924"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs0ErsOxNWCsWtF6gvR2Gpyj0_tX9E8yXYug&usqp=CAU",
-			"Name": "DANPONG PHARMACY",
-			"Distance": "53 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 5,
-			"Contact": "0208181438"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs0ErsOxNWCsWtF6gvR2Gpyj0_tX9E8yXYug&usqp=CAU",
+			"name": "DANPONG PHARMACY",
+			"distance": "53 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 5,
+			"contact": "0208181438"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
-			"Name": "UNIK PHARMACY",
-			"Distance": "54 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 5,
-			"Contact": "0244662440"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
+			"name": "UNIK PHARMACY",
+			"distance": "54 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 5,
+			"contact": "0244662440"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
-			"Name": "RICOMONS PHARMACY",
-			"Distance": "55 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 5,
-			"Contact": "0200601376"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
+			"name": "RICOMONS PHARMACY",
+			"distance": "55 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 5,
+			"contact": "0200601376"
 		},
-		{
-			"Logo": "https://www.graphicsprings.com/filestorage/stencils/62eedfb5818a17fdb9581b1b9324a630.png?width=500&height=500",
-			"Name": "SIX STARS PHARMACY",
-			"Distance": "56 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 5,
-			"Contact": "0201525646"
+		{
+			"logo": "https://www.graphicsprings.com/filestorage/stencils/62eedfb5818a17fdb9581b1b9324a630.png?width=500&height=500",
+			"name": "SIX STARS PHARMACY",
+			"distance": "56 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 5,
+			"contact": "0201525646"
 		},
-		{
-			"Logo": "https://media-exp1.licdn.com/dms/image/C560BAQEEvJa9s6arXQ/company-logo_200_200/0/1519870200648?e=2159024400&v=beta&t=WyPXADEGZ6Mf2lBir0m46cf7eVRyv4_I5kCxayo0bwc",
-			"Name": "NUMARK PHARMACY",
-			"Distance": "57 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 5,
-			"Contact": "0246160287"
+		{
+			"logo": "https://media-exp1.licdn.com/dms/image/C560BAQEEvJa9s6arXQ/company-logo_200_200/0/1519870200648?e=2159024400&v=beta&t=WyPXADEGZ6Mf2lBir0m46cf7eVRyv4_I5kCxayo0bwc",
+			"name": "NUMARK PHARMACY",
+			"distance": "57 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 5,
+			"contact": "0246160287"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs0ErsOxNWCsWtF6gvR2Gpyj0_tX9E8yXYug&usqp=CAU",
-			"Name": "MOSSAY PHARMACY",
-			"Distance": "58 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 5,
-			"Contact": "0289400400"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs0ErsOxNWCsWtF6gvR2Gpyj0_tX9E8yXYug&usqp=CAU",
+			"name": "MOSSAY PHARMACY",
+			"distance": "58 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 5,
+			"contact": "0289400400"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
-			"Name": "PEEVIS PHARMACY",
-			"Distance": "59 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 2,
-			"Contact": "0208252725"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
+			"name": "PEEVIS PHARMACY",
+			"distance": "59 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 2,
+			"contact": "0208252725"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
-			"Name": "METRO PHARMACY",
-			"Distance": "60 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 2,
-			"Contact": "0249742015"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
+			"name": "METRO PHARMACY",
+			"distance": "60 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 2,
+			"contact": "0249742015"
 		},
-		{
-			"Logo": "https://www.graphicsprings.com/filestorage/stencils/62eedfb5818a17fdb9581b1b9324a630.png?width=500&height=500",
-			"Name": "SAQS CINIC AND PHAMARCY",
-			"Distance": "61 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 2,
-			"Contact": "0372026088/0206940090"
+		{
+			"logo": "https://www.graphicsprings.com/filestorage/stencils/62eedfb5818a17fdb9581b1b9324a630.png?width=500&height=500",
+			"name": "SAQS CINIC AND PHAMARCY",
+			"distance": "61 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 2,
+			"contact": "0372026088/0206940090"
 		},
-		{
-			"Logo": "https://media-exp1.licdn.com/dms/image/C560BAQEEvJa9s6arXQ/company-logo_200_200/0/1519870200648?e=2159024400&v=beta&t=WyPXADEGZ6Mf2lBir0m46cf7eVRyv4_I5kCxayo0bwc",
-			"Name": "WESTERN PHARMACY",
-			"Distance": "62 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 2,
-			"Contact": "0372026616/0208167836"
+		{
+			"logo": "https://media-exp1.licdn.com/dms/image/C560BAQEEvJa9s6arXQ/company-logo_200_200/0/1519870200648?e=2159024400&v=beta&t=WyPXADEGZ6Mf2lBir0m46cf7eVRyv4_I5kCxayo0bwc",
+			"name": "WESTERN PHARMACY",
+			"distance": "62 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 2,
+			"contact": "0372026616/0208167836"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs0ErsOxNWCsWtF6gvR2Gpyj0_tX9E8yXYug&usqp=CAU",
-			"Name": "VITAL PHARMACY",
-			"Distance": "63 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 2,
-			"Contact": "0244721725/0372022862"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs0ErsOxNWCsWtF6gvR2Gpyj0_tX9E8yXYug&usqp=CAU",
+			"name": "VITAL PHARMACY",
+			"distance": "63 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 2,
+			"contact": "0244721725/0372022862"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
-			"Name": "OAK CRESCENT PHARMACY",
-			"Distance": "64 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 2,
-			"Contact": "0208161252/0242617434"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
+			"name": "OAK CRESCENT PHARMACY",
+			"distance": "64 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 2,
+			"contact": "0208161252/0242617434"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
-			"Name": "KANBROS PHARMACY",
-			"Distance": "65 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 2,
-			"Contact": "0207419289"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
+			"name": "KANBROS PHARMACY",
+			"distance": "65 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 2,
+			"contact": "0207419289"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
-			"Name": "TWO D PHARMACY",
-			"Distance": "66 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 2,
-			"Contact": "0244764443"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
+			"name": "TWO D PHARMACY",
+			"distance": "66 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 2,
+			"contact": "0244764443"
 		},
-		{
-			"Logo": "https://www.graphicsprings.com/filestorage/stencils/62eedfb5818a17fdb9581b1b9324a630.png?width=500&height=500",
-			"Name": "LAUGH PHARMACY",
-			"Distance": "67 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 2,
-			"Contact": "0244981704"
+		{
+			"logo": "https://www.graphicsprings.com/filestorage/stencils/62eedfb5818a17fdb9581b1b9324a630.png?width=500&height=500",
+			"name": "LAUGH PHARMACY",
+			"distance": "67 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 2,
+			"contact": "0244981704"
 		},
-		{
-			"Logo": "https://media-exp1.licdn.com/dms/image/C560BAQEEvJa9s6arXQ/company-logo_200_200/0/1519870200648?e=2159024400&v=beta&t=WyPXADEGZ6Mf2lBir0m46cf7eVRyv4_I5kCxayo0bwc",
-			"Name": "RAPHEKA PHARMACY LIMITED",
-			"Distance": "68 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 2,
-			"Contact": "0200228716"
+		{
+			"logo": "https://media-exp1.licdn.com/dms/image/C560BAQEEvJa9s6arXQ/company-logo_200_200/0/1519870200648?e=2159024400&v=beta&t=WyPXADEGZ6Mf2lBir0m46cf7eVRyv4_I5kCxayo0bwc",
+			"name": "RAPHEKA PHARMACY LIMITED",
+			"distance": "68 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 2,
+			"contact": "0200228716"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs0ErsOxNWCsWtF6gvR2Gpyj0_tX9E8yXYug&usqp=CAU",
-			"Name": "ASHBYS PHARMACY",
-			"Distance": "69 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 2,
-			"Contact": "0207715648"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs0ErsOxNWCsWtF6gvR2Gpyj0_tX9E8yXYug&usqp=CAU",
+			"name": "ASHBYS PHARMACY",
+			"distance": "69 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 2,
+			"contact": "0207715648"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
-			"Name": "HAPHIL PHARMACY",
-			"Distance": "70 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 2,
-			"Contact": "0540250852"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
+			"name": "HAPHIL PHARMACY",
+			"distance": "70 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 2,
+			"contact": "0540250852"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
-			"Name": "GRAND PHARMACY",
-			"Distance": "71 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 2,
-			"Contact": "0540250853"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
+			"name": "GRAND PHARMACY",
+			"distance": "71 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 2,
+			"contact": "0540250853"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
-			"Name": "REYNEK PHARMACY",
-			"Distance": "72 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 2,
-			"Contact": "0208165427"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
+			"name": "REYNEK PHARMACY",
+			"distance": "72 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 2,
+			"contact": "0208165427"
 		},
-		{
-			"Logo": "https://www.graphicsprings.com/filestorage/stencils/62eedfb5818a17fdb9581b1b9324a630.png?width=500&height=500",
-			"Name": "HealthHaus Pharmacy",
-			"Distance": "73 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 2,
-			"Contact": "0553576937"
+		{
+			"logo": "https://www.graphicsprings.com/filestorage/stencils/62eedfb5818a17fdb9581b1b9324a630.png?width=500&height=500",
+			"name": "HealthHaus Pharmacy",
+			"distance": "73 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 2,
+			"contact": "0553576937"
 		},
-		{
-			"Logo": "https://media-exp1.licdn.com/dms/image/C560BAQEEvJa9s6arXQ/company-logo_200_200/0/1519870200648?e=2159024400&v=beta&t=WyPXADEGZ6Mf2lBir0m46cf7eVRyv4_I5kCxayo0bwc",
-			"Name": "OPA CHEMIST LTD",
-			"Distance": "74 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 2,
-			"Contact": "0553576937"
+		{
+			"logo": "https://media-exp1.licdn.com/dms/image/C560BAQEEvJa9s6arXQ/company-logo_200_200/0/1519870200648?e=2159024400&v=beta&t=WyPXADEGZ6Mf2lBir0m46cf7eVRyv4_I5kCxayo0bwc",
+			"name": "OPA CHEMIST LTD",
+			"distance": "74 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 2,
+			"contact": "0553576937"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs0ErsOxNWCsWtF6gvR2Gpyj0_tX9E8yXYug&usqp=CAU",
-			"Name": "EFKWA PHARMACY",
-			"Distance": "75 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 2,
-			"Contact": "0540122966"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs0ErsOxNWCsWtF6gvR2Gpyj0_tX9E8yXYug&usqp=CAU",
+			"name": "EFKWA PHARMACY",
+			"distance": "75 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 2,
+			"contact": "0540122966"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
-			"Name": "ALPHA DUO PHARMA LIMITED",
-			"Distance": "76 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 2,
-			"Contact": "0246840101"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
+			"name": "ALPHA DUO PHARMA LIMITED",
+			"distance": "76 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 2,
+			"contact": "0246840101"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
-			"Name": "ROKMER PHARMA LTD",
-			"Distance": "77 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 2,
-			"Contact": "0200942426"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
+			"name": "ROKMER PHARMA LTD",
+			"distance": "77 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 2,
+			"contact": "0200942426"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
-			"Name": "FAP PHARMACY LTD",
-			"Distance": "78 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 1,
-			"Contact": "0208235723"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
+			"name": "FAP PHARMACY LTD",
+			"distance": "78 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 1,
+			"contact": "0208235723"
 		},
-		{
-			"Logo": "https://www.graphicsprings.com/filestorage/stencils/62eedfb5818a17fdb9581b1b9324a630.png?width=500&height=500",
-			"Name": "BENDOZ PHARMACY LTD",
-			"Distance": "79 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 1,
-			"Contact": "0540122963"
+		{
+			"logo": "https://www.graphicsprings.com/filestorage/stencils/62eedfb5818a17fdb9581b1b9324a630.png?width=500&height=500",
+			"name": "BENDOZ PHARMACY LTD",
+			"distance": "79 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 1,
+			"contact": "0540122963"
 		},
-		{
-			"Logo": "https://media-exp1.licdn.com/dms/image/C560BAQEEvJa9s6arXQ/company-logo_200_200/0/1519870200648?e=2159024400&v=beta&t=WyPXADEGZ6Mf2lBir0m46cf7eVRyv4_I5kCxayo0bwc",
-			"Name": "ACP Chemicals Ltd.",
-			"Distance": "80 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 1,
-			"Contact": "0540124230"
+		{
+			"logo": "https://media-exp1.licdn.com/dms/image/C560BAQEEvJa9s6arXQ/company-logo_200_200/0/1519870200648?e=2159024400&v=beta&t=WyPXADEGZ6Mf2lBir0m46cf7eVRyv4_I5kCxayo0bwc",
+			"name": "ACP Chemicals Ltd.",
+			"distance": "80 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 1,
+			"contact": "0540124230"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs0ErsOxNWCsWtF6gvR2Gpyj0_tX9E8yXYug&usqp=CAU",
-			"Name": "ADEPA PHARMACEUTICALS",
-			"Distance": "81 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 1,
-			"Contact": "0540122964"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs0ErsOxNWCsWtF6gvR2Gpyj0_tX9E8yXYug&usqp=CAU",
+			"name": "ADEPA PHARMACEUTICALS",
+			"distance": "81 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 1,
+			"contact": "0540122964"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
-			"Name": "AZAR CHEMICAL INDUSTRIES",
-			"Distance": "82 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 1,
-			"Contact": "0540122965"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
+			"name": "AZAR CHEMICAL INDUSTRIES",
+			"distance": "82 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 1,
+			"contact": "0540122965"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
-			"Name": "BOAKYE PHARMACY",
-			"Distance": "83 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 1,
-			"Contact": "0540121945"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
+			"name": "BOAKYE PHARMACY",
+			"distance": "83 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 1,
+			"contact": "0540121945"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
-			"Name": "CHEMKOAT",
-			"Distance": "84 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 1,
-			"Contact": "0540124213"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
+			"name": "CHEMKOAT",
+			"distance": "84 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 1,
+			"contact": "0540124213"
 		},
-		{
-			"Logo": "https://www.graphicsprings.com/filestorage/stencils/62eedfb5818a17fdb9581b1b9324a630.png?width=500&height=500",
-			"Name": "HILLS PHARMACY",
-			"Distance": "85 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 1,
-			"Contact": "0504873611"
+		{
+			"logo": "https://www.graphicsprings.com/filestorage/stencils/62eedfb5818a17fdb9581b1b9324a630.png?width=500&height=500",
+			"name": "HILLS PHARMACY",
+			"distance": "85 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 1,
+			"contact": "0504873611"
 		},
-		{
-			"Logo": "https://media-exp1.licdn.com/dms/image/C560BAQEEvJa9s6arXQ/company-logo_200_200/0/1519870200648?e=2159024400&v=beta&t=WyPXADEGZ6Mf2lBir0m46cf7eVRyv4_I5kCxayo0bwc",
-			"Name": "KENDICKS PHARMACY",
-			"Distance": "86 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 1,
-			"Contact": "0504873611"
+		{
+			"logo": "https://media-exp1.licdn.com/dms/image/C560BAQEEvJa9s6arXQ/company-logo_200_200/0/1519870200648?e=2159024400&v=beta&t=WyPXADEGZ6Mf2lBir0m46cf7eVRyv4_I5kCxayo0bwc",
+			"name": "KENDICKS PHARMACY",
+			"distance": "86 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 1,
+			"contact": "0504873611"
 		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs0ErsOxNWCsWtF6gvR2Gpyj0_tX9E8yXYug&usqp=CAU",
-			"Name": "MD CHEMISTS LIMITED",
-			"Distance": "87 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 1,
-			"Contact": "0208165427"
-		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
-			"Name": "PASS PHARMACY",
-			"Distance": "88 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 1,
-			"Contact": "0553576937"
-		},
-		{
-			"Logo": "https://www.graphicsprings.com/filestorage/stencils/62eedfb5818a17fdb9581b1b9324a630.png?width=500&height=500",
-			"Name": "TREVIPHARMA LIMITED",
-			"Distance": "89 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 1,
-			"Contact": "0553576937"
-		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMtqFmymtjJvJr5MM4uX3B4CEEgM4dTt8o5YzG06IvlRHc3MT8rSrB4Od042lLPUIKI98&usqp=CAU",
-			"Name": "HEIGHTS PHARMACY",
-			"Distance": "90 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 1,
-			"Contact": "0540122966"
-		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVaUGYnopjk2aGaa92o0aa5267DV5N8AAZgw&usqp=CAU",
-			"Name": "Kinapharma Ltd.",
-			"Distance": "91 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 1,
-			"Contact": "0246840101"
-		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGv2ycErnCLKnPjm5Wk6NVlF2Cku7RcLjn5ABEIsylyaU_WPoiyNBSyjYgdRUdUTkVQ3w&usqp=CAU",
-			"Name": "WARWICK PAINE GHANA",
-			"Distance": "92 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 1,
-			"Contact": "0200942426"
-		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
-			"Name": "MENSAF CHEMISTS LIMITED",
-			"Distance": "93 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 1,
-			"Contact": "0208235723"
-		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
-			"Name": "Pharmcovert Pharmacy Ltd.",
-			"Distance": "94 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 1,
-			"Contact": "0540122963"
-		},
-		{
-			"Logo": "https://www.graphicsprings.com/filestorage/stencils/62eedfb5818a17fdb9581b1b9324a630.png?width=500&height=500",
-			"Name": "Med's Pharmacy",
-			"Distance": "95 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 1,
-			"Contact": "0540124230"
-		},
-		{
-			"Logo": "https://media-exp1.licdn.com/dms/image/C560BAQEEvJa9s6arXQ/company-logo_200_200/0/1519870200648?e=2159024400&v=beta&t=WyPXADEGZ6Mf2lBir0m46cf7eVRyv4_I5kCxayo0bwc",
-			"Name": "Sarps Chemists Ltd.",
-			"Distance": "96 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 1,
-			"Contact": "0540122964"
-		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs0ErsOxNWCsWtF6gvR2Gpyj0_tX9E8yXYug&usqp=CAU",
-			"Name": "Sarkuff Pharmacy",
-			"Distance": "97 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 1,
-			"Contact": "0540122965"
-		},
-		{
-			"Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
-			"Name": "Robert Kay Pharmacy",
-			"Distance": "98 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 1,
-			"Contact": "0540121945"
-		},
-		{
-			"Logo": "https://www.graphicsprings.com/filestorage/stencils/62eedfb5818a17fdb9581b1b9324a630.png?width=500&height=500",
-			"Name": "Roman Ridge Pharmacy",
-			"Distance": "99 km",
-			"Description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
-			"Rating": 1,
-			"Contact": "0540124213"
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs0ErsOxNWCsWtF6gvR2Gpyj0_tX9E8yXYug&usqp=CAU",
+			"name": "MD CHEMISTS LIMITED",
+			"distance": "87 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 1,
+			"contact": "0208165427"
+		},
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
+			"name": "PASS PHARMACY",
+			"distance": "88 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 1,
+			"contact": "0553576937"
+		},
+		{
+			"logo": "https://www.graphicsprings.com/filestorage/stencils/62eedfb5818a17fdb9581b1b9324a630.png?width=500&height=500",
+			"name": "TREVIPHARMA LIMITED",
+			"distance": "89 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 1,
+			"contact": "0553576937"
+		},
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMtqFmymtjJvJr5MM4uX3B4CEEgM4dTt8o5YzG06IvlRHc3MT8rSrB4Od042lLPUIKI98&usqp=CAU",
+			"name": "HEIGHTS PHARMACY",
+			"distance": "90 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 1,
+			"contact": "0540122966"
+		},
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVaUGYnopjk2aGaa92o0aa5267DV5N8AAZgw&usqp=CAU",
+			"name": "Kinapharma Ltd.",
+			"distance": "91 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 1,
+			"contact": "0246840101"
+		},
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGv2ycErnCLKnPjm5Wk6NVlF2Cku7RcLjn5ABEIsylyaU_WPoiyNBSyjYgdRUdUTkVQ3w&usqp=CAU",
+			"name": "WARWICK PAINE GHANA",
+			"distance": "92 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 1,
+			"contact": "0200942426"
+		},
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
+			"name": "MENSAF CHEMISTS LIMITED",
+			"distance": "93 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 1,
+			"contact": "0208235723"
+		},
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
+			"name": "Pharmcovert Pharmacy Ltd.",
+			"distance": "94 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 1,
+			"contact": "0540122963"
+		},
+		{
+			"logo": "https://www.graphicsprings.com/filestorage/stencils/62eedfb5818a17fdb9581b1b9324a630.png?width=500&height=500",
+			"name": "Med's Pharmacy",
+			"distance": "95 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 1,
+			"contact": "0540124230"
+		},
+		{
+			"logo": "https://media-exp1.licdn.com/dms/image/C560BAQEEvJa9s6arXQ/company-logo_200_200/0/1519870200648?e=2159024400&v=beta&t=WyPXADEGZ6Mf2lBir0m46cf7eVRyv4_I5kCxayo0bwc",
+			"name": "Sarps Chemists Ltd.",
+			"distance": "96 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 1,
+			"contact": "0540122964"
+		},
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs0ErsOxNWCsWtF6gvR2Gpyj0_tX9E8yXYug&usqp=CAU",
+			"name": "Sarkuff Pharmacy",
+			"distance": "97 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 1,
+			"contact": "0540122965"
+		},
+		{
+			"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEooit3rXX1evnjr0amW2dYAR1h6rmFsOwg&usqp=CAU",
+			"name": "Robert Kay Pharmacy",
+			"distance": "98 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 1,
+			"contact": "0540121945"
+		},
+		{
+			"logo": "https://www.graphicsprings.com/filestorage/stencils/62eedfb5818a17fdb9581b1b9324a630.png?width=500&height=500",
+			"name": "Roman Ridge Pharmacy",
+			"distance": "99 km",
+			"description": "Driven by our mission to provide a full range of quality pharmaceutical products at affordable prices.",
+			"rating": 1,
+			"contact": "0540124213"
 		}
 	]
-}

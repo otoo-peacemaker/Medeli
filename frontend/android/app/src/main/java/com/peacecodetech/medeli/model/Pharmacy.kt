@@ -1,9 +1,16 @@
 package com.peacecodetech.medeli.model
 
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+
+@Entity(tableName = "pharmacy")
 class Pharmacy(
-    val logo: String? = null,
-    val name: String? = null,
-    val distance: String? = null,
-    val description: String? = null,
-    val rating: Int? = null,
+    @PrimaryKey(autoGenerate = true) var id: Int? = 0,
+    @ColumnInfo val logo: String? = null,
+    @ColumnInfo val name: String? = null,
+    @ColumnInfo val distance: String? = null,
+    @ColumnInfo val description: String? = null,
+    @ColumnInfo val rating: Int? = null,
 )

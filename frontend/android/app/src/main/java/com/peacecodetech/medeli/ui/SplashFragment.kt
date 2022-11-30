@@ -7,8 +7,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.peacecodetech.medeli.R
+import com.peacecodetech.medeli.databinding.ActivityMainBinding
 import com.peacecodetech.medeli.databinding.FragmentSplashBinding
-class SplashFragment : Fragment() {
+import com.peacecodetech.medeli.util.BaseFragment
+
+class SplashFragment : BaseFragment() {
 
     private var _binding: FragmentSplashBinding? = null
     private val binding get() = _binding!!
@@ -20,6 +23,7 @@ class SplashFragment : Fragment() {
     ): View {
 
         _binding = FragmentSplashBinding.inflate(inflater, container, false)
+        setProgressBar((requireActivity().findViewById(R.id.progressId)))
         return binding.root
 
     }
@@ -28,10 +32,12 @@ class SplashFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.loginBtn.setOnClickListener {
+            showProgressBar()
             findNavController().navigate(R.id.action_splashFragment2_to_signInFragment)
         }
 
         binding.signUpBtn.setOnClickListener {
+            showProgressBar()
             findNavController().navigate(R.id.action_splashFragment2_to_signUpFragment) }
     }
 
