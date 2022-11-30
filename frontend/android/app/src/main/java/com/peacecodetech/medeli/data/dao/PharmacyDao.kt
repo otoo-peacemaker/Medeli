@@ -2,14 +2,13 @@ package com.peacecodetech.medeli.data.dao
 
 import androidx.room.*
 import com.peacecodetech.medeli.model.Pharmacy
-import com.peacecodetech.medeli.util.Resource
 import kotlinx.coroutines.flow.Flow
 
 
 @Dao
 interface PharmacyDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertToRoom(pharmacy: Pharmacy)
+    suspend fun insertToRoom(pharmacy: MutableList<Pharmacy>)
 
     @Update
     suspend fun updateList(pharmacy: Pharmacy)
