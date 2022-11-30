@@ -1,11 +1,16 @@
 package com.peacecodetech.medeli.data.source
 
 import android.content.Context
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import com.peacecodetech.medeli.data.dao.PharmacyDao
 import com.peacecodetech.medeli.di.RoomModule
 import com.peacecodetech.medeli.model.Pharmacy
+import com.peacecodetech.medeli.model.Products
+import com.peacecodetech.medeli.util.getJsonDataFromAsset
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import org.json.JSONArray
@@ -26,7 +31,7 @@ class DatabaseCallback(
         }
     }//
 
-    private suspend fun populatePharmacy(pharmacyDao: PharmacyDao) {
+   /* private suspend fun populatePharmacy(pharmacyDao: PharmacyDao) {
         val bufferReader = application.assets.open("pharmacy_metadata.json").bufferedReader()
         val jsonString = bufferReader.use {
             it.readText()
@@ -47,6 +52,21 @@ class DatabaseCallback(
             Timber.d("image: $imgUrl  name: $description || version : $name  \n")
             pharmacyDao.insertToRoom(pharmacy)
             Timber.d("image: $imgUrl  name: $description || version : $name  \n")
+        }
+    }*/
+
+    private suspend fun populatePharmacy(pharmacyDao: PharmacyDao) {
+        val jsonFileString = getJsonDataFromAsset(application, "pharmacy_metadata.json")
+        val product = mutableListOf<Pharmacy>()
+        if (jsonFileString != null) {
+            val gson = Gson()
+            val objPharmacyType = object : TypeToken<List<Pharmacy>>() {}.type
+            val pharmacy: List<Pharmacy> = gson.fromJson(jsonFileString, objPharmacyType)
+            pharmacy.forEach { data ->
+                data.let { product.add(it) }
+            }
+            pharmacyDao.insertToRoom(product)
+
         }
     }
 

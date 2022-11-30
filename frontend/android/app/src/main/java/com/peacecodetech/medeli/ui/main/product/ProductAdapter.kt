@@ -32,8 +32,8 @@ class ProductAdapter(
         fun bind(data: Products?) {
             if (data != null) {
                 binding.productName.text = data.name
-                binding.price.text = data.price.toString()
-                binding.qnty.text = data.quantity.toString()
+                binding.price.text = "$ ${data.price}"
+                binding.stockValue.text ="${data.quantity} in stock"
                 Glide.with(binding.imgProduct).load(data.img_url).into(binding.imgProduct)
             }
         }
@@ -87,11 +87,11 @@ class ProductAdapter(
                     val filteredList = ArrayList<Products>()
                     categoriesList
                         .filter {
-                            it.name.contains(constraint!!) or (constraint?.let { it1 ->
+                            it.name.contains(constraint!!) or (constraint.let { it1 ->
                                 it.name.contains(
                                     it1
                                 )
-                            } == true)//or something  (it.author.contains(constraint))
+                            })//or something  (it.author.contains(constraint))
                         }.forEach { value ->
                             filteredList.add(value)
                         }

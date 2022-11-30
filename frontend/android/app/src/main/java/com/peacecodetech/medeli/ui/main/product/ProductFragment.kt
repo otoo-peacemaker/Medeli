@@ -1,6 +1,7 @@
 package com.peacecodetech.medeli.ui.main.product
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -90,11 +91,11 @@ class ProductFragment : Fragment(), ProductAdapter.OnSelectedItemListener,
     }
 
     override fun onSelectedItemListener(viewListBinding: ProductListBinding) {
-        Toast.makeText(requireContext(), "Not yet implemented", Toast.LENGTH_LONG).show()
+        Timber.tag("TAG").d("Not yet implemented")
     }
 
     override fun onOnViewDetail(pharmacy: Products) {
-        Toast.makeText(requireContext(), "Not yet implemented", Toast.LENGTH_LONG).show()
+        Timber.tag("TAG").d("Not yet implemented")
     }
 
 }

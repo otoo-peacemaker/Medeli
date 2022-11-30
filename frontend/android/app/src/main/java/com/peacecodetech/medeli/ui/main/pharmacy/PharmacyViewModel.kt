@@ -71,7 +71,7 @@ class PharmacyViewModel @Inject constructor(
 
      fun insertIntoRoomPharmacyData(pharmacy: Pharmacy) =
         viewModelScope.launch {
-            pharmacyRepository.insertToRoom(pharmacy)
+           // pharmacyRepository.insertToRoom(pharmacy)
 
         }
 
