@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.peacecodetech.medeli.databinding.CategoriesCardBinding
 import com.peacecodetech.medeli.databinding.SavedListBinding
+import com.peacecodetech.medeli.model.Categories
 import com.peacecodetech.medeli.model.Pharmacy
 
 class HomeRecyAdapter(
@@ -82,7 +83,7 @@ class HomeRecyAdapter(
                     val filteredList = ArrayList<Categories>()
                     categoriesList
                         .filter {
-                            it.name.contains(constraint!!.trim())//or something  (it.author.contains(constraint))
+                            it.name!!.contains(constraint!!.trim())//or something  (it.author.contains(constraint))
                         }.forEach { value ->
                             filteredList.add(value)
                         }
@@ -103,7 +104,6 @@ class HomeRecyAdapter(
                 }
                 notifyDataSetChanged()
             }
-
         }
     }
 

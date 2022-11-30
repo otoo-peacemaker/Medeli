@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/splashFragment2"
-        android:name="com.peacecodetech.medeli.ui.SplashFragment"
+        android:name="com.peacecodetech.medeli.ui.main.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash">
         <action

@@ -1,8 +1,5 @@
 package com.peacecodetech.medeli.ui.main.pharmacy
 
-import android.content.ActivityNotFoundException
-import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -10,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.content.res.AppCompatResources
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
@@ -24,6 +20,7 @@ import com.peacecodetech.medeli.R
 import com.peacecodetech.medeli.databinding.FragmentPharmacyBinding
 import com.peacecodetech.medeli.databinding.SavedListBinding
 import com.peacecodetech.medeli.model.Pharmacy
+import com.peacecodetech.medeli.model.Products
 import com.peacecodetech.medeli.util.BaseFragment
 import com.peacecodetech.medeli.util.getJsonDataFromAsset
 import dagger.hilt.android.AndroidEntryPoint
@@ -78,7 +75,7 @@ class PharmacyFragment : BaseFragment(), RecyclerAdapter.OnViewDetail,
         getPharmacy()
 
         binding.savedFragment.materialButton.setOnClickListener {
-            routUserToMap("4.908538200000001,-1.7563672","4.989325299999999,-1.7562893")
+            routUserToMap("4.908538200000001,-1.7563672", "4.989325299999999,-1.7562893")
         }
 
         return binding.root
@@ -118,13 +115,15 @@ class PharmacyFragment : BaseFragment(), RecyclerAdapter.OnViewDetail,
             setHasFixedSize(true)
             adapter = pharmacyAdapter
         }
+
+      loadJsonFile()
     }
 
     private fun viewModelObservers() {
         lifecycleScope.launch {
             viewModel.getRoomPharmacyData.observe(viewLifecycleOwner, Observer { list ->
                 list?.let {
-                    pharmacyAdapter.submitList(it)
+                   // pharmacyAdapter.submitList(it)
                 }
             })
         }
@@ -176,15 +175,17 @@ class PharmacyFragment : BaseFragment(), RecyclerAdapter.OnViewDetail,
     }
 
     private fun loadJsonFile() {
+        val product = mutableListOf<Pharmacy>()
         val jsonFileString = getJsonDataFromAsset(requireContext(), "pharmacy_metadata.json")
+
         if (jsonFileString != null) {
             val gson = Gson()
             val objPharmacyType = object : TypeToken<List<Pharmacy>>() {}.type
             val pharmacy: List<Pharmacy> = gson.fromJson(jsonFileString, objPharmacyType)
-            pharmacy.forEachIndexed { idx, data ->
-                /*pharmacyAdapter.submitList(arr)
-                viewModel.insertIntoRoomPharmacyData(data)*/
+            pharmacy.forEach {  data ->
+                data.let { product.add(it) }
             }
+            pharmacyAdapter.submitList(product)
         }
     }
 
@@ -210,6 +211,7 @@ class PharmacyFragment : BaseFragment(), RecyclerAdapter.OnViewDetail,
                 // displaying a toast message.
                 Toast.makeText(requireContext(), "Pharmacy Added..", Toast.LENGTH_SHORT).show()
             }
+
             override fun onCancelled(error: DatabaseError) {
                 // displaying a failure message on below line.
                 Toast.makeText(requireContext(), "Fail to add Pharmacy..", Toast.LENGTH_SHORT)
@@ -228,19 +230,18 @@ class PharmacyFragment : BaseFragment(), RecyclerAdapter.OnViewDetail,
                     val phaInfo = data.getValue(Pharmacy::class.java)
                     if (phaInfo != null) {
                         viewModel.insertIntoRoomPharmacyData(phaInfo)
-                         arrListPharmacy.add(phaInfo)
-                        pharmacyAdapter.submitList(arrListPharmacy)
+                        arrListPharmacy.add(phaInfo)
                     }
                     Log.i("META", "{$phaInfo}")
                 }
+                pharmacyAdapter.submitList(arrListPharmacy)
             }
+
             override fun onCancelled(error: DatabaseError) {
                 TODO("Not yet implemented")
             }
         })
     }
-
-
 
 
     override fun onDestroyView() {

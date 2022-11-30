@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.peacecodetech.medeli.R
 import com.peacecodetech.medeli.databinding.CategoriesCardBinding
 import com.peacecodetech.medeli.databinding.FragmentHomeBinding
+import com.peacecodetech.medeli.model.Categories
 import com.peacecodetech.medeli.ui.main.pharmacy.RecyclerAdapter
 import com.peacecodetech.medeli.util.startAuthActivity
 import timber.log.Timber
@@ -32,7 +33,6 @@ class HomeFragment : Fragment(), HomeRecyAdapter.OnViewDetail, SearchView.OnQuer
                 putInt("color",it.color)
             }
             navigateTo(bundle)
-
         }
     }
 
@@ -76,7 +76,6 @@ class HomeFragment : Fragment(), HomeRecyAdapter.OnViewDetail, SearchView.OnQuer
             setHasFixedSize(true)
             adapter = pharmacyAdapter
         }
-
         pharmacyAdapter.addData(categories)
     }
 
@@ -85,8 +84,6 @@ class HomeFragment : Fragment(), HomeRecyAdapter.OnViewDetail, SearchView.OnQuer
             findNavController().navigate(R.id.action_navigation_home_to_productFragment,
                 bundle)
     }
-
-
 
     override fun onOnViewDetail(pharmacy: Categories) {
         Toast.makeText(requireContext(), "Not yet implemented", Toast.LENGTH_LONG).show()
@@ -166,8 +163,3 @@ class HomeFragment : Fragment(), HomeRecyAdapter.OnViewDetail, SearchView.OnQuer
     }
 
 }
-
-data class Categories(
-    val name:String,
-    val color: Int
-)
