@@ -1,0 +1,842 @@
+[
+  {
+    "name": "Pei Mei Natural Vitamin C Serum.",
+    "price": 1480,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/52/136454/1.jpg?8824",
+    "favourite": "TRUE",
+    "quantity": 14
+  },
+  {
+    "name": "Habetong Aloe Vera Soothing/Moisturizing Sunburn Repair Gel",
+    "price": 1680,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/13/003746/1.jpg?8388",
+    "favourite": "TRUE",
+    "quantity": 16
+  },
+  {
+    "name": "Aichun Beauty Black Facial Mask Whitening Complex + Free Black Head Remover",
+    "price": 1680,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/35/804214/1.jpg?7922",
+    "favourite": "TRUE",
+    "quantity": 16
+  },
+  {
+    "name": "Neutrogena Sesame Body Oil",
+    "price": 3500,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/61/249417/1.jpg?9564",
+    "favourite": "TRUE",
+    "quantity": 35
+  },
+  {
+    "name": "Aichun Beauty Collagen+Vitamin E Carrot Face Brightening Serum- 99% Oil FREE",
+    "price": 1380,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/04/804214/5.jpg?6263",
+    "favourite": "TRUE",
+    "quantity": 13
+  },
+  {
+    "name": "Simple Micellar Facial Gel Wash Water Boost 150ml",
+    "price": 4799,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/59/897277/1.jpg?0040",
+    "favourite": "FALSE",
+    "quantity": 47
+  },
+  {
+    "name": "Alorepair Super Fast Hair And Beard Growth Spray - Minoxidil 5%",
+    "price": 3781,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/13/930267/1.jpg?8754",
+    "favourite": "FALSE",
+    "quantity": 37
+  },
+  {
+    "name": "Bio-Oil Specialist Skincare Oil 25ml",
+    "price": 2565,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/37/863246/1.jpg?5172",
+    "favourite": "FALSE",
+    "quantity": 25
+  },
+  {
+    "name": "Bio-Oil Specialist Skincare Oil 125ml",
+    "price": 5510,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/17/863246/1.jpg?5142",
+    "favourite": "TRUE",
+    "quantity": 55
+  },
+  {
+    "name": "BELAY Always Young Lactobionic Acid Anti-Aging Serum- 10ML",
+    "price": 1842,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/35/433407/1.jpg?6253",
+    "favourite": "TRUE",
+    "quantity": 18
+  },
+  {
+    "name": "Aichun Beauty Black Facial Mask Whitenin Complex - Black Mask",
+    "price": 1880,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/394542/1.jpg?5786",
+    "favourite": "TRUE",
+    "quantity": 18
+  },
+  {
+    "name": "Aichun Beauty Eggs 99 Collagen + Vitamin E Face Serum",
+    "price": 1350,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/72/804214/1.jpg?8098",
+    "favourite": "TRUE",
+    "quantity": 13
+  },
+  {
+    "name": "Bio-Oil Specialist Skincare Oil 200ml",
+    "price": 7347,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/07/863246/1.jpg?3461",
+    "favourite": "FALSE",
+    "quantity": 73
+  },
+  {
+    "name": "Cosrx Advanced Snail Mucin Power Essence",
+    "price": 1250,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/50/458072/1.jpg?8690",
+    "favourite": "TRUE",
+    "quantity": 12
+  },
+  {
+    "name": "Derma Roller Micro Needle Skin Multi 1.5mm",
+    "price": 3000,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/07/890356/1.jpg?2086",
+    "favourite": "TRUE",
+    "quantity": 30
+  },
+  {
+    "name": "Aichun Beauty Instant Beard Growth Natural Oil",
+    "price": 1650,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/39/396834/1.jpg?7672",
+    "favourite": "TRUE",
+    "quantity": 16
+  },
+  {
+    "name": "Derma Roller Dermaroller Micro Needle Skin Multi 0.5mm",
+    "price": 2250,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/27/793584/1.jpg?7026",
+    "favourite": "TRUE",
+    "quantity": 22
+  },
+  {
+    "name": "Aichun Beauty Beard Growth Oil - Rapid Result",
+    "price": 1650,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/30/947413/1.jpg?7672",
+    "favourite": "TRUE",
+    "quantity": 16
+  },
+  {
+    "name": "De Joda Pedicure & Manicure Cream 200g",
+    "price": 999,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/39/458916/1.jpg?0091",
+    "favourite": "FALSE",
+    "quantity": 99
+  },
+  {
+    "name": "Makari De Suisse Extreme Unify & Illuminate Argan And Carrot Tone Boosting Face Cream",
+    "price": 2080,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/44/882676/1.jpg?8284",
+    "favourite": "TRUE",
+    "quantity": 20
+  },
+  {
+    "name": "Palmer's Cocoa Butter Formula Body Lotion",
+    "price": 4275,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/28/056556/1.jpg?7366",
+    "favourite": "FALSE",
+    "quantity": 42
+  },
+  {
+    "name": "Pixi Glow Tonic - Glycolic Acid Toner - 250ml",
+    "price": 9500,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/67/306176/1.jpg?3767",
+    "favourite": "TRUE",
+    "quantity": 95
+  },
+  {
+    "name": "Eden Glycerin And Rosewater Toning And Moisturizing Liquid",
+    "price": 2400,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/97/214795/1.jpg?9673",
+    "favourite": "TRUE",
+    "quantity": 24
+  },
+  {
+    "name": "Shine On Knuckles Cream, Elbow, Armpit And Dark Spot Remover.....(2pcs)",
+    "price": 4999,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/35/640034/1.jpg?9611",
+    "favourite": "FALSE",
+    "quantity": 49
+  },
+  {
+    "name": "Florida Baby Face Lightening Anti-spot Face Cream",
+    "price": 2375,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/27/313866/1.jpg?8493",
+    "favourite": "FALSE",
+    "quantity": 23
+  },
+  {
+    "name": "Avila Organic Glowing Papaya Soap×3",
+    "price": 4999,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/22/776366/1.jpg?2083",
+    "favourite": "FALSE",
+    "quantity": 49
+  },
+  {
+    "name": "Vaseline Healthy Even Tone UV Protection Body Lotion B3 Sunscreen",
+    "price": 2755,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/47/566556/1.jpg?9946",
+    "favourite": "FALSE",
+    "quantity": 27
+  },
+  {
+    "name": "Simple Water Boost Hydrating Gel Cream, 50ml",
+    "price": 4599,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/87/217636/1.jpg?3106",
+    "favourite": "FALSE",
+    "quantity": 45
+  },
+  {
+    "name": "Cosrx Advanced Snail 92 All In One Cream - 100ml",
+    "price": 1350,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/16/185795/1.jpg?3230",
+    "favourite": "TRUE",
+    "quantity": 13
+  },
+  {
+    "name": "5-1 Multifunction Electric Face Facial Cleansing Brush Spa Skin Care Massage-Pink",
+    "price": 2995,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/20/34368/1.jpg?0234",
+    "favourite": "FALSE",
+    "quantity": 29
+  },
+  {
+    "name": "Beauty Formulas Tea Tree Deep Cleansing Facial Mask",
+    "price": 2650,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/37/325512/1.jpg?5356",
+    "favourite": "TRUE",
+    "quantity": 26
+  },
+  {
+    "name": "Derma Roller Micro Needle Skin Multi 3.0mm.",
+    "price": 5000,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/25/064196/1.jpg?0617",
+    "favourite": "TRUE",
+    "quantity": 50
+  },
+  {
+    "name": "Animate Vitamin E Facial Essence Oil - 60 Softgel Capsule",
+    "price": 1425,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/44/141326/1.jpg?1964",
+    "favourite": "FALSE",
+    "quantity": 14
+  },
+  {
+    "name": "Clean & Clear Morning Energy Skin Brightening Daily Facial Scrub 150 Ml",
+    "price": 4850,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/01/495656/1.jpg?9308",
+    "favourite": "TRUE",
+    "quantity": 48
+  },
+  {
+    "name": "Vaseline Healthy Even Tone UV Protection Body Lotion B3 Sunscreen",
+    "price": 2470,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/18/566556/1.jpg?4406",
+    "favourite": "TRUE",
+    "quantity": 24
+  },
+  {
+    "name": "Avila Intense Lightening Organic/Black Soap",
+    "price": 3499,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/71/843865/1.jpg?1871",
+    "favourite": "FALSE",
+    "quantity": 34
+  },
+  {
+    "name": "Surgical Disposable Face Nose Mask 3 Layer Protection 50Pcs",
+    "price": 2400,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/55/743407/1.jpg?3745",
+    "favourite": "TRUE",
+    "quantity": 24
+  },
+  {
+    "name": "Irish Gold Egg Yolk Extract Toning Body Lotion",
+    "price": 3325,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/21/413866/1.jpg?0561",
+    "favourite": "FALSE",
+    "quantity": 33
+  },
+  {
+    "name": "Avila Intense Lightening Organic/Black Soap",
+    "price": 2950,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/883624/1.jpg?8807",
+    "favourite": "TRUE",
+    "quantity": 29
+  },
+  {
+    "name": "HAWAII Herbal Carrot Soap X 4",
+    "price": 3420,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/23/465707/1.jpg?5351",
+    "favourite": "TRUE",
+    "quantity": 34
+  },
+  {
+    "name": "Mederma Strech Mark Remover Good Therapy",
+    "price": 3870,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/30/543524/1.jpg?9892",
+    "favourite": "TRUE",
+    "quantity": 38
+  },
+  {
+    "name": "white express Lightening Body Lotion In 10 Days",
+    "price": 3325,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/83/350596/1.jpg?1427",
+    "favourite": "FALSE",
+    "quantity": 33
+  },
+  {
+    "name": "Avila Natural Moringa Soap",
+    "price": 1999,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/42/156625/1.jpg?3810",
+    "favourite": "FALSE",
+    "quantity": 19
+  },
+  {
+    "name": "Avila Neem Face Cream",
+    "price": 4999,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/41/885576/1.jpg?2745",
+    "favourite": "FALSE",
+    "quantity": 49
+  },
+  {
+    "name": "Makari De Suisse UV CLEAR FACIAL SUNSCREEN BROAD SPECTRUM SPF-46",
+    "price": 2020,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/35/366676/1.jpg?9210",
+    "favourite": "TRUE",
+    "quantity": 20
+  },
+  {
+    "name": "Peau De Lune Eclaircissante Facial Cleanser Lotion",
+    "price": 3325,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/05/891027/1.jpg?4643",
+    "favourite": "FALSE",
+    "quantity": 33
+  },
+  {
+    "name": "Makari De Suisse Exclusive Unify & Illuminate Exfoliating Soap",
+    "price": 1450,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/14/472676/1.jpg?3915",
+    "favourite": "TRUE",
+    "quantity": 14
+  },
+  {
+    "name": "Eden Mama's Super Choice Eden Teens Glow Shower Milk & Lotion",
+    "price": 7200,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/05/654036/1.jpg?0407",
+    "favourite": "TRUE",
+    "quantity": 72
+  },
+  {
+    "name": "Makari De Suisse Exclusive Unify & Illuminate Tone Boosting Face Cream",
+    "price": 1730,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/88/482676/1.jpg?7808",
+    "favourite": "TRUE",
+    "quantity": 17
+  },
+  {
+    "name": "Makari De Suisse Extreme Argan And Carrot Exfoliating Soap",
+    "price": 1730,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/25/882676/1.jpg?8164",
+    "favourite": "TRUE",
+    "quantity": 17
+  },
+  {
+    "name": "VEET GOLD Face Whitening Spot And Sun Burn Remover Cream",
+    "price": 3500,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/83/527612/1.jpg?8794",
+    "favourite": "TRUE",
+    "quantity": 35
+  },
+  {
+    "name": "Irish Spring Body Wash Deep Action Srub",
+    "price": 4500,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/68/914954/1.jpg?5486",
+    "favourite": "TRUE",
+    "quantity": 45
+  },
+  {
+    "name": "Simple Kind To Skin Soothing Facial Toner - 200ml",
+    "price": 4999,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/48/56869/1.jpg?6268",
+    "favourite": "FALSE",
+    "quantity": 49
+  },
+  {
+    "name": "Makari De Suisse Exclusive Unify & Illuminate Dark Spot Corrector Serum",
+    "price": 2020,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/82/482676/1.jpg?6502",
+    "favourite": "TRUE",
+    "quantity": 20
+  },
+  {
+    "name": "Makari De Suisse Extreme Argan And Carrot Spot Corrector Pen",
+    "price": 2400,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/35/882676/1.jpg?8165",
+    "favourite": "TRUE",
+    "quantity": 24
+  },
+  {
+    "name": "Pears Transparent Soap Pure & Gentle With Mint Extracts X 12",
+    "price": 9000,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/33/872676/1.jpg?5366",
+    "favourite": "TRUE",
+    "quantity": 90
+  },
+  {
+    "name": "Egg Yolk Brightening Collagen Soap X3",
+    "price": 3610,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/23/569136/1.jpg?3216",
+    "favourite": "TRUE",
+    "quantity": 36
+  },
+  {
+    "name": "Makari De Suisse Extreme Unify & Illuminate Argan And Carrot Toning Gel",
+    "price": 1705,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/84/882676/1.jpg?8164",
+    "favourite": "FALSE",
+    "quantity": 17
+  },
+  {
+    "name": "Makari De Suisse Extreme Unify & Illuminate Argan And Carrot Dark Spot Corrector Serum",
+    "price": 2650,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/24/882676/1.jpg?8165",
+    "favourite": "TRUE",
+    "quantity": 26
+  },
+  {
+    "name": "Egg Yolk Lightening Anti Aging Soap",
+    "price": 1805,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/16/527136/1.jpg?4892",
+    "favourite": "FALSE",
+    "quantity": 18
+  },
+  {
+    "name": "Collomak Salicylic Acid Fluid Skin Viral Issues",
+    "price": 4999,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/50/378817/1.jpg?7974",
+    "favourite": "FALSE",
+    "quantity": 49
+  },
+  {
+    "name": "Reusable Full Mouth Cover Anti-Dust Face Mask-Black",
+    "price": 1900,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/16/452917/1.jpg?7022",
+    "favourite": "TRUE",
+    "quantity": 19
+  },
+  {
+    "name": "Avila Organic Lightening/Glowing Herbal Soap-450g.",
+    "price": 3999,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/53/710195/1.jpg?2726",
+    "favourite": "FALSE",
+    "quantity": 39
+  },
+  {
+    "name": "Makari De Suisse Caviar Clarifying Body Glycerin",
+    "price": 2900,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/03/472676/1.jpg?4460",
+    "favourite": "TRUE",
+    "quantity": 29
+  },
+  {
+    "name": "Makari De Suisse Exclusive Active Intense Advance Lightening Toning Gel",
+    "price": 1385,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/78/482676/1.jpg?7807",
+    "favourite": "FALSE",
+    "quantity": 13
+  },
+  {
+    "name": "Ginger oil Ginger Essential Oil,Pure Natural Lymphatic Massage Oil",
+    "price": 3500,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/70/440607/3.jpg?2398",
+    "favourite": "TRUE",
+    "quantity": 35
+  },
+  {
+    "name": "Vaseline Healthy Even Tone UV Protection Body Lotion B3 Sunscreen",
+    "price": 4500,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/25/823407/1.jpg?4835",
+    "favourite": "TRUE",
+    "quantity": 45
+  },
+  {
+    "name": "Exfoliating Face Brush And Accessories 5 In 1head Sets",
+    "price": 5600,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/01/947213/1.jpg?4786",
+    "favourite": "TRUE",
+    "quantity": 56
+  },
+  {
+    "name": "Beauty Formulas Cucumber Cleansing Facial Wipes - Cool Moist",
+    "price": 2399,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/24/63575/1.jpg?4693",
+    "favourite": "FALSE",
+    "quantity": 23
+  },
+  {
+    "name": "Makari De Suisse Night Radiance Face Cream",
+    "price": 3300,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/82/472676/1.jpg?4460",
+    "favourite": "TRUE",
+    "quantity": 33
+  },
+  {
+    "name": "Eden Extra Whtening Apricot Face & Body Scrub",
+    "price": 4750,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/97/951536/1.jpg?7806",
+    "favourite": "TRUE",
+    "quantity": 47
+  },
+  {
+    "name": "Radiant Glow Botanical Brightening Lotion For Radiant & Glowing Skin.",
+    "price": 1200,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/06/51318/1.jpg?8304",
+    "favourite": "TRUE",
+    "quantity": 12
+  },
+  {
+    "name": "Makari De Suisse Caviar Enriched Treatment Soap",
+    "price": 1195,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/05/882676/1.jpg?8164",
+    "favourite": "FALSE",
+    "quantity": 11
+  },
+  {
+    "name": "Bronze Tone Maxitone Body Lotion",
+    "price": 2755,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/52/081536/1.jpg?0515",
+    "favourite": "FALSE",
+    "quantity": 27
+  },
+  {
+    "name": "Lumine Carrot Face And Body Lightening Lotion",
+    "price": 6175,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/51/885576/1.jpg?0431",
+    "favourite": "FALSE",
+    "quantity": 61
+  },
+  {
+    "name": "Disaar Vitamin C Facial Wash With Berry Glutathione.",
+    "price": 3099,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/70/285576/1.jpg?1543",
+    "favourite": "FALSE",
+    "quantity": 30
+  },
+  {
+    "name": "Jra Spot& Sun Burn Removing Cream",
+    "price": 1805,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/55/368546/1.jpg?1110",
+    "favourite": "FALSE",
+    "quantity": 18
+  },
+  {
+    "name": "Fresh Scents Liquid Hand Wash - Floribunda Rose, 4L",
+    "price": 6250,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/38/703087/1.jpg?6403",
+    "favourite": "TRUE",
+    "quantity": 62
+  },
+  {
+    "name": "Makari De Suisse Pure Radiance Exfoliating Sugar Scrub",
+    "price": 2465,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/53/366676/1.jpg?9209",
+    "favourite": "FALSE",
+    "quantity": 24
+  },
+  {
+    "name": "Lavender Repair Essence  - Effective Scar Removal -3pcs",
+    "price": 7505,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/64/896146/1.jpg?0467",
+    "favourite": "FALSE",
+    "quantity": 75
+  },
+  {
+    "name": "Fresh Scents Hand Wash - French Lavender, 4L",
+    "price": 6250,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/27/703087/1.jpg?0589",
+    "favourite": "TRUE",
+    "quantity": 62
+  },
+  {
+    "name": "Mabox Retinol Moisturizer + Free Vitamin C Oil/Hyaluronic Acid.",
+    "price": 1299,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/84/238866/1.jpg?0827",
+    "favourite": "FALSE",
+    "quantity": 12
+  },
+  {
+    "name": "Aichun Beauty Beard Growth Oil - Rapid Result",
+    "price": 999,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/01/955963/1.jpg?7046",
+    "favourite": "FALSE",
+    "quantity": 99
+  },
+  {
+    "name": "Likas Whitening Herbal Body Lotion Papaya 300ml",
+    "price": 6800,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/22/600885/1.jpg?5647",
+    "favourite": "TRUE",
+    "quantity": 68
+  },
+  {
+    "name": "Rooties Beauty Rooties Herbal Extract PapayaTreatment Scrub",
+    "price": 4500,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/90/856685/1.jpg?2662",
+    "favourite": "TRUE",
+    "quantity": 45
+  },
+  {
+    "name": "Miss Rose Glitter Glue",
+    "price": 5000,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/19/858027/1.jpg?3965",
+    "favourite": "TRUE",
+    "quantity": 50
+  },
+  {
+    "name": "Palmer's Skin Success Fade Milk Body Lotion",
+    "price": 9025,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/62/084217/1.jpg?5098",
+    "favourite": "FALSE",
+    "quantity": 90
+  },
+  {
+    "name": "Simple Micellar Facial Gel Wash Water Boost 150ml",
+    "price": 5999,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/33/951877/1.jpg?5213",
+    "favourite": "FALSE",
+    "quantity": 59
+  },
+  {
+    "name": "Mabox Retinol Moisturizer Face Cream /Hyaluronic Acid, Vitamin E",
+    "price": 7499,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/40/064807/1.jpg?1597",
+    "favourite": "FALSE",
+    "quantity": 74
+  },
+  {
+    "name": "1 Pieces Of Magic Twist Hair Sponge, For Dreads Locks And Free Pink Lip Balm",
+    "price": 4499,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/85/967907/1.jpg?1708",
+    "favourite": "FALSE",
+    "quantity": 44
+  },
+  {
+    "name": "Now Essential Oils Spearmint - 1 Fl Oz (30 Ml)",
+    "price": 7500,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/95/885054/1.jpg?6171",
+    "favourite": "TRUE",
+    "quantity": 75
+  },
+  {
+    "name": "Lavender Repair Essence Oil - Effective Scar Removal -3pcs",
+    "price": 8075,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/14/936027/1.jpg?3626",
+    "favourite": "FALSE",
+    "quantity": 80
+  },
+  {
+    "name": "Cien Schaumbad Thermal Spa",
+    "price": 8000,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/90/823326/1.jpg?7847",
+    "favourite": "TRUE",
+    "quantity": 80
+  },
+  {
+    "name": "Carrots Eclaircissant Larissa Carrot Soap 225g",
+    "price": 3300,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/55/779175/1.jpg?0191",
+    "favourite": "TRUE",
+    "quantity": 33
+  },
+  {
+    "name": "Skin Doctor Massage Oil - For All Theraphy.",
+    "price": 3399,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/71/349406/1.jpg?5767",
+    "favourite": "FALSE",
+    "quantity": 33
+  },
+  {
+    "name": "Makari De Suisse Velvet Rose Smoothing Body Lotion",
+    "price": 4155,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/95/882676/1.jpg?8166",
+    "favourite": "FALSE",
+    "quantity": 41
+  },
+  {
+    "name": "Surgical Disposable Face Nose Mask 3 Layer Protection 100Pcs",
+    "price": 4500,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/47/843407/1.jpg?7244",
+    "favourite": "TRUE",
+    "quantity": 45
+  },
+  {
+    "name": "E45 Skin Nourishing Soap, 3 Pack",
+    "price": 5000,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/26/601643/1.jpg?0259",
+    "favourite": "TRUE",
+    "quantity": 50
+  },
+  {
+    "name": "Clean & Clear Deep Cleansing Lotion For Sensitive Skin 200ml",
+    "price": 4699,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/47/119656/1.jpg?3142",
+    "favourite": "FALSE",
+    "quantity": 46
+  },
+  {
+    "name": "Cetaphil Daily Facial Cleanser, For Normal To Oily Skin - 16 Oz",
+    "price": 1150,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/61/007552/1.jpg?5333",
+    "favourite": "TRUE",
+    "quantity": 11
+  },
+  {
+    "name": "Vaseline Intensive Care Cocoa Glow Body Lotion 400ml",
+    "price": 5199,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/20/246314/1.jpg?9498",
+    "favourite": "FALSE",
+    "quantity": 51
+  },
+  {
+    "name": "Vintage Hair Clipper, USB Rechargeable Clipper",
+    "price": 9499,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/26/787667/1.jpg?3767",
+    "favourite": "FALSE",
+    "quantity": 94
+  },
+  {
+    "name": "Makari De Suisse Blue Crystal Ultimate Intense Skin Reviving Body Lotion",
+    "price": 6540,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/65/882676/1.jpg?8165",
+    "favourite": "TRUE",
+    "quantity": 65
+  },
+  {
+    "name": "Pr Francoise Bedon Puissance Lightening Milk - 500ml",
+    "price": 1330,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/19/971536/1.jpg?7755",
+    "favourite": "TRUE",
+    "quantity": 13
+  },
+  {
+    "name": "Nature Essential Brightening, Spotless & Dark Spot Knuckle Remover Oil (10ml)",
+    "price": 3800,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/82/686667/1.jpg?8833",
+    "favourite": "TRUE",
+    "quantity": 38
+  },
+  {
+    "name": "Beauty Formulas Activated Charcoal Cleanser, Mask And Scrub Set.",
+    "price": 6970,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/64/612287/1.jpg?7586",
+    "favourite": "TRUE",
+    "quantity": 69
+  },
+  {
+    "name": "Asantee RICE MILK Lightening Body Scrub 700ml",
+    "price": 2850,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/55/527136/1.jpg?4892",
+    "favourite": "TRUE",
+    "quantity": 28
+  },
+  {
+    "name": "Lavender Repair Essence Oil - Effective Scar Removal Serum",
+    "price": 4275,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/54/896146/1.jpg?0526",
+    "favourite": "FALSE",
+    "quantity": 42
+  },
+  {
+    "name": "Beckon Dark Knuckles Repair Moisturizing Anti-drying Hand Cream",
+    "price": 2375,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/42/302864/1.jpg?7758",
+    "favourite": "FALSE",
+    "quantity": 23
+  },
+  {
+    "name": "Vaseline Healthy Even Tone UV Protection Body Lotion B3 Sunscreen",
+    "price": 4500,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/15/823407/1.jpg?4835",
+    "favourite": "TRUE",
+    "quantity": 45
+  },
+  {
+    "name": "Avila Tumeric And Licorice Facial Scrub",
+    "price": 4499,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/02/942824/1.jpg?4478",
+    "favourite": "FALSE",
+    "quantity": 44
+  },
+  {
+    "name": "Dr. Rashel Long Lasting 24hrs Hydration Sun Cream SPF+++ 50",
+    "price": 3999,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/23/464867/1.jpg?9229",
+    "favourite": "FALSE",
+    "quantity": 39
+  },
+  {
+    "name": "Plante Camu Camu White Body Lotion",
+    "price": 8850,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/70/042264/1.jpg?5483",
+    "favourite": "TRUE",
+    "quantity": 88
+  },
+  {
+    "name": "Pure Egyptian Magic Lightening Body Lotion",
+    "price": 8075,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/02/061536/1.jpg?8669",
+    "favourite": "FALSE",
+    "quantity": 80
+  },
+  {
+    "name": "Neutrogena Rapid Clear 2-in-1 Fight & Fade Toner For Acne & Marks-236ML",
+    "price": 1200,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/90/354367/1.jpg?0103",
+    "favourite": "TRUE",
+    "quantity": 12
+  },
+  {
+    "name": "Disaar Vitamin C And Hyaluronic Acid Face Cream!!!",
+    "price": 2900,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/57/517907/1.jpg?0292",
+    "favourite": "TRUE",
+    "quantity": 29
+  },
+  {
+    "name": "VEET GOLD VEETgold Vitamin A, B, C, D Kojic Acid Oil Corrector",
+    "price": 8500,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/37/108567/1.jpg?5139",
+    "favourite": "TRUE",
+    "quantity": 85
+  },
+  {
+    "name": "Eskinol Naturals Avocado Facial Cleanser",
+    "price": 7000,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/69/750596/1.jpg?3557",
+    "favourite": "TRUE",
+    "quantity": 70
+  },
+  {
+    "name": "Mabox Retinol Moisturizer + Free Vitamin C Oil/Hyaluronic Acid",
+    "price": 1299,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/34/238866/1.jpg?0827",
+    "favourite": "FALSE",
+    "quantity": 12
+  },
+  {
+    "name": "Surgical Disposable Face Nose Mask 3 Layer Protection 200Pcs",
+    "price": 8999,
+    "img_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/86/843407/1.jpg?6737",
+    "favourite": "FALSE",
+    "quantity": 89
+  }
+]

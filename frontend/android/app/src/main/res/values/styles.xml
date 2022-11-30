@@ -13,7 +13,7 @@
         <item name="lineHeight">24.67dp</item>
         <item name="textAllCaps">false</item>
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_height">@dimen/_50sdp</item>
         <item name="font">@font/nexa_regular</item>
         <item name="android:gravity">center</item>
     </style>
@@ -43,4 +43,17 @@
     <style name="textInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
     </style>
+
+    <style name="ratingTextViewStyle" parent="TextAppearance.Material3.DisplayMedium">
+        <item name="fontFamily">@font/nexa_regular</item>
+        <item name="textFillColor">#A7B0B5</item>
+        <item name="android:fontWeight">10</item>
+    </style>
+
+    <!--Material Circle Image style-->
+    <style name="circleImageView" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
 </resources>

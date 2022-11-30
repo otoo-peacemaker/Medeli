@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/layoutStyle"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.SignInFragment">
+    tools:context=".ui.auth.SignInFragment">
 
     <!--header-->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/layoutStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -37,15 +40,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:text="@string/sign_up_with_google" />
+                    android:text="@string/sign_in_with_google" />
             </LinearLayout>
-
 
             <LinearLayout
                 android:id="@+id/llLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="@dimen/_10sdp"
                 android:gravity="center"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -64,13 +66,12 @@
                 <View style="@style/lineViewStyle" />
             </LinearLayout>
 
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/emailLayout"
                 style="@style/textInputLayoutStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="@dimen/_10sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/llLayout">
@@ -82,13 +83,12 @@
                     android:hint="@string/email" />
             </com.google.android.material.textfield.TextInputLayout>
 
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/passLayout"
                 style="@style/textInputLayoutStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="@dimen/_10sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/emailLayout"
@@ -104,10 +104,10 @@
             <TextView
                 android:id="@+id/forgotPss"
                 android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:gravity="center"
+                android:layout_height="@dimen/_40sdp"
                 android:clickable="true"
                 android:focusable="true"
+                android:gravity="center"
                 android:text="@string/forget_password"
                 android:textColor="@color/secondaryColor"
                 app:layout_constraintEnd_toEndOf="@+id/passLayout"
@@ -116,7 +116,6 @@
             <Button
                 android:id="@+id/loginBtn"
                 style="@style/buttonStyle"
-                android:layout_marginTop="80dp"
                 android:text="@string/sign_in"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -127,7 +126,7 @@
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="@dimen/_10sdp"
                 android:text="@string/don_t_have_an_account"
                 app:layout_constraintEnd_toStartOf="@+id/signUpText"
                 app:layout_constraintHorizontal_bias="0.844"
@@ -139,6 +138,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="84dp"
+                android:layout_marginStart="@dimen/_20sdp"
                 android:text="@string/sign_up"
                 android:textColor="@color/primaryColor"
                 app:layout_constraintBottom_toBottomOf="@+id/textView3"
