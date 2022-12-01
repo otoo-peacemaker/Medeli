@@ -14,6 +14,7 @@ import com.peacecodetech.medeli.databinding.ProductListBinding
 import com.peacecodetech.medeli.model.Categories
 import com.peacecodetech.medeli.model.Products
 
+
 class ProductAdapter(
     private var onSelectedItemListener: OnSelectedItemListener,
     private var onViewDetail: OnViewDetail,
@@ -33,7 +34,7 @@ class ProductAdapter(
             if (data != null) {
                 binding.productName.text = data.name
                 binding.price.text = "$ ${data.price}"
-                binding.stockValue.text ="${data.quantity} in stock"
+                binding.stockValue.text = "${data.quantity} in stock"
                 Glide.with(binding.imgProduct).load(data.img_url).into(binding.imgProduct)
             }
         }
@@ -102,6 +103,7 @@ class ProductAdapter(
                 }
             }
 
+            @SuppressLint("NotifyDataSetChanged")
             override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
                 categoriesListFiltered = if (results?.values == null)
                     ArrayList()
@@ -112,5 +114,6 @@ class ProductAdapter(
             }
         }
     }
+
 
 }

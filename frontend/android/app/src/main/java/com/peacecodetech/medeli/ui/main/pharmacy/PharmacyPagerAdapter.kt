@@ -5,9 +5,11 @@ import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.peacecodetech.medeli.ui.main.product.DetailsFragment
+import com.peacecodetech.medeli.ui.main.product.ProductFragment
 
 
-class PagerAdapter(fm: FragmentActivity) : FragmentStateAdapter(fm) {
+class PharmacyPagerAdapter(fm: FragmentActivity) : FragmentStateAdapter(fm) {
     private val fragmentList = ArrayList<Fragment>()
     private val fragmentTitleList = ArrayList<String>()
 
@@ -21,8 +23,9 @@ class PagerAdapter(fm: FragmentActivity) : FragmentStateAdapter(fm) {
     override fun createFragment(position: Int): Fragment {
         return when (position) {
             0 -> {
-                SavedFragment()
+                ProductFragment()
             }
+            1 -> DetailsFragment()
             else -> {
                 NearestFragment()
             }
@@ -36,6 +39,26 @@ class ViewPagerAdapter(fm: FragmentManager, private var tabCount: Int) : Fragmen
         return when (position) {
             0 -> SavedFragment()
             else ->  NearestFragment()
+        }
+    }
+
+    override fun getCount(): Int {
+        return tabCount
+    }
+
+    override fun getPageTitle(position: Int): CharSequence {
+        return "Tab " + (position + 1)
+    }
+}
+
+
+
+class ProductPagerAdapter(fm: FragmentManager, private var tabCount: Int) : FragmentPagerAdapter(fm) {
+
+    override fun getItem(position: Int): Fragment {
+        return when (position) {
+            0 ->   ProductFragment()
+            else ->  DetailsFragment()
         }
     }
 

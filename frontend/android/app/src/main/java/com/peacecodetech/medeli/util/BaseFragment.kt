@@ -1,5 +1,6 @@
 package com.peacecodetech.medeli.util
 
+import android.app.UiModeManager
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
@@ -65,6 +66,17 @@ open class BaseFragment : Fragment() {
             val goToPlayStoreIntent = Intent(Intent.ACTION_VIEW, uri)
             goToPlayStoreIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             startActivity(goToPlayStoreIntent)
+        }
+    }
+
+    fun setNightMode(target: Context, state: Boolean) {
+        val uiManager = target.getSystemService(Context.UI_MODE_SERVICE) as UiModeManager
+        if (state) {
+            //uiManager.enableCarMode(0);
+            uiManager.nightMode = UiModeManager.MODE_NIGHT_YES
+        } else {
+            // uiManager.disableCarMode(0);
+            uiManager.nightMode = UiModeManager.MODE_NIGHT_NO
         }
     }
 
