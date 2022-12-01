@@ -2,6 +2,7 @@ package com.peacecodetech.medeli.ui.main.home
 
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -81,12 +82,12 @@ class HomeFragment : Fragment(), HomeRecyAdapter.OnViewDetail, SearchView.OnQuer
 
     private fun navigateTo(bundle: Bundle) {
         if (findNavController().currentDestination != null)
-            findNavController().navigate(R.id.action_navigation_home_to_productFragment,
+            findNavController().navigate(R.id.action_navigation_home_to_productMainFragment,
                 bundle)
     }
 
     override fun onOnViewDetail(pharmacy: Categories) {
-        Toast.makeText(requireContext(), "Not yet implemented", Toast.LENGTH_LONG).show()
+        Timber.tag("TAG").d("Not yet implemented")
     }
     private val categories = arrayListOf(
         Categories(

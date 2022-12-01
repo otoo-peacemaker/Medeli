@@ -5,27 +5,29 @@
     android:id="@+id/cardView"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_margin="@dimen/_10sdp"
     app:cardBackgroundColor="@color/cardBgColor"
+    android:layout_margin="@dimen/_5sdp"
     app:cardCornerRadius="@dimen/_10sdp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_10sdp">
+        android:layout_width="@dimen/_140sdp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/productCard"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/_5sdp"
             android:layout_height="wrap_content"
             app:cardBackgroundColor="@color/windowBackground"
             app:cardCornerRadius="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <RelativeLayout
                 android:id="@+id/productContainer"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_5sdp">
 
@@ -40,8 +42,8 @@
                     android:id="@+id/favorite"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignEnd="@id/imgProduct"
-                    android:layout_marginEnd="-6dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="-5dp"
                     android:contentDescription="@string/fav"
                     android:src="@drawable/unfavorited" />
             </RelativeLayout>
@@ -56,7 +58,7 @@
             android:fontFamily="@font/nexa_bold"
             android:gravity="center"
             android:lineHeight="@dimen/_20sdp"
-            android:paddingStart="@dimen/_10sdp"
+            android:paddingStart="@dimen/_5sdp"
             android:paddingEnd="@dimen/_10sdp"
             android:text="@string/_52"
             app:layout_constraintStart_toStartOf="parent"
@@ -67,6 +69,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/nexa_bold"
+            android:lines="2"
+            android:ellipsize="end"
+            android:gravity="start"
             android:text="@string/evy_body"
             android:textSize="@dimen/_12sdp"
             app:layout_constraintStart_toStartOf="@+id/price"

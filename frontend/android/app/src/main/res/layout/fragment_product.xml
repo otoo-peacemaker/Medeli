@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.main.product.ProductFragment">
-
+<!--
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabL"
         android:layout_width="wrap_content"
@@ -35,13 +36,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.58"
         app:layout_constraintStart_toEndOf="@+id/tabL"
-        app:layout_constraintTop_toTopOf="@+id/tabL" />
+        app:layout_constraintTop_toTopOf="@+id/tabL" />-->
 
     <TextView
         android:id="@+id/selectedProduct"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_40sdp"
-        android:layout_marginTop="@dimen/_20sdp"
         android:background="#5D9AFF"
         android:drawablePadding="-100dp"
         android:gravity="center"
@@ -51,7 +51,7 @@
         app:drawableStartCompat="@drawable/ic_back"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tabL" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
