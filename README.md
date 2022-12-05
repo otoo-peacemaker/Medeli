@@ -24,6 +24,7 @@ Current Project features
 * Home page with categorized product.
 * Product page with list of products
 * Search functionality on categorized product.
+* Sharesheet(share pharmacy between apps)
 * To be continue.....
 
 
