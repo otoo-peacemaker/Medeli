@@ -10,7 +10,7 @@ Rules
 Project resources.
 ----------------------
 * [UI/UX Designs](https://www.figma.com/file/AyHDaS14pMbJRusNVHyEHj/Taha-Pharmacy-preview-(Community)?node-id=1%3A9718&t=TI6PpYfKv4xYCAdD-0)
-* [Run the app here](https://appetize.io/app/3o5cacis55xgbegsi7ib3tokle?device=pixel4&osVersion=11.0&scale=75)
+* [Run the app here](https://appetize.io/app/3o5cacis55xgbegsi7ib3tokle?device=pixel6&osVersion=12.0&scale=75)
 * [APK file](https://drive.google.com/file/d/1TgS2YMke2-Q3o63sWUPyPy5sJN7JUEf-/view)
 
 Current Project features
