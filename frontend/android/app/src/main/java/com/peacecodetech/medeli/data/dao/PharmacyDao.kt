@@ -1,7 +1,7 @@
 package com.peacecodetech.medeli.data.dao
 
 import androidx.room.*
-import com.peacecodetech.medeli.model.Pharmacy
+import com.peacecodetech.medeli.data.model.Pharmacy
 import kotlinx.coroutines.flow.Flow
 
 

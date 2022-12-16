@@ -1,4 +1,4 @@
-package com.peacecodetech.medeli.model
+package com.peacecodetech.medeli.data.model
 
 data class Categories(
     val name: String?=null,
@@ -9,7 +9,7 @@ data class Categories(
 data class Products(
     val name: String,
     val img_url: String,
-    val price: Double,
-    val quantity: Int,
+    var price: Int,
+    var quantity: Int,
     val isFavorited: Boolean
 )

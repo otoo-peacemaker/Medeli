@@ -21,7 +21,7 @@
             android:paddingStart="@dimen/_10sdp"
             android:paddingEnd="@dimen/_10sdp"
             android:fontFamily="@font/nexa_bold"
-            android:text="Mom and Baby"
+            android:text="@string/mom_and_baby"
             app:layout_constraintEnd_toStartOf="@+id/imagId"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imagId" />

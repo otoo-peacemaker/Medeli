@@ -6,13 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.peacecodetech.medeli.R
 import com.peacecodetech.medeli.databinding.FragmentSavedBinding
 import com.peacecodetech.medeli.databinding.SavedListBinding
-import com.peacecodetech.medeli.model.Pharmacy
+import com.peacecodetech.medeli.data.model.Pharmacy
 import com.peacecodetech.medeli.util.BaseFragment
 import com.peacecodetech.medeli.util.getJsonDataFromAsset
 import timber.log.Timber
@@ -100,21 +101,21 @@ class SavedFragment : BaseFragment(), RecyclerAdapter.OnViewDetail,
                 text = context.getString(R.string.chat)
                 icon = AppCompatResources.getDrawable(context, R.drawable.ic_chat)
                 setOnClickListener {
-                    Timber.tag("TAG").d("Not yet implemented")
+                   // findNavController().navigate(R.id.action_savedFragment_to_navigation_chat)
                 }
             }
             favorite.button.apply {
                 text = context.getString(R.string.fav)
-                icon = AppCompatResources.getDrawable(context, R.drawable.ic_favorite)
+                icon = AppCompatResources.getDrawable(context, R.drawable.ic_outline_shopping_cart_24)
                 setOnClickListener {
-                    Timber.tag("TAG").d("Not yet implemented")
+                   // findNavController().navigate(R.id.action_savedFragment_to_navigation_search)
                 }
             }
             share.button.apply {
                 text = context.getString(R.string.share)
                 icon = AppCompatResources.getDrawable(context, R.drawable.ic_share)
                 setOnClickListener {
-                    Timber.tag("TAG").d("Not yet implemented")
+                    sharedSheet(viewListBinding.pharmacyName.text.toString(),viewListBinding.description.text.toString())
                 }
             }
         }
