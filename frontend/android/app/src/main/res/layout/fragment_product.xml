@@ -14,10 +14,7 @@
         android:background="#5D9AFF"
         android:drawablePadding="-100dp"
         android:gravity="center"
-        android:paddingStart="@dimen/_100sdp"
-        android:paddingEnd="@dimen/_20sdp"
         android:text="@string/mom_and_baby"
-        app:drawableStartCompat="@drawable/ic_back"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

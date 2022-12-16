@@ -78,4 +78,6 @@
     <string name="hello">Hello</string>
     <string name="cart">Cart</string>
     <string name="sign">$</string>
+    <string name="notification">Notification</string>
+    <string name="first_aid">First aid</string>
 </resources>
