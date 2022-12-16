@@ -6,14 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.peacecodetech.medeli.R
 import com.peacecodetech.medeli.databinding.FragmentSavedBinding
 import com.peacecodetech.medeli.databinding.SavedListBinding
-import com.peacecodetech.medeli.data.model.Pharmacy
+import com.peacecodetech.medeli.data.responses.Pharmacy
 import com.peacecodetech.medeli.util.BaseFragment
 import com.peacecodetech.medeli.util.getJsonDataFromAsset
 import timber.log.Timber

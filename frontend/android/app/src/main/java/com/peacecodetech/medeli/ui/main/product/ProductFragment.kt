@@ -11,7 +11,7 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.peacecodetech.medeli.databinding.FragmentProductBinding
 import com.peacecodetech.medeli.databinding.ProductListBinding
-import com.peacecodetech.medeli.data.model.Products
+import com.peacecodetech.medeli.data.responses.Products
 import com.peacecodetech.medeli.util.getJsonDataFromAsset
 import timber.log.Timber
 

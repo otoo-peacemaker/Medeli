@@ -1,4 +1,4 @@
-package com.peacecodetech.medeli.data.model
+package com.peacecodetech.medeli.data.responses
 
 data class Categories(
     val name: String?=null,

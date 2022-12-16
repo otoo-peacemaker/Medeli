@@ -1,21 +1,16 @@
-package com.peacecodetech.medeli.data.source
+package com.peacecodetech.medeli.data.source.local
 
 import android.content.Context
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.peacecodetech.medeli.data.dao.PharmacyDao
 import com.peacecodetech.medeli.di.RoomModule
-import com.peacecodetech.medeli.data.model.Pharmacy
-import com.peacecodetech.medeli.data.model.Products
+import com.peacecodetech.medeli.data.responses.Pharmacy
 import com.peacecodetech.medeli.util.getJsonDataFromAsset
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
-import org.json.JSONArray
-import org.json.JSONObject
-import timber.log.Timber
 
 @Suppress("BlockingMethodInNonBlockingContext")
 class DatabaseCallback(

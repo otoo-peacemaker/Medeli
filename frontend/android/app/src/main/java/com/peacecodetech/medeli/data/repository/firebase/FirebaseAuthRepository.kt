@@ -11,7 +11,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.firestore.FirebaseFirestore
-import com.peacecodetech.medeli.data.model.User
+import com.peacecodetech.medeli.data.responses.User
 import com.peacecodetech.medeli.util.BaseFragment
 import com.peacecodetech.medeli.util.Resource
 import timber.log.Timber

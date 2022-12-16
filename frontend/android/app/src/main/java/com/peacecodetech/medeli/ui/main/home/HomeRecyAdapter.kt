@@ -7,12 +7,10 @@ import android.view.ViewGroup
 import android.widget.Filter
 import android.widget.Filterable
 import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.peacecodetech.medeli.databinding.CategoriesCardBinding
-import com.peacecodetech.medeli.databinding.SavedListBinding
-import com.peacecodetech.medeli.data.model.Categories
-import com.peacecodetech.medeli.data.model.Pharmacy
+import com.peacecodetech.medeli.data.responses.Categories
+import com.peacecodetech.medeli.data.responses.Pharmacy
 
 class HomeRecyAdapter(
     private var onViewDetail: OnViewDetail,

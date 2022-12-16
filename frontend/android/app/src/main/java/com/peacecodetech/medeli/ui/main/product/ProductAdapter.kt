@@ -11,8 +11,8 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.peacecodetech.medeli.databinding.ProductListBinding
-import com.peacecodetech.medeli.data.model.Categories
-import com.peacecodetech.medeli.data.model.Products
+import com.peacecodetech.medeli.data.responses.Categories
+import com.peacecodetech.medeli.data.responses.Products
 
 
 class ProductAdapter(
