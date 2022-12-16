@@ -9,7 +9,7 @@ import androidx.lifecycle.viewModelScope
 import com.google.android.gms.tasks.RuntimeExecutionException
 import com.google.firebase.auth.FirebaseAuth
 import com.peacecodetech.medeli.data.repository.firebase.FirebaseAuthRepository
-import com.peacecodetech.medeli.data.responses.User
+import com.peacecodetech.medeli.data.request.User
 import com.peacecodetech.medeli.util.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
