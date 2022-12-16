@@ -13,7 +13,7 @@ import com.google.firebase.database.*
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.peacecodetech.medeli.databinding.FragmentPharmacyBinding
-import com.peacecodetech.medeli.data.model.Pharmacy
+import com.peacecodetech.medeli.data.responses.Pharmacy
 import com.peacecodetech.medeli.util.BaseFragment
 import com.peacecodetech.medeli.util.getJsonDataFromAsset
 import dagger.hilt.android.AndroidEntryPoint

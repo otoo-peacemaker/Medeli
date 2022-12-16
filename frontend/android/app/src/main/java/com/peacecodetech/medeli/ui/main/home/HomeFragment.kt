@@ -11,7 +11,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.peacecodetech.medeli.R
 import com.peacecodetech.medeli.databinding.FragmentHomeBinding
-import com.peacecodetech.medeli.data.model.Categories
+import com.peacecodetech.medeli.data.responses.Categories
 import timber.log.Timber
 
 
