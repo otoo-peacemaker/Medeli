@@ -11,8 +11,8 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.peacecodetech.medeli.databinding.CategoriesCardBinding
 import com.peacecodetech.medeli.databinding.SavedListBinding
-import com.peacecodetech.medeli.model.Categories
-import com.peacecodetech.medeli.model.Pharmacy
+import com.peacecodetech.medeli.data.model.Categories
+import com.peacecodetech.medeli.data.model.Pharmacy
 
 class HomeRecyAdapter(
     private var onViewDetail: OnViewDetail,

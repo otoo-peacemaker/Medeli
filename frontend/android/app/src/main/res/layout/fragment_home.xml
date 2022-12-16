@@ -97,14 +97,15 @@
                         app:layout_constraintStart_toStartOf="parent"
 
                         app:layout_constraintVertical_bias="0.0"
-                        app:srcCompat="@drawable/ic_insurance" />
+                        app:srcCompat="@drawable/ic_insurance"
+                        android:contentDescription="@string/add_your_insurance" />
 
                     <TextView
                         android:id="@+id/textView5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_15sdp"
-                        android:text="Add your insurance "
+                        android:text="@string/add_your_insurance"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.2"
                         app:layout_constraintStart_toStartOf="@+id/imageView3"
@@ -114,7 +115,7 @@
                         android:id="@+id/tv2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="to use it in your upcoming orders"
+                        android:text="@string/to_use_it_in_your_upcoming_orders"
                         app:layout_constraintStart_toStartOf="@+id/textView5"
                         app:layout_constraintTop_toBottomOf="@id/textView5" />
 
@@ -137,7 +138,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:fontFamily="@font/nexa_bold"
-                android:text="Categories"
+                android:text="@string/categories"
                 android:textSize="@dimen/_15ssp"
                 app:layout_constraintStart_toStartOf="@+id/cardView2"
                 app:layout_constraintTop_toBottomOf="@+id/cardView2" />
@@ -157,42 +158,4 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
-
-
-    <!--
-     <TextView
-         android:id="@+id/welcome"
-         style="@style/welcomeStyle"
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:layout_marginTop="@dimen/_20sdp"
-         android:text="@string/welcome_to_medeli"
-         app:layout_constraintEnd_toEndOf="parent"
-         app:layout_constraintHorizontal_bias="1.0"
-         app:layout_constraintStart_toStartOf="parent"
-         app:layout_constraintTop_toTopOf="parent" />
-
-     <ImageView
-         android:id="@+id/imageView"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:contentDescription="@string/splash_image"
-         android:src="@drawable/splash_img"
-         app:layout_constraintEnd_toEndOf="parent"
-         app:layout_constraintStart_toStartOf="parent"
-         app:layout_constraintTop_toBottomOf="@+id/welcome" />
-
-
-     <include
-         layout="@layout/app_buttons"
-         android:id="@+id/sendEmailId"
-         android:layout_width="match_parent"
-         android:layout_height="@dimen/_45sdp"
-         android:layout_marginStart="@dimen/_20sdp"
-         android:layout_marginEnd="@dimen/_20sdp"
-         app:layout_constraintBottom_toBottomOf="parent"
-         app:layout_constraintEnd_toEndOf="parent"
-         app:layout_constraintStart_toStartOf="parent"
-         app:layout_constraintTop_toBottomOf="@+id/imageView"
-         app:layout_constraintVertical_bias="0.073"/>-->
 </androidx.constraintlayout.widget.ConstraintLayout>

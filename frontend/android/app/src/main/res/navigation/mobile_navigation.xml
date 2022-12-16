@@ -38,25 +38,32 @@
         android:id="@+id/savedFragment"
         android:name="com.peacecodetech.medeli.ui.main.pharmacy.SavedFragment"
         android:label="fragment_saved"
-        tools:layout="@layout/fragment_saved" />
+        tools:layout="@layout/fragment_saved" >
+        <action
+            android:id="@+id/action_savedFragment_to_navigation_search"
+            app:destination="@id/navigation_search" />
+        <action
+            android:id="@+id/action_savedFragment_to_navigation_chat"
+            app:destination="@id/navigation_chat" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_chat"
         android:name="com.peacecodetech.medeli.ui.main.chat.ChatFragment"
-        android:label="fragment_chat"
+        android:label="chat"
         tools:layout="@layout/fragment_chat" />
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.peacecodetech.medeli.ui.main.profile.ProfileFragment"
-        android:label="fragment_profile"
+        android:label="Profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/productFragment"
         android:name="com.peacecodetech.medeli.ui.main.product.ProductFragment"
-        android:label="fragment_product"
+        android:label="Product"
         tools:layout="@layout/fragment_product" />
     <fragment
         android:id="@+id/productMainFragment"
         android:name="com.peacecodetech.medeli.ui.main.product.ProductMainFragment"
-        android:label="fragment_product_main"
+        android:label="Products"
         tools:layout="@layout/fragment_product_main" />
 </navigation>

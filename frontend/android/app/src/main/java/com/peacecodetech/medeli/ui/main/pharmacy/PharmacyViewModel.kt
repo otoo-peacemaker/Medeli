@@ -3,7 +3,7 @@ package com.peacecodetech.medeli.ui.main.pharmacy
 import androidx.lifecycle.*
 import com.peacecodetech.medeli.data.repository.firebase.FirebaseRealtimeDBImpl
 import com.peacecodetech.medeli.data.repository.room.PharmacyRepository
-import com.peacecodetech.medeli.model.Pharmacy
+import com.peacecodetech.medeli.data.model.Pharmacy
 import com.peacecodetech.medeli.util.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow

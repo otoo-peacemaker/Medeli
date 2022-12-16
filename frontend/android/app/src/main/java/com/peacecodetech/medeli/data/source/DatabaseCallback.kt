@@ -8,8 +8,8 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.peacecodetech.medeli.data.dao.PharmacyDao
 import com.peacecodetech.medeli.di.RoomModule
-import com.peacecodetech.medeli.model.Pharmacy
-import com.peacecodetech.medeli.model.Products
+import com.peacecodetech.medeli.data.model.Pharmacy
+import com.peacecodetech.medeli.data.model.Products
 import com.peacecodetech.medeli.util.getJsonDataFromAsset
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch

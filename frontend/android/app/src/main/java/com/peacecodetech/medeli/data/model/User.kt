@@ -1,4 +1,4 @@
-package com.peacecodetech.medeli.model
+package com.peacecodetech.medeli.data.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

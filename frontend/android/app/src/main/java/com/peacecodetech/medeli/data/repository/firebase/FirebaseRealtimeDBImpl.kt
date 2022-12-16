@@ -3,7 +3,7 @@ package com.peacecodetech.medeli.data.repository.firebase
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.Query
 import com.peacecodetech.medeli.data.source.FirebaseRealtimeDB
-import com.peacecodetech.medeli.model.Pharmacy
+import com.peacecodetech.medeli.data.model.Pharmacy
 import com.peacecodetech.medeli.util.Resource
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.callbackFlow

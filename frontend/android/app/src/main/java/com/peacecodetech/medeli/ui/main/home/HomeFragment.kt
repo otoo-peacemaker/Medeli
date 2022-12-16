@@ -2,24 +2,16 @@ package com.peacecodetech.medeli.ui.main.home
 
 import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.appcompat.widget.SearchView
-import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.peacecodetech.medeli.R
-import com.peacecodetech.medeli.databinding.CategoriesCardBinding
 import com.peacecodetech.medeli.databinding.FragmentHomeBinding
-import com.peacecodetech.medeli.model.Categories
-import com.peacecodetech.medeli.ui.main.pharmacy.RecyclerAdapter
-import com.peacecodetech.medeli.util.startAuthActivity
+import com.peacecodetech.medeli.data.model.Categories
 import timber.log.Timber
 
 
@@ -28,10 +20,10 @@ class HomeFragment : Fragment(), HomeRecyAdapter.OnViewDetail, SearchView.OnQuer
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
     private val pharmacyAdapter: HomeRecyAdapter by lazy {
-        HomeRecyAdapter(this){
+        HomeRecyAdapter(this) {
             val bundle = Bundle().apply {
                 putString("name", it.name)
-                putInt("color",it.color)
+                putInt("color", it.color)
             }
             navigateTo(bundle)
         }
@@ -42,7 +34,7 @@ class HomeFragment : Fragment(), HomeRecyAdapter.OnViewDetail, SearchView.OnQuer
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val homeViewModel = ViewModelProvider(this)[HomeViewModel::class.java]
+        // val homeViewModel = ViewModelProvider(this)[HomeViewModel::class.java]
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         binding.searchViewId.setOnQueryTextListener(this)
@@ -53,9 +45,9 @@ class HomeFragment : Fragment(), HomeRecyAdapter.OnViewDetail, SearchView.OnQuer
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        with(binding){
+        with(binding) {
             add.apply {
-               this.loginBtn.text = getString(R.string.add)
+                this.loginBtn.text = getString(R.string.add)
             }
             product.apply {
                 tvId.text = getString(R.string.product)
@@ -73,7 +65,7 @@ class HomeFragment : Fragment(), HomeRecyAdapter.OnViewDetail, SearchView.OnQuer
     private fun initRecView() {
         val recyclerView = binding.recyclerView
         recyclerView.apply {
-            layoutManager = GridLayoutManager(requireContext(),2)
+            layoutManager = GridLayoutManager(requireContext(), 2)
             setHasFixedSize(true)
             adapter = pharmacyAdapter
         }
@@ -82,71 +74,92 @@ class HomeFragment : Fragment(), HomeRecyAdapter.OnViewDetail, SearchView.OnQuer
 
     private fun navigateTo(bundle: Bundle) {
         if (findNavController().currentDestination != null)
-            findNavController().navigate(R.id.action_navigation_home_to_productMainFragment,
-                bundle)
+            findNavController().navigate(
+                R.id.action_navigation_home_to_productMainFragment,
+                bundle
+            )
     }
 
     override fun onOnViewDetail(pharmacy: Categories) {
         Timber.tag("TAG").d("Not yet implemented")
     }
+
     private val categories = arrayListOf(
         Categories(
-        name = "Mom & Baby",
-        color = Color.parseColor("#5D9AFF")),
+            name = "Mom & Baby",
+            color = Color.parseColor("#5D9AFF")
+        ),
         Categories(
             name = "Fighting the infection",
-            color = Color.parseColor("#3CB5B7")),
+            color = Color.parseColor("#3CB5B7")
+        ),
         Categories(
             name = "Diabetes",
-            color = Color.parseColor("#F77DB7")),
+            color = Color.parseColor("#F77DB7")
+        ),
         Categories(
             name = "Antibiotics",
-            color = Color.parseColor("#FE8B8A")),
+            color = Color.parseColor("#FE8B8A")
+        ),
         Categories(
             name = "Drugs",
-            color = Color.parseColor("#FEAC7E")),
+            color = Color.parseColor("#FEAC7E")
+        ),
         Categories(
             name = "Women",
-            color = Color.parseColor("#7879F1")),
+            color = Color.parseColor("#7879F1")
+        ),
         Categories(
             name = "Cosmetic",
-            color = Color.parseColor("#5D9AFF")),
+            color = Color.parseColor("#5D9AFF")
+        ),
         Categories(
             name = "Men",
-            color = Color.parseColor("#FFB200")),
+            color = Color.parseColor("#FFB200")
+        ),
         Categories(
             name = "Mom & Baby",
-            color = Color.parseColor("#5D9AFF")),
+            color = Color.parseColor("#5D9AFF")
+        ),
         Categories(
             name = "Women",
-            color = Color.parseColor("#7879F1")),
+            color = Color.parseColor("#7879F1")
+        ),
         Categories(
             name = "Cosmetic",
-            color = Color.parseColor("#5D9AFF")),
+            color = Color.parseColor("#5D9AFF")
+        ),
         Categories(
             name = "Men",
-            color = Color.parseColor("#FFB200")),
+            color = Color.parseColor("#FFB200")
+        ),
         Categories(
             name = "Mom & Baby",
-            color = Color.parseColor("#5D9AFF")),
+            color = Color.parseColor("#5D9AFF")
+        ),
         Categories(
             name = "Mom & Baby",
-            color = Color.parseColor("#5D9AFF")),
+            color = Color.parseColor("#5D9AFF")
+        ),
         Categories(
             name = "Fighting the infection",
-            color = Color.parseColor("#3CB5B7")),
+            color = Color.parseColor("#3CB5B7")
+        ),
         Categories(
             name = "Diabetes",
-            color = Color.parseColor("#F77DB7")),
+            color = Color.parseColor("#F77DB7")
+        ),
         Categories(
             name = "Antibiotics",
-            color = Color.parseColor("#FE8B8A")),
+            color = Color.parseColor("#FE8B8A")
+        ),
         Categories(
             name = "Drugs",
-            color = Color.parseColor("#FEAC7E")),
+            color = Color.parseColor("#FEAC7E")
+        ),
 
 
-    )
+        )
 
     override fun onQueryTextSubmit(query: String?): Boolean {
         pharmacyAdapter.filter.filter(query)
