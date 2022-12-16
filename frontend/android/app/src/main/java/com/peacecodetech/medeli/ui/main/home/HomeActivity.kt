@@ -6,10 +6,7 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
+import androidx.navigation.ui.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.peacecodetech.medeli.R
 import com.peacecodetech.medeli.databinding.ActivityHomeBinding
@@ -29,8 +26,7 @@ class HomeActivity : AppCompatActivity() {
         setSupportActionBar(binding.topAppBar)
         val navView: BottomNavigationView = binding.navView
 
-        val navController =
-            supportFragmentManager.findFragmentById(R.id.nav_host_fragment_activity_home) as NavHostFragment
+        val navController = supportFragmentManager.findFragmentById(R.id.nav_host_fragment_activity_home) as NavHostFragment
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.navigation_home,
@@ -54,13 +50,12 @@ class HomeActivity : AppCompatActivity() {
     /** Handle action bar item clicks here. The action bar will
      *automatically handle clicks on the Home/Up button, so long
      *as you specify a parent activity in AndroidManifest.xml.
+     * Now, when a user clicks the page_fragment menu item, the app automatically navigates to the corresponding destination with the same id.
      * */
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.cart -> true
-            else -> super.onOptionsItemSelected(item)
-        }
+        val navController = findNavController(R.id.nav_host_fragment_activity_home)
+        return item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -68,3 +63,5 @@ class HomeActivity : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 }
+
+//https://developer.android.com/guide/navigation/navigation-ui

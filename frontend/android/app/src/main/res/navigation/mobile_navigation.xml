@@ -27,7 +27,7 @@
     <fragment
         android:id="@+id/navigation_search"
         android:name="com.peacecodetech.medeli.ui.main.search.SearchFragment"
-        android:label="@string/search"
+        android:label="First aid"
         tools:layout="@layout/fragment_search" />
     <fragment
         android:id="@+id/nearestFragment"
@@ -49,7 +49,7 @@
     <fragment
         android:id="@+id/navigation_chat"
         android:name="com.peacecodetech.medeli.ui.main.chat.ChatFragment"
-        android:label="chat"
+        android:label="Chat"
         tools:layout="@layout/fragment_chat" />
     <fragment
         android:id="@+id/navigation_profile"
@@ -66,4 +66,9 @@
         android:name="com.peacecodetech.medeli.ui.main.product.ProductMainFragment"
         android:label="Products"
         tools:layout="@layout/fragment_product_main" />
+    <fragment
+        android:id="@+id/navigation_notification"
+        android:name="com.peacecodetech.medeli.ui.main.notification.NotificationFragment"
+        android:label="Notification"
+        tools:layout="@layout/fragment_notification" />
 </navigation>
