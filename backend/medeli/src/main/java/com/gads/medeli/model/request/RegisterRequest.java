@@ -1,5 +1,6 @@
 package com.gads.medeli.model.request;
 
+import com.gads.medeli.security.validation.ValidEmail;
 import lombok.*;
 
 import javax.validation.constraints.Email;
@@ -11,6 +12,7 @@ import javax.validation.constraints.Email;
 public class RegisterRequest {
   private String firstname;
   private String lastname;
+  @ValidEmail
   private String email;
   private String password;
 }

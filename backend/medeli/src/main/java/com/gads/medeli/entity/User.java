@@ -1,5 +1,6 @@
 package com.gads.medeli.entity;
 
+import com.gads.medeli.security.validation.ValidEmail;
 import com.gads.medeli.util.Role;
 import jakarta.persistence.*;
 import lombok.*;
@@ -8,6 +9,8 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
 import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
@@ -27,6 +30,9 @@ public class User implements UserDetails {
   private Integer id;
   private String firstname;
   private String lastname;
+
+  @NonNull
+  @NotEmpty
   private String email;
   private String password;
 

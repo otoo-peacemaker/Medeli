@@ -28,10 +28,10 @@ public class AuthenticationService {
     private final AuthenticationManager authenticationManager;
 
     public AuthenticationResponse register(RegisterRequest request) {
-        boolean isValidEmail = emailValidator.validateEmail(request.getEmail());
+       /* boolean isValidEmail = emailValidator.validateEmail(request.getEmail());
         if (!isValidEmail) {
             throw new IllegalStateException("email not valid");
-        }
+        }*/
 
         if (findByEmail(request.getEmail())) {
             // TODO check of attributes are the same and
@@ -50,6 +50,7 @@ public class AuthenticationService {
             var jwtToken = jwtService.generateToken(user);
             return AuthenticationResponse.builder()
                     .token(jwtToken)
+                    .message("Registration successful")
                     .build();
     }
 
@@ -64,7 +65,7 @@ public class AuthenticationService {
             var jwtToken = jwtService.generateToken(user);
             return AuthenticationResponse.builder()
                     .token(jwtToken)
-                    .message("Success")
+                    .message("Login successful")
                     .build();
         }
         return AuthenticationResponse.builder().message("Error whiles logging in").build();

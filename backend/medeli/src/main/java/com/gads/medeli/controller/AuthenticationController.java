@@ -6,6 +6,7 @@ import com.gads.medeli.model.request.LoginRequest;
 import com.gads.medeli.model.request.RegisterRequest;
 import com.gads.medeli.service.AuthenticationService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,9 +18,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class AuthenticationController {
 
+  @Autowired
   private final AuthenticationService service;
 
-  @PostMapping("/register")
+  @PostMapping("/registration")
   public ResponseEntity<AuthenticationResponse> register(@RequestBody RegisterRequest request) {
     return ResponseEntity.ok(service.register(request));
   }
