@@ -1,0 +1,302 @@
+{
+	"info": {
+		"_postman_id": "73437b5a-2fa1-4fb4-b31e-f66d90fd9c1e",
+		"name": "medeli api docs",
+		"description": "MEDELI API COLLECTION",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "19566989-73437b5a-2fa1-4fb4-b31e-f66d90fd9c1e"
+	},
+	"item": [
+		{
+			"name": "authentication",
+			"item": [
+				{
+					"name": "registration",
+					"id": "cb8a8a09-7c59-4de1-9978-dc4576b8ff65",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Peacemaker\",\r\n    \"lastName\": \"Otoo\",\r\n    \"email\": \"hell@gmail.com\",\r\n    \"password\": \"12345678\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/user/registration",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"registration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "confirm_email",
+					"id": "017067c4-1adf-4c10-92ce-d3a4e8e80b7e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "fd7e6e34-e7cd-41ba-9f92-8011e3346b23",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"ig@mail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/registration/confirm_email?email=ig@mail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"registration",
+								"confirm_email"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "ig@mail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"id": "198a890b-8257-40f2-a30e-f1877de33fdb",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "9657f03b-f66b-4423-afc2-454652918961",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"ig@mail.com\",\r\n    \"password\": \"1234567\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset_password",
+					"id": "8607d483-3de4-4601-af23-566c6ce56a39",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "fd7e6e34-e7cd-41ba-9f92-8011e3346b23",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldPassword\": \"1234567\",\r\n    \"newPassword\": \"Otoo.4.56@\",\r\n    \"token\": \"18fb364a-dc84-4030-8f29-202e63e962e5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/user/resetPassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"resetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "confirm_account",
+					"id": "0a38ef80-ffe3-46e6-87c8-850cf2724e52",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "fd7e6e34-e7cd-41ba-9f92-8011e3346b23",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Peacemaker\",\r\n    \"lastName\": \"Otoo\",\r\n    \"password\": \"1234567\",\r\n    \"email\": \"infofeedacc@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refresh_token",
+					"id": "fb0ccbc2-3a0d-48d0-a4f9-da2917b65b05",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "fd7e6e34-e7cd-41ba-9f92-8011e3346b23",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Peacemaker\",\r\n    \"lastName\": \"Otoo\",\r\n    \"password\": \"1234567\",\r\n    \"email\": \"infofeedacc@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081"
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "597ec6ba-e112-42d3-ac9a-c342463f1b94",
+			"description": "Api endpoints for user authentication"
+		}
+	]
+}
