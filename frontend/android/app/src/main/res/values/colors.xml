@@ -3,7 +3,7 @@
     <color name="primaryColor">#FEC107</color>
     <color name="colorOnPrimary">#1C3146</color>
     <color name="secondaryColor">#2879FF</color>
-    <color name="windowBackground">#FFFFFF</color>
+    <color name="windowBackground">#FBFCFE</color>
 
     <color name="white">#FFFFFF</color>
     <color name="yellow">#FEC107</color>
@@ -11,8 +11,10 @@
     <color name="midGrey">#CFD8DD</color>
     <color name="black">#000000</color>
 
-
+    <color name="cardBgColor">#FFFFFF</color>
 
     <color name="textColor">#1C3146</color>
+    <color name="distanceDesc">#465C67</color>
+    <color name="storeColor">#000000</color>
 
 </resources>

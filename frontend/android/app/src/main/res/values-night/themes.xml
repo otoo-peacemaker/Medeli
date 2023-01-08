@@ -8,9 +8,14 @@
         <item name="colorOnPrimary">@color/colorOnPrimary</item>
 
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/secondaryColor</item>
+        <item name="colorSecondary">@color/primaryColor</item>
         <item name="colorSecondaryVariant">@color/white</item>
         <item name="colorOnSecondary">@color/white</item>
+
+        <item name="colorAccent">@color/secondaryColor</item>
+
+        <item name="colorSurface">@color/windowBackground</item>
+        <item name="colorOnSurface">@color/white</item>
 
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>

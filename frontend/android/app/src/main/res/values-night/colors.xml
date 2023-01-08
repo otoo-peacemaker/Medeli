@@ -11,5 +11,8 @@
     <color name="midGrey">#CFD8DD</color>
     <color name="black">#000000</color>
 
+    <color name="cardBgColor">#1C3146</color>
     <color name="textColor">#F6F7F9</color>
+    <color name="distanceDesc">#A7B0B5</color>
+    <color name="storeColor">#2879FF</color>
 </resources>
