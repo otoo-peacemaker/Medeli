@@ -10,8 +10,8 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.peacecodetech.medeli.databinding.SavedListBinding
-import com.peacecodetech.medeli.model.Categories
-import com.peacecodetech.medeli.model.Pharmacy
+import com.peacecodetech.medeli.data.responses.Categories
+import com.peacecodetech.medeli.data.responses.Pharmacy
 
 class RecyclerAdapter(
     private var onSelectedItemListener: OnSelectedItemListener,

@@ -11,12 +11,14 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
             style="@style/layoutStyle"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <TextView
@@ -61,11 +63,12 @@
                 android:layout_height="48dp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:clickable="true"
-                android:gravity="center"
-                android:textSize="@dimen/_13ssp"
                 android:focusable="true"
+                android:fontFamily="@font/nexa_bold"
+                android:gravity="center"
                 android:text="@string/skip_for_now"
                 android:textColor="@color/secondaryColor"
+                android:textSize="@dimen/_13ssp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"

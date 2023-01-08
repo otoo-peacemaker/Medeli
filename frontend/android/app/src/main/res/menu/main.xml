@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:id="@+id/cart"
-        android:icon="@drawable/cart"
+
+    <item android:id="@+id/navigation_notification"
+        android:icon="@drawable/ic_notifications_black_24dp"
         app:showAsAction="always"
-        android:title="" />
+        android:title="@string/notification" />
 </menu>

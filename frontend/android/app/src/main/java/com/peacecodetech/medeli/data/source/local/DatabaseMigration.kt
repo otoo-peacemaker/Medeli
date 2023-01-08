@@ -1,4 +1,4 @@
-package com.peacecodetech.medeli.data.source
+package com.peacecodetech.medeli.data.source.local
 
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase

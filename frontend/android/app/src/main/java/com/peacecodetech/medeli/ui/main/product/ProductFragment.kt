@@ -4,17 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.peacecodetech.medeli.databinding.FragmentProductBinding
 import com.peacecodetech.medeli.databinding.ProductListBinding
-import com.peacecodetech.medeli.model.Categories
-import com.peacecodetech.medeli.model.Products
+import com.peacecodetech.medeli.data.responses.Products
 import com.peacecodetech.medeli.util.getJsonDataFromAsset
 import timber.log.Timber
 
@@ -90,11 +87,11 @@ class ProductFragment : Fragment(), ProductAdapter.OnSelectedItemListener,
     }
 
     override fun onSelectedItemListener(viewListBinding: ProductListBinding) {
-        Toast.makeText(requireContext(), "Not yet implemented", Toast.LENGTH_LONG).show()
+        Timber.tag("TAG").d("Not yet implemented")
     }
 
     override fun onOnViewDetail(pharmacy: Products) {
-        Toast.makeText(requireContext(), "Not yet implemented", Toast.LENGTH_LONG).show()
+        Timber.tag("TAG").d("Not yet implemented")
     }
 
 }

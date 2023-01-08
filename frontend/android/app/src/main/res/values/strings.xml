@@ -64,10 +64,20 @@
     <string name="profile">Profie</string>
     <string name="_52">$ 52</string>
     <string name="_68_in_stock">68 in stock</string>
-    <string name="_4">4</string>
+    <string name="_4">0</string>
     <string name="evy_body">Evy body</string>
     <string name="minus">minus</string>
     <string name="details">Details</string>
     <string name="products">Products</string>
     <string name="mom_and_baby">Mom and baby</string>
+    <string name="add_your_insurance">Add your insurance</string>
+    <string name="to_use_it_in_your_upcoming_orders">to use it in your upcoming orders</string>
+    <string name="categories">Categories</string>
+    <string name="nothing_to_show_here_n">Nothing to show here \n 😩</string>
+    <string name="later_implementation">Later Implementation 😋</string>
+    <string name="hello">Hello</string>
+    <string name="cart">Cart</string>
+    <string name="sign">$</string>
+    <string name="notification">Notification</string>
+    <string name="first_aid">First aid</string>
 </resources>

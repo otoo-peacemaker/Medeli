@@ -1,6 +1,6 @@
-package com.peacecodetech.medeli.data.source
+package com.peacecodetech.medeli.data.dao
 
-import com.peacecodetech.medeli.model.Pharmacy
+import com.peacecodetech.medeli.data.responses.Pharmacy
 import com.peacecodetech.medeli.util.Resource
 import kotlinx.coroutines.flow.Flow
 

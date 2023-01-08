@@ -2,5 +2,9 @@ package com.gads.medeli.util;
 
 public enum Role {
   USER,
-  ADMIN
+  ADMIN,
+  DOCTOR,
+  NURSE,
+  RIDER,
+  PHARMACIST
 }

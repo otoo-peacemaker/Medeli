@@ -1,14 +1,14 @@
 package com.peacecodetech.medeli.data.repository.room
 
 import com.peacecodetech.medeli.data.dao.PharmacyDao
-import com.peacecodetech.medeli.model.Pharmacy
+import com.peacecodetech.medeli.data.responses.Pharmacy
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 class PharmacyRepository @Inject constructor(
     private val pharmacyDao: PharmacyDao
 ):PharmacyDao {
-    override suspend fun insertToRoom(pharmacy: Pharmacy) {
+    override suspend fun insertToRoom(pharmacy: MutableList<Pharmacy>) {
        return pharmacyDao.insertToRoom(pharmacy)
     }
 

@@ -1,11 +1,11 @@
 package com.peacecodetech.medeli.util
 
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.view.View
-import android.widget.ProgressBar
+import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import com.peacecodetech.medeli.MainActivity
 import com.peacecodetech.medeli.ui.main.home.HomeActivity
@@ -45,6 +45,7 @@ fun Context.startAuthActivity() =
         it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(it)
     }
+
 fun getJsonDataFromAsset(context: Context, fileName: String): String? {
     val jsonString: String
     try {
@@ -54,4 +55,15 @@ fun getJsonDataFromAsset(context: Context, fileName: String): String? {
         return null
     }
     return jsonString
+}
+
+/**checking the current state of the graph*/
+fun Fragment.checkNavDestination(checkCurrentDestination: Boolean) {
+    var currentDestination = checkCurrentDestination
+    currentDestination = false
+    if (currentDestination && findNavController().currentDestination == null) {
+        findNavController().navigate(findNavController().graph.startDestinationId)
+    } else {
+        currentDestination = false
+    }
 }

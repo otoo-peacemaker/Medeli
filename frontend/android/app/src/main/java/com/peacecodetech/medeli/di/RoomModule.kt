@@ -4,9 +4,9 @@ import android.content.Context
 import androidx.room.Room
 import com.peacecodetech.medeli.data.dao.PharmacyDao
 import com.peacecodetech.medeli.data.repository.room.PharmacyRepository
-import com.peacecodetech.medeli.data.source.ALTER_TABLE_MIGRATION_1_2
-import com.peacecodetech.medeli.data.source.AppDatabase
-import com.peacecodetech.medeli.data.source.DatabaseCallback
+import com.peacecodetech.medeli.data.source.local.ALTER_TABLE_MIGRATION_1_2
+import com.peacecodetech.medeli.data.source.local.AppDatabase
+import com.peacecodetech.medeli.data.source.local.DatabaseCallback
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
