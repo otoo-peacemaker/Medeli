@@ -13,6 +13,7 @@ Project resources.
 * [Run the app here](https://appetize.io/app/3o5cacis55xgbegsi7ib3tokle?device=pixel6&osVersion=12.0&scale=75)
 * [Demo](https://www.loom.com/share/337b0c571ba748bd8312e02e8dbf9056)
 * [APK file](https://drive.google.com/file/d/1TgS2YMke2-Q3o63sWUPyPy5sJN7JUEf-/view)
+* [medeli postman api docs](https://guglex.postman.co/workspace/Team-Workspace~612614aa-b160-4228-84e0-679db7b5e36c/api/c7454719-05fe-47b8-99fd-a22024fcaf93)
 
 Current Project features
 -----------------
