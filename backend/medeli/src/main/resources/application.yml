@@ -19,3 +19,21 @@ spring:
         format_sql: true
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
+  mail:
+    host: localhost
+    port: 1025
+    username: medeli
+    password: password
+
+    properties:
+      mail:
+        smtp:
+          ssl:
+            trust: "*"
+          auth: true
+          starttls:
+            enable: true
+          connection-timeout: 5000
+          timeout: 3000
+          write timeout: 5000
+

@@ -26,18 +26,19 @@ import java.util.Objects;
 public class User implements UserDetails {
 
   @Id
-  @GeneratedValue
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Integer id;
   private String firstname;
   private String lastname;
 
-  @NonNull
-  @NotEmpty
+  @Column(unique = true)
   private String email;
   private String password;
 
   @Enumerated(EnumType.STRING)
   private Role role;
+  private Boolean accountVerified = false;
+
 
   @Override
   public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -71,7 +72,7 @@ public class User implements UserDetails {
 
   @Override
   public boolean isEnabled() {
-    return true;
+    return accountVerified;
   }
 
   @Override

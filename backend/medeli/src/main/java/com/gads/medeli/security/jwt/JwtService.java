@@ -1,10 +1,12 @@
 package com.gads.medeli.security.jwt;
 
 import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
+import lombok.Builder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
@@ -14,10 +16,15 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
+
+
+@Builder
 @Service
 public class JwtService {
 
   private static final String SECRET_KEY = "404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970";
+  // Set the expiration time to 1 hour
+ // long expirationTime = 3600;
 
   public String extractUsername(String token) {
     return extractClaim(token, Claims::getSubject);
@@ -46,13 +53,20 @@ public class JwtService {
         .compact();
   }
 
+  /**
+   * A function to return a valid token iff [username] s are equal and token not expired
+   * */
   public boolean isTokenValid(String token, UserDetails userDetails) {
     final String username = extractUsername(token);
     return (username.equals(userDetails.getUsername())) && !isTokenExpired(token);
   }
 
-  private boolean isTokenExpired(String token) {
+  public boolean isTokenExpired(String token) {
     return extractExpiration(token).before(new Date());
+  }
+
+  public Date isTokenIssuedAt(String token) {
+    return extractClaim(token, Claims::getIssuedAt);
   }
 
   private Date extractExpiration(String token) {
